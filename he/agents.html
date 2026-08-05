@@ -1,0 +1,516 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>סוכני AI - Data Clinic</title>
+<meta name="description" content="ארבעה סוכני AI מומחים שעובדים לצד הצוות שלך - רופא החריגות, שיחת תובנות, מנבא ומספר. מבוססים על הנתונים שלך, מוטמעים בסלאק." />
+<link rel="stylesheet" href="../site.css?v=4" />
+<link rel="icon" type="image/png" href="../assets/mascot.png" />
+</head>
+<body>
+
+<!-- ──────── NAV ──────── -->
+<header class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="brand">
+      <img src="../assets/mascot.png" alt="" />
+      <span>Data Clinic</span>
+    </a>
+    <nav class="nav-links">
+      <a href="index.html">בית</a>
+      <a href="index.html#services">שירותים</a>
+      <a href="dashboards.html">דשבורדים</a>
+      <a href="agents.html" class="active">סוכני AI</a>
+      <a href="learn.html">מדריכים</a>
+      <a href="about.html">אודות</a>
+    </nav>
+    <div class="nav-cta-row">
+      <div class="lang-toggle">
+        <a href="../agents.html" class="lang-btn">EN</a>
+        <a href="agents.html" class="lang-btn active">HE</a>
+      </div>
+      <a href="about.html#contact" class="btn btn-primary">שכרו מומחה <span class="arrow">→</span></a>
+    </div>
+  </div>
+</header>
+
+<!-- ──────── PAGE HERO ──────── -->
+<section class="page-hero">
+  <div class="container">
+    <div class="page-hero-grid">
+      <div>
+        <div class="crumb">
+          <a href="index.html">בית</a>
+          <span>/</span>
+          <span>סוכני AI</span>
+        </div>
+        <h1>ארבעה מומחים, <br/><span class="serif">זמינים 24/7.</span></h1>
+        <p class="lead">כל סוכן בנוי למשימה אחת, מחובר למחסן שלך, ומאומן על ההגדרות העסקיות שלך. הם חיים בסלאק, ב-Teams, או ישירות בתוך הדשבורדים שלך - ולא ישנים.</p>
+        <div style="display:flex; gap:10px; flex-wrap:wrap;">
+          <a href="#agents-list" class="btn btn-blue btn-lg">הכר את הסוכנים <span class="arrow">→</span></a>
+          <a href="#how-they-work" class="btn btn-ghost btn-lg">איך הם עובדים</a>
+        </div>
+      </div>
+      <div class="page-hero-mascot">
+        <img src="../assets/mascot.png" alt="מסקוט Data Clinic"/>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ──────── AGENTS AT A GLANCE ──────── -->
+<section class="section" style="padding: 88px 0 0;">
+  <div class="container">
+    <div class="section-head reveal" style="text-align:right; max-width: none; margin-bottom: 32px;">
+      <span class="section-eyebrow">הסוכנים</span>
+      <h2 style="font-size: clamp(28px, 3.4vw, 44px);">ארבעה סוכנים, <span class="serif">משימה אחת:</span> להפוך נתונים להחלטות.</h2>
+      <p style="margin: 0; max-width: 60ch;">לחץ על כל סוכן למטה לגלילה לפרופיל המלא שלו, דוגמת שיחה, ואינטגרציות.</p>
+    </div>
+
+    <div class="agents-strip reveal">
+      <a href="#agent-anomaly" class="agent-strip-card">
+        <div class="ava"><img src="../assets/mascot.png" alt=""/></div>
+        <span class="role">מנטור</span>
+        <h5>רופא החריגות</h5>
+        <p class="tagline">מזהה מה השתבש - לפניך.</p>
+        <span class="arr">ראה פרופיל →</span>
+      </a>
+      <a href="#agent-insights" class="agent-strip-card">
+        <div class="ava"><img src="../assets/mascot.png" alt=""/></div>
+        <span class="role">אנליסט</span>
+        <h5>שיחת תובנות</h5>
+        <p class="tagline">עונה על שאלות בשפה חופשית.</p>
+        <span class="arr">ראה פרופיל →</span>
+      </a>
+      <a href="#agent-forecast" class="agent-strip-card">
+        <div class="ava"><img src="../assets/mascot.png" alt=""/></div>
+        <span class="role">חוזה</span>
+        <h5>מנבא</h5>
+        <p class="tagline">מתכנן את הרבעון הבא, לא האחרון.</p>
+        <span class="arr">ראה פרופיל →</span>
+      </a>
+      <a href="#agent-narrator" class="agent-strip-card">
+        <div class="ava"><img src="../assets/mascot.png" alt=""/></div>
+        <span class="role">כותב</span>
+        <h5>מספר</h5>
+        <p class="tagline">כותב את העדכון השבועי בשבילך.</p>
+        <span class="arr">ראה פרופיל →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ──────── AGENT DETAIL CARDS ──────── -->
+<section id="agents-list" class="section" style="padding: 24px 0 96px;">
+  <div class="container">
+    <div class="agent-detail-grid reveal" style="display:flex; flex-direction:column; gap: 32px;">
+
+      <!-- 1. ANOMALY DOCTOR -->
+      <article class="agent-detail" id="agent-anomaly">
+        <div class="panel-l">
+          <div class="agent-head">
+            <div class="ava"><img src="../assets/mascot.png" alt=""/></div>
+            <div>
+              <span class="role">מנטור · 24/7</span>
+              <h3>רופא החריגות</h3>
+              <div class="tagline">"מזהה מה השתבש - לפניך."</div>
+            </div>
+          </div>
+          <p class="desc">עוקב אחרי כל KPI קריטי במחסן שלך מסביב לשעון. ברגע שמדד סוטה מהתבנית הצפויה - לפי שעה ביום, יום בשבוע, או מגמה - אתה מקבל הודעת סלאק עם הערך, ההקשר, וסיבת שורש משוערת.</p>
+          <div class="skills-row">
+            <span class="skill-chip">זיהוי חריגות</span>
+            <span class="skill-chip">ניתוח סיבת שורש</span>
+            <span class="skill-chip">דירוג חומרה</span>
+            <span class="skill-chip">התראות סלאק ואימייל</span>
+            <span class="skill-chip">מודע לחגים</span>
+          </div>
+          <div class="integrations">
+            <div class="lbl">חי ב</div>
+            <div class="integ-row">
+              <span class="integ-pill"><span class="ic" style="background:#4A154B;">S</span>Slack</span>
+              <span class="integ-pill"><span class="ic" style="background:#7B83EB;">T</span>Teams</span>
+              <span class="integ-pill"><span class="ic" style="background:#11182A;">@</span>אימייל</span>
+              <span class="integ-pill"><span class="ic" style="background:#16A8EA;">L</span>Looker</span>
+            </div>
+          </div>
+          <div class="agent-actions">
+            <a href="about.html#contact" class="btn btn-blue">נסה את הסוכן <span class="arrow">→</span></a>
+            <a href="dashboards.html" class="btn btn-ghost">ראה על דשבורד</a>
+          </div>
+        </div>
+        <div class="panel-r">
+          <div class="agent-chat">
+            <div class="ch-head">
+              <div class="ava"><img src="../assets/mascot.png" alt=""/></div>
+              <div><div class="nm">רופא החריגות</div></div>
+              <div class="st"><span class="dot"></span>עוקב אחרי 47 מדדים</div>
+            </div>
+
+            <div class="ch-bubble bot">
+              <strong>⚠ חריגה זוהתה</strong>: המרת תשלום ירדה 32% ב-90 הדקות האחרונות.
+              <div class="ch-card">
+                <div class="row"><span>נוכחי</span><b class="warn">1.4%</b></div>
+                <div class="row"><span>טווח צפוי</span><b>2.0% – 2.4%</b></div>
+                <div class="row"><span>Z-score</span><b class="warn">−3.8</b></div>
+                <div class="row"><span>חומרה</span><b class="warn">גבוהה</b></div>
+              </div>
+              <span class="src">מקור · events.checkout_completed · 90 דקות אחרונות</span>
+            </div>
+
+            <div class="ch-bubble you">מה גורם לזה?</div>
+
+            <div class="ch-bubble bot">
+              כנראה בעיית ספק תשלומים. שיעור הצלחת אימות <strong>Stripe ישראל</strong> ירד מ-98% → 71% ב-14:22. משתמשי Mobile-Safari מושפעים הכי הרבה. עדכנתי את @ops-oncall.
+              <span class="src">ביטחון ב-root cause · 84%</span>
+            </div>
+
+            <div class="ch-input">
+              <input placeholder="שאל את רופא החריגות..." disabled/>
+              <button class="send">↑</button>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- 2. INSIGHTS CHAT -->
+      <article class="agent-detail" id="agent-insights">
+        <div class="panel-l">
+          <div class="agent-head">
+            <div class="ava"><img src="../assets/mascot.png" alt=""/></div>
+            <div>
+              <span class="role">אנליסט · NL → SQL</span>
+              <h3>שיחת תובנות</h3>
+              <div class="tagline">"שאל כל שאלה. קבל תשובה עם מקורות."</div>
+            </div>
+          </div>
+          <p class="desc">השאלה העסקית שלך בשפה חופשית הופכת ל-SQL - רצה על מחסן הנתונים שלך - וחוזרת כמספר מצוטט, גרף, או נרטיב קצר. כל תשובה ניתנת למעקב עד השורה שיצרה אותה.</p>
+          <div class="skills-row">
+            <span class="skill-chip">שפה טבעית → SQL</span>
+            <span class="skill-chip">תשובות עם מקורות</span>
+            <span class="skill-chip">קידוח לפרטים</span>
+            <span class="skill-chip">מודע לשכבת מדדים</span>
+            <span class="skill-chip">בחירת גרף אוטומטית</span>
+          </div>
+          <div class="integrations">
+            <div class="lbl">מתחבר ל</div>
+            <div class="integ-row">
+              <span class="integ-pill"><img src="../assets/logos/bigquery.svg" alt="" style="width:18px; height:18px;"/>BigQuery</span>
+              <span class="integ-pill"><img src="../assets/logos/snowflake.svg" alt="" style="width:18px; height:18px;"/>Snowflake</span>
+              <span class="integ-pill"><img src="../assets/logos/redshift.svg" alt="" style="width:18px; height:18px;"/>Redshift</span>
+              <span class="integ-pill"><img src="../assets/logos/dbt.svg" alt="" style="width:18px; height:18px;"/>dbt metrics</span>
+            </div>
+          </div>
+          <div class="agent-actions">
+            <a href="about.html#contact" class="btn btn-blue">נסה את הסוכן <span class="arrow">→</span></a>
+            <a href="#" class="btn btn-ghost">צפה בדמו (2 דקות)</a>
+          </div>
+        </div>
+        <div class="panel-r">
+          <div class="agent-chat">
+            <div class="ch-head">
+              <div class="ava"><img src="../assets/mascot.png" alt=""/></div>
+              <div><div class="nm">שיחת תובנות</div></div>
+              <div class="st"><span class="dot"></span>מחובר</div>
+            </div>
+
+            <div class="ch-bubble you">למה הנטישה קפצה בשבוע שעבר?</div>
+
+            <div class="ch-bubble bot">
+              נטישה שבועית עלתה מ-<strong>2.1% → 3.4%</strong> (+62%). הגידול מרוכז ב<strong>לקוחות SMB שנתיים</strong> בתוכנית Legacy Pro.
+              <div class="ch-card">
+                <div class="row"><span>תוכנית</span><b>Legacy Pro</b></div>
+                <div class="row"><span>סגמנט</span><b>SMB · שנתי</b></div>
+                <div class="row"><span>עזבו השבוע</span><b class="warn">42 חשבונות</b></div>
+                <div class="row"><span>סיבה עיקרית (NPS)</span><b>"העלאת מחיר"</b></div>
+              </div>
+              <span class="src">שאילתה · fct_subscription_events · חלון 7 ימים</span>
+            </div>
+
+            <div class="ch-bubble you">הראה לי את ה-SQL.</div>
+
+            <div class="ch-bubble bot">
+              <div class="ch-card" style="font-family: var(--font-mono); white-space: pre-wrap;">SELECT plan, segment,
+       COUNT(*) AS churned
+FROM   prod.fct_subscription_events
+WHERE  event = 'churn'
+       AND week_of = '2026-04-29'
+GROUP  BY 1,2
+ORDER  BY churned DESC
+LIMIT  10;</div>
+            </div>
+
+            <div class="ch-input">
+              <input placeholder="שאל כל שאלה על הנתונים שלך..." disabled/>
+              <button class="send">↑</button>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- 3. FORECASTER -->
+      <article class="agent-detail" id="agent-forecast">
+        <div class="panel-l">
+          <div class="agent-head">
+            <div class="ava"><img src="../assets/mascot.png" alt=""/></div>
+            <div>
+              <span class="role">חוזה · סדרות זמן</span>
+              <h3>מנבא</h3>
+              <div class="tagline">"מסתכל קדימה, לא אחורה."</div>
+            </div>
+          </div>
+          <p class="desc">מודלי סדרות זמן מאומנים על הנתונים שלך, מתרעננים שבועית. הכנסות, ביקוש, כח אדם, מלאי - עם רווחי ביטחון ולחצני תרחישים שאפשר לשחק איתם מדשבורד או סלאק.</p>
+          <div class="skills-row">
+            <span class="skill-chip">מידול סדרות זמן</span>
+            <span class="skill-chip">רווחי ביטחון</span>
+            <span class="skill-chip">לחצני תרחישים</span>
+            <span class="skill-chip">חגים ועונתיות</span>
+            <span class="skill-chip">דוחות backtest</span>
+          </div>
+          <div class="integrations">
+            <div class="lbl">מפיק ל</div>
+            <div class="integ-row">
+              <span class="integ-pill"><img src="../assets/logos/looker.svg" alt="" style="width:18px; height:18px;"/>Looker</span>
+              <span class="integ-pill"><img src="../assets/logos/powerbi.svg" alt="" style="width:18px; height:18px;"/>Power BI</span>
+              <span class="integ-pill"><img src="../assets/logos/sheets.svg" alt="" style="width:18px; height:18px;"/>Sheets</span>
+              <span class="integ-pill"><span class="ic" style="background:#4A154B;">S</span>Slack</span>
+            </div>
+          </div>
+          <div class="agent-actions">
+            <a href="about.html#contact" class="btn btn-blue">נסה את הסוכן <span class="arrow">→</span></a>
+            <a href="#" class="btn btn-ghost">ראה דוח backtest</a>
+          </div>
+        </div>
+        <div class="panel-r">
+          <div class="agent-chat">
+            <div class="ch-head">
+              <div class="ava"><img src="../assets/mascot.png" alt=""/></div>
+              <div><div class="nm">מנבא</div></div>
+              <div class="st"><span class="dot"></span>עודכן לפני 4 שעות</div>
+            </div>
+
+            <div class="ch-bubble you">מה תחזית ההכנסות שלנו לרבעון 3?</div>
+
+            <div class="ch-bubble bot">
+              תחזית הבסיס שלי ל<strong>רבעון 3 FY26</strong> היא <strong>₪9.4M</strong> (±₪0.7M, ביטחון 80%).
+              <div class="ch-card">
+                <div class="row"><span>נמוך (P10)</span><b>₪8.4M</b></div>
+                <div class="row"><span>בסיס (P50)</span><b class="ok">₪9.4M</b></div>
+                <div class="row"><span>גבוה (P90)</span><b>₪10.3M</b></div>
+                <div class="row"><span>מול תוכנית (₪9.0M)</span><b class="ok">+4.4%</b></div>
+              </div>
+              <span class="src">מודל · prophet · מאומן על 36 חודשים · MAPE backtest 6.2%</span>
+            </div>
+
+            <div class="ch-bubble you">מה אם נקצץ הוצאות פרסום ב-20%?</div>
+
+            <div class="ch-bubble bot">
+              מריץ מחדש עם <strong>−20% הוצאות פרסום</strong> משבוע 28...<br/>
+              תחזית הבסיס לרבעון 3 יורדת ל<strong>₪8.6M</strong> (−8.5%). רוב ההפסד הוא בגיוס לקוחות חדשים; חידושים לא מושפעים.
+              <span class="src">תרחיש · paid_spend × 0.80 · שאר הנתונים קבועים</span>
+            </div>
+
+            <div class="ch-input">
+              <input placeholder="הרץ תרחיש what-if..." disabled/>
+              <button class="send">↑</button>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- 4. NARRATOR -->
+      <article class="agent-detail" id="agent-narrator">
+        <div class="panel-l">
+          <div class="agent-head">
+            <div class="ava"><img src="../assets/mascot.png" alt=""/></div>
+            <div>
+              <span class="role">כותב · דוחות אוטומטיים</span>
+              <h3>מספר</h3>
+              <div class="tagline">"כותב את העדכון השבועי בשבילך."</div>
+            </div>
+          </div>
+          <p class="desc">מכין את הסקירה העסקית שלך ביום שני עם הגרפים הנכונים, המספרים הנכונים, ובסגנון שאימנת אותו עליו. מוסר לנוטשן, שולח כאימייל לדירקטוריון, או מדביק לסלאק - הכל לפני שישבת עם הקפה שלך.</p>
+          <div class="skills-row">
+            <span class="skill-chip">נרטיב אוטומטי</span>
+            <span class="skill-chip">הפצה רב-ערוצית</span>
+            <span class="skill-chip">מאומן על הסגנון שלך</span>
+            <span class="skill-chip">קישורי מקורות</span>
+            <span class="skill-chip">טיוטות ניתנות לעריכה</span>
+          </div>
+          <div class="integrations">
+            <div class="lbl">מפרסם ל</div>
+            <div class="integ-row">
+              <span class="integ-pill"><span class="ic" style="background:#000;">N</span>Notion</span>
+              <span class="integ-pill"><span class="ic" style="background:#4A154B;">S</span>Slack</span>
+              <span class="integ-pill"><span class="ic" style="background:#11182A;">@</span>אימייל</span>
+              <span class="integ-pill"><span class="ic" style="background:#7B83EB;">T</span>Teams</span>
+            </div>
+          </div>
+          <div class="agent-actions">
+            <a href="about.html#contact" class="btn btn-blue">נסה את הסוכן <span class="arrow">→</span></a>
+            <a href="#" class="btn btn-ghost">ראה דוח לדוגמה</a>
+          </div>
+        </div>
+        <div class="panel-r">
+          <div class="agent-chat">
+            <div class="ch-head">
+              <div class="ava"><img src="../assets/mascot.png" alt=""/></div>
+              <div><div class="nm">מספר</div></div>
+              <div class="st"><span class="dot"></span>מתוזמן · שני 07:00</div>
+            </div>
+
+            <div class="ch-bubble bot">
+              <strong>סקירה עסקית שבועית · שבוע 18</strong><br/><br/>
+              הכנסות סגרו על <strong>₪684k</strong>, <strong>+12% WoW</strong> ו-<strong>+24% YoY</strong>: מונעות על ידי דחיפה חזקה ביום שלישי מההצעה השנתית החדשה.<br/><br/>
+              <strong>מה עבד:</strong> מחזור חיים אימייל/SMS (+38% הכנסות), מיקוד מחדש ב-Meta (+22%).<br/>
+              <strong>מה לא עבד:</strong> הוצאות Google Brand עלו 18%, אך המרות שטוחות.<br/>
+              <strong>לתשומת לב:</strong> תשלום Mobile-Safari ירד רביעי-חמישי (נפתר כעת).
+              <span class="src">טיוטה · מוכנה לפרסום ב-#leadership · מקורות מצורפים (4)</span>
+            </div>
+
+            <div class="ch-bubble you">קצר יותר ופרסם לסלאק.</div>
+
+            <div class="ch-bubble bot">
+              קוצרתי ל-4 שורות ופרסמתי ל<strong>#leadership</strong>. טיוטה מלאה נשמרה ב-Notion.
+              <span class="src">פורסם 09:14 · קישור הודעה · בטל</span>
+            </div>
+
+            <div class="ch-input">
+              <input placeholder="ערוך את הדוח או פרסם במקום אחר..." disabled/>
+              <button class="send">↑</button>
+            </div>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ──────── HOW THEY WORK ──────── -->
+<section id="how-they-work" class="section" style="padding: 0 0 96px; background: linear-gradient(180deg, #fff, #F7F8FB);">
+  <div class="container">
+    <div class="section-head reveal" style="text-align:right; max-width: none; margin-bottom: 36px;">
+      <span class="section-eyebrow">מאחורי הקלעים</span>
+      <h2 style="font-size: clamp(28px, 3.4vw, 44px);">איך הסוכנים <span class="serif">נשארים מדויקים.</span></h2>
+      <p style="margin: 0; max-width: 60ch;">כל תשובה של סוכן מגיעה מהנתונים שלך, ההגדרות שלך, וכללי העסק שלך - לא LLM כללי שמנחש. הנה איך.</p>
+    </div>
+
+    <div class="arch-card reveal">
+      <div class="arch-row">
+        <div class="arch-step">
+          <span class="num">01</span>
+          <h5>המחסן שלך</h5>
+          <p>סוכנים קוראים מ-BigQuery, Snowflake, או Redshift שלך - לא עותק של צד שלישי. קריאה בלבד, טבלאות מוגדרות.</p>
+        </div>
+        <div class="arch-arrow">→</div>
+        <div class="arch-step">
+          <span class="num">02</span>
+          <h5>שכבת המדדים שלך</h5>
+          <p>הגדרות חיות ב-dbt או בשכבה הסמנטית שלך. "הכנסות" אומר אותו דבר בכל סוכן ובכל צוות.</p>
+        </div>
+        <div class="arch-arrow">→</div>
+        <div class="arch-step">
+          <span class="num">03</span>
+          <h5>תשובות עם מקורות</h5>
+          <p>כל מספר שסוכן מפיק מקושר ל-SQL, המודל, והשורה. ללא הזיות, ללא AI אטום.</p>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top: 28px; display:grid; grid-template-columns: repeat(3, 1fr); gap: 20px;" class="reveal value-grid">
+      <div class="value-card">
+        <div class="vi">⚿</div>
+        <h4>קריאה בלבד כברירת מחדל</h4>
+        <p>סוכנים לעולם לא כותבים למחסן שלך. חשבונות שירות מוגבלים לסכמות שאישרת במפורש.</p>
+      </div>
+      <div class="value-card">
+        <div class="vi">⚙</div>
+        <h4>BYO LLM</h4>
+        <p>השתמש ב-OpenAI, Anthropic Claude, Gemini, או נקודת הקצה הפרטית שלך - הנתונים שלך נשארים אצלך.</p>
+      </div>
+      <div class="value-card">
+        <div class="vi">↻</div>
+        <h4>מבוקר ומוסבר</h4>
+        <p>כל פעולת סוכן נרשמת: שאלה, SQL שרץ, שורות מקור, מודל, זמן תגובה, ושרשרת אישור.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ──────── SLIM STATS ──────── -->
+<section style="padding: 0 0 96px;">
+  <div class="container reveal">
+    <div class="slim-stats">
+      <div class="cell"><div class="num">4</div><div class="lbl">סוכנים מומחים</div></div>
+      <div class="cell"><div class="num">24<span class="serif">/</span>7</div><div class="lbl">תמיד פעיל</div></div>
+      <div class="cell"><div class="num">&lt; 3<span class="serif">ש׳</span></div><div class="lbl">זמן תגובה חציוני</div></div>
+      <div class="cell"><div class="num">100%</div><div class="lbl">מצוטט עד שורת המקור</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ──────── CTA BAND ──────── -->
+<section style="padding: 0 0 120px;">
+  <div class="container reveal">
+    <div class="cta-band">
+      <div>
+        <h2>רוצה <span class="serif">לפרוס סוכן?</span></h2>
+        <p>נדגים את הסוכנים על הנתונים שלך, בסביבת פיתוח פרטית. תראה מה הם אומרים, מאיפה המספרים מגיעים, ואם הם מתאימים לצוות שלך.</p>
+        <div class="btns">
+          <a href="about.html#contact" class="btn btn-blue btn-lg">הזמן הדגמה פרטית <span class="arrow">→</span></a>
+          <a href="dashboards.html" class="btn btn-ghost btn-lg">ראה את הדשבורדים</a>
+        </div>
+      </div>
+      <div class="cta-band-art">
+        <img src="../assets/mascot.png" alt="">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ──────── FOOTER ──────── -->
+<footer class="footer">
+  <div class="container">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a href="index.html" class="brand"><img src="../assets/mascot.png" alt=""/><span>Data Clinic</span></a>
+        <p>קולקטיב של מומחי דאטה עצמאיים ובכירים - דשבורדים, סוכני AI והפייפליינים שמתחתיהם, בנויים בידי מי שבאמת מבצע את העבודה.</p>
+      </div>
+      <div class="foot-col">
+        <h5>מוצר</h5>
+        <a href="dashboards.html">דשבורדים</a>
+        <a href="agents.html">סוכני AI</a>
+        <a href="index.html#services">שירותים</a>
+      </div>
+      <div class="foot-col">
+        <h5>חברה</h5>
+        <a href="about.html">אודות</a>
+        <a href="about.html#contact">צור קשר</a>
+        <a href="#">לקוחות</a>
+        <a href="#">בלוג</a>
+      </div>
+      <div class="foot-col">
+        <h5>משאבים</h5>
+        <a href="#">תיעוד</a>
+        <a href="#">שינויים</a>
+        <a href="#">אבטחה</a>
+        <a href="#">פרטיות</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Data Clinic. כל הזכויות שמורות.</span>
+      <span>נבנה באהבה בתל אביב.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+
+</body>
+</html>

@@ -1,0 +1,439 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Data Clinic - Dashboards, AI agents, and pipelines that just work</title>
+<meta name="description" content="A Tel Aviv collective of senior freelance data specialists - engineers, analysts, BI developers, and business analysts. Hire the right expert for your dashboards, pipelines, and AI." />
+<link rel="stylesheet" href="site.css?v=4" />
+<link rel="icon" type="image/png" href="assets/mascot.png" />
+</head>
+<body>
+
+<!-- ──────── NAV ──────── -->
+<header class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="brand">
+      <img src="assets/mascot.png" alt="" />
+      <span>Data Clinic</span>
+    </a>
+    <nav class="nav-links">
+      <a href="index.html" class="active">Home</a>
+      <a href="#services">Services</a>
+      <a href="dashboards.html">Dashboards</a>
+      <a href="agents.html">AI Agents</a>
+      <a href="learn.html">Learn</a>
+      <a href="about.html">About</a>
+    </nav>
+    <div class="nav-cta-row">
+      <div class="lang-toggle">
+        <a href="index.html" class="lang-btn active">EN</a>
+        <a href="he/index.html" class="lang-btn">HE</a>
+      </div>
+      <a href="about.html#contact" class="btn btn-primary">Hire a specialist <span class="arrow">→</span></a>
+    </div>
+  </div>
+</header>
+
+<!-- ──────── HERO ──────── -->
+<section class="hero-clean">
+  <div class="container">
+    <div class="hero-clean-grid">
+      <div>
+        <span class="hero-clean-badge">
+          <span class="dot"></span> A senior data collective · Live in 2 weeks
+        </span>
+        <h1>
+          Your data,<br/>
+          <span class="serif">in good hands.</span>
+        </h1>
+        <p class="lead">
+          A collective of senior freelance data specialists - engineers, analysts, BI developers, and business analysts. You work directly with the right expert for your project. No agency, no juniors, no handoffs.
+        </p>
+        <div class="hero-clean-ctas">
+          <a href="about.html#contact" class="btn btn-blue btn-lg">Hire a specialist <span class="arrow">→</span></a>
+          <a href="dashboards.html" class="btn btn-ghost btn-lg">See dashboards</a>
+        </div>
+      </div>
+
+      <div class="hero-clean-right">
+        <div class="hero-mascot-orb">
+          <img src="assets/mascot.png" alt="Data Clinic mascot"/>
+        </div>
+
+        <!-- Floating dashboard tile -->
+        <div class="hero-float hero-float-dash">
+          <div class="head">
+            <span>Revenue MTD</span>
+            <span class="tag"><span style="width:5px; height:5px; border-radius:50%; background:#117E3E; animation: pulse 1.6s infinite;"></span>Live</span>
+          </div>
+          <div class="num">₪2.84M</div>
+          <div class="d">+18.4% vs last year</div>
+          <div class="spark">
+            <svg viewBox="0 0 200 24" preserveAspectRatio="none" style="width:100%; height:100%;">
+              <path d="M0,18 L25,16 L50,12 L75,14 L100,8 L125,10 L150,4 L175,6 L200,2" stroke="#16A8EA" stroke-width="1.5" fill="none"/>
+            </svg>
+          </div>
+        </div>
+
+        <!-- Floating agent chat tile -->
+        <div class="hero-float hero-float-chat">
+          <div class="head">
+            <span class="ava"><img src="assets/mascot.png" alt=""/></span>
+            <span>Anomaly Doctor</span>
+            <span class="status"><span></span>just now</span>
+          </div>
+          <p>⚠ Checkout conversion dropped <b>−32%</b> in the last 90m. Likely Stripe IL - paged @ops.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ──────── TECH MARQUEE ──────── -->
+<section class="tech-section">
+  <div class="container">
+    <div class="tech-marquee">
+      <div class="tech-marquee-label">Built on the modern data stack</div>
+      <div class="tech-track">
+    <span class="tech-item"><img src="assets/logos/bigquery.svg" alt=""/>BigQuery</span>
+    <span class="tech-item"><img src="assets/logos/snowflake.svg" alt=""/>Snowflake</span>
+    <span class="tech-item"><img src="assets/logos/dbt.svg" alt=""/>dbt</span>
+    <span class="tech-item"><img src="assets/logos/dataform.svg" alt=""/>Dataform</span>
+    <span class="tech-item"><img src="assets/logos/gcp.svg" alt=""/>Google Cloud</span>
+    <span class="tech-item"><img src="assets/logos/airflow.svg" alt=""/>Airflow</span>
+    <span class="tech-item"><img src="assets/logos/cloudrun.svg" alt=""/>Cloud Run</span>
+    <span class="tech-item"><img src="assets/logos/powerbi.svg" alt=""/>Power BI</span>
+    <span class="tech-item"><img src="assets/logos/tableau.svg" alt=""/>Tableau</span>
+    <span class="tech-item"><img src="assets/logos/looker.svg" alt=""/>Looker</span>
+    <span class="tech-item"><img src="assets/logos/salesforce.svg" alt=""/>Salesforce</span>
+    <span class="tech-item"><img src="assets/logos/hubspot.svg" alt=""/>HubSpot</span>
+    <span class="tech-item"><img src="assets/logos/ga4.svg" alt=""/>GA4</span>
+    <span class="tech-item"><img src="assets/logos/sheets.svg" alt=""/>Sheets</span>
+    <span class="tech-item"><img src="assets/logos/excel.svg" alt=""/>Excel</span>
+    <span class="tech-item"><img src="assets/logos/mysql.svg" alt=""/>MySQL</span>
+    <span class="tech-item"><img src="assets/logos/mongodb.svg" alt=""/>MongoDB</span>
+    <span class="tech-item"><img src="assets/logos/gemini.svg" alt=""/>Gemini</span>
+    <span class="tech-item"><img src="assets/logos/vertex.svg" alt=""/>Vertex AI</span>
+    <span class="tech-item"><img src="assets/logos/redshift.svg" alt=""/>Redshift</span>
+    <!-- duplicate for seamless loop -->
+    <span class="tech-item"><img src="assets/logos/bigquery.svg" alt=""/>BigQuery</span>
+    <span class="tech-item"><img src="assets/logos/snowflake.svg" alt=""/>Snowflake</span>
+    <span class="tech-item"><img src="assets/logos/dbt.svg" alt=""/>dbt</span>
+    <span class="tech-item"><img src="assets/logos/dataform.svg" alt=""/>Dataform</span>
+    <span class="tech-item"><img src="assets/logos/gcp.svg" alt=""/>Google Cloud</span>
+    <span class="tech-item"><img src="assets/logos/airflow.svg" alt=""/>Airflow</span>
+    <span class="tech-item"><img src="assets/logos/cloudrun.svg" alt=""/>Cloud Run</span>
+    <span class="tech-item"><img src="assets/logos/powerbi.svg" alt=""/>Power BI</span>
+    <span class="tech-item"><img src="assets/logos/tableau.svg" alt=""/>Tableau</span>
+    <span class="tech-item"><img src="assets/logos/looker.svg" alt=""/>Looker</span>
+    <span class="tech-item"><img src="assets/logos/salesforce.svg" alt=""/>Salesforce</span>
+    <span class="tech-item"><img src="assets/logos/hubspot.svg" alt=""/>HubSpot</span>
+    <span class="tech-item"><img src="assets/logos/ga4.svg" alt=""/>GA4</span>
+    <span class="tech-item"><img src="assets/logos/sheets.svg" alt=""/>Sheets</span>
+    <span class="tech-item"><img src="assets/logos/excel.svg" alt=""/>Excel</span>
+    <span class="tech-item"><img src="assets/logos/mysql.svg" alt=""/>MySQL</span>
+    <span class="tech-item"><img src="assets/logos/mongodb.svg" alt=""/>MongoDB</span>
+    <span class="tech-item"><img src="assets/logos/gemini.svg" alt=""/>Gemini</span>
+    <span class="tech-item"><img src="assets/logos/vertex.svg" alt=""/>Vertex AI</span>
+    <span class="tech-item"><img src="assets/logos/redshift.svg" alt=""/>Redshift</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ──────── SERVICES ──────── -->
+<section class="services-blue" id="services">
+  <div class="container">
+    <h2 class="sb-title reveal">What we <span class="serif">do.</span></h2>
+    <p class="sb-subtitle reveal">Eight specialties, one collective. Every project is delivered by a vetted senior freelancer - the person you meet is the person who builds it.</p>
+
+    <div class="sb-frame reveal">
+      <div class="sb-grid">
+
+        <div class="sb-item">
+          <div class="sb-check">✓</div>
+          <div class="sb-text"><b>Strategy &amp; consulting</b>: Audit your data sources, define the KPIs that matter, and write the roadmap your team will actually ship.</div>
+        </div>
+
+        <div class="sb-item">
+          <div class="sb-check">✓</div>
+          <div class="sb-text"><b>Dashboard development</b>: Department dashboards built on the BI tool you already use - Power BI, Tableau, Looker. Live in two weeks.</div>
+        </div>
+
+        <div class="sb-item">
+          <div class="sb-check">✓</div>
+          <div class="sb-text"><b>Improving existing BI</b>: Slow dashboards, conflicting numbers, broken pipelines? We diagnose and fix without ripping out your stack.</div>
+        </div>
+
+        <div class="sb-item">
+          <div class="sb-check">✓</div>
+          <div class="sb-text"><b>Data warehouse</b>: A modern warehouse on BigQuery or Snowflake, modeled in dbt, tested and documented from day one.</div>
+        </div>
+
+        <div class="sb-item">
+          <div class="sb-check">✓</div>
+          <div class="sb-text"><b>Engineers on-demand</b>: Senior data engineers and analysts embedded with your team for as long as you need. No juniors in disguise.</div>
+        </div>
+
+        <div class="sb-item">
+          <div class="sb-check">✓</div>
+          <div class="sb-text"><b>AI agents</b>: Anomaly Doctor, Insights Chat, Forecaster, Narrator - purpose-built agents grounded in your warehouse and metrics layer.</div>
+        </div>
+
+        <div class="sb-item">
+          <div class="sb-check">✓</div>
+          <div class="sb-text"><b>Pipelines &amp; automation</b>: Production orchestration with Airflow and Cloud Run, plus robust Excel and Sheets setups for teams living in spreadsheets.</div>
+        </div>
+
+        <div class="sb-item">
+          <div class="sb-check">✓</div>
+          <div class="sb-text"><b>Training &amp; handoff</b>: Loom walkthroughs, dbt docs, and live workshops. Your team owns the keys when we leave - no lock-in.</div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="sb-cta reveal">
+      <a href="about.html#contact" class="btn btn-yellow btn-lg">Book a free demo call <span class="arrow">→</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ──────── LOGO STRIP ──────── -->
+<section class="logos">
+  <div class="container">
+    <div class="logos-label">Trusted by data teams at companies that take their numbers seriously</div>
+    <div class="logos-row">
+      <div class="logo-tile">◆ Northwind</div>
+      <div class="logo-tile">▲ Atlas Group</div>
+      <div class="logo-tile">⬡ Hexford</div>
+      <div class="logo-tile">◐ Lumen Labs</div>
+      <div class="logo-tile">✦ Polaris</div>
+      <div class="logo-tile">◇ Meridian</div>
+    </div>
+  </div>
+</section>
+
+<!-- ──────── DASHBOARD SHOWCASE ──────── -->
+<section class="section" style="padding: 96px 0;">
+  <div class="container">
+    <div class="section-head reveal" style="text-align:left; margin-bottom: 36px; max-width: none;">
+      <span class="section-eyebrow">DASHBOARDS</span>
+      <h2>A dashboard that earns <br/><span class="serif">its 9am check.</span></h2>
+      <p style="margin: 0; max-width: 64ch;">Think of a dashboard like the one in your car - a single screen showing everything that matters about how your business is running. Revenue, growth, margin, the things that change every day, all on one page. Built on the BI tool your team already uses, refreshed live from your data.</p>
+    </div>
+
+    <div class="mini-dash-grid reveal">
+
+      <a href="dashboards.html" class="mini-dash">
+        <div class="md-icon">M</div>
+        <div class="md-title">Management</div>
+        <div class="md-desc">Revenue, margin, runway - the CEO morning view.</div>
+        <div class="md-chart">
+          <svg viewBox="0 0 200 60" preserveAspectRatio="none" style="width:100%; height:100%;">
+            <path d="M0,50 L25,42 L50,38 L75,28 L100,30 L125,22 L150,18 L175,12 L200,6" stroke="#16A8EA" stroke-width="2" fill="rgba(22,168,234,0.12)"/>
+          </svg>
+        </div>
+        <div class="md-foot"><span class="tag"><span class="pulse"></span>Live</span><span class="ar">→</span></div>
+      </a>
+
+      <a href="dashboards.html" class="mini-dash">
+        <div class="md-icon">P</div>
+        <div class="md-title">Marketing</div>
+        <div class="md-desc">ROAS, CPA, channel mix in real time.</div>
+        <div class="md-chart">
+          <svg viewBox="0 0 200 60" preserveAspectRatio="none" style="width:100%; height:100%;">
+            <rect x="6"   y="22" width="20" height="32" fill="#16A8EA" rx="2"/>
+            <rect x="38"  y="14" width="20" height="40" fill="#16A8EA" rx="2"/>
+            <rect x="70"  y="28" width="20" height="26" fill="#F97316" rx="2"/>
+            <rect x="102" y="20" width="20" height="34" fill="#16A8EA" rx="2"/>
+            <rect x="134" y="34" width="20" height="20" fill="#F97316" rx="2"/>
+            <rect x="166" y="18" width="20" height="36" fill="#16A8EA" rx="2"/>
+          </svg>
+        </div>
+        <div class="md-foot"><span class="tag"><span class="pulse"></span>Daily</span><span class="ar">→</span></div>
+      </a>
+
+      <a href="dashboards.html" class="mini-dash">
+        <div class="md-icon">S</div>
+        <div class="md-title">Sales &amp; CRM</div>
+        <div class="md-desc">Pipeline, win rate, and forecast in one place.</div>
+        <div class="md-chart">
+          <svg viewBox="0 0 200 60" preserveAspectRatio="none" style="width:100%; height:100%;">
+            <rect x="4"   y="6"  width="26" height="48" fill="#16A8EA" rx="2"/>
+            <rect x="36"  y="14" width="26" height="40" fill="#7CD3F5" rx="2"/>
+            <rect x="68"  y="22" width="26" height="32" fill="#9DD4F4" rx="2"/>
+            <rect x="100" y="30" width="26" height="24" fill="#F97316" rx="2"/>
+            <rect x="132" y="38" width="26" height="16" fill="#FB9A3E" rx="2"/>
+            <rect x="164" y="44" width="26" height="10" fill="#117E3E" rx="2"/>
+          </svg>
+        </div>
+        <div class="md-foot"><span class="tag"><span class="pulse"></span>Hourly</span><span class="ar">→</span></div>
+      </a>
+
+      <a href="dashboards.html" class="mini-dash">
+        <div class="md-icon">U</div>
+        <div class="md-title">Product Analytics</div>
+        <div class="md-desc">DAU, retention, activation - by the minute.</div>
+        <div class="md-chart">
+          <svg viewBox="0 0 200 60" preserveAspectRatio="none" style="width:100%; height:100%;">
+            <path d="M0,5 L40,5 L40,18 L80,18 L80,30 L120,30 L120,40 L160,40 L160,50 L200,50" stroke="#16A8EA" stroke-width="2" fill="rgba(22,168,234,0.14)"/>
+          </svg>
+        </div>
+        <div class="md-foot"><span class="tag"><span class="pulse"></span>Streaming</span><span class="ar">→</span></div>
+      </a>
+
+    </div>
+
+    <div style="display:flex; justify-content:center; margin-top: 36px;">
+      <a href="dashboards.html" class="btn btn-blue btn-lg">All dashboards <span class="arrow">→</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ──────── AI AGENT SHOWCASE ──────── -->
+<section class="section" style="padding: 0 0 96px;">
+  <div class="container">
+    <div class="section-head reveal" style="text-align:left; margin-bottom: 40px; max-width: none;">
+      <span class="section-eyebrow">AI AGENTS</span>
+      <h2>An AI analyst <br/><span class="serif">who never sleeps.</span></h2>
+      <p style="margin: 0; max-width: 60ch;">Ask questions in plain English, get cited answers from your warehouse. Or let the agents come to you when something's off.</p>
+    </div>
+
+    <article class="agent-detail reveal" id="featured-agent">
+      <div class="panel-l">
+        <div class="agent-head">
+          <div class="ava"><img src="assets/mascot.png" alt=""/></div>
+          <div>
+            <span class="role">Featured · Insights Chat</span>
+            <h3>Insights Chat</h3>
+            <div class="tagline">"Ask anything. Get a sourced answer."</div>
+          </div>
+        </div>
+        <p class="desc">Your business question in plain English becomes SQL, runs against your warehouse, and comes back as a cited number, a chart, or a short narrative. Every answer is traceable to the row that produced it.</p>
+        <div class="skills-row">
+          <span class="skill-chip">Natural language → SQL</span>
+          <span class="skill-chip">Cited answers</span>
+          <span class="skill-chip">Drill-down</span>
+          <span class="skill-chip">Metrics-layer aware</span>
+        </div>
+        <div class="integrations">
+          <div class="lbl">Connects to</div>
+          <div class="integ-row">
+            <span class="integ-pill"><img src="assets/logos/bigquery.svg" alt="" style="width:18px; height:18px;"/>BigQuery</span>
+            <span class="integ-pill"><img src="assets/logos/snowflake.svg" alt="" style="width:18px; height:18px;"/>Snowflake</span>
+            <span class="integ-pill"><img src="assets/logos/dbt.svg" alt="" style="width:18px; height:18px;"/>dbt metrics</span>
+            <span class="integ-pill"><span class="ic" style="background:#4A154B;">S</span>Slack</span>
+          </div>
+        </div>
+        <div class="agent-actions">
+          <a href="agents.html" class="btn btn-blue">Meet all the agents <span class="arrow">→</span></a>
+          <a href="about.html#contact" class="btn btn-ghost">Try on your data</a>
+        </div>
+      </div>
+      <div class="panel-r">
+        <div class="agent-chat">
+          <div class="ch-head">
+            <div class="ava"><img src="assets/mascot.png" alt=""/></div>
+            <div><div class="nm">Insights Chat</div></div>
+            <div class="st"><span class="dot"></span>online</div>
+          </div>
+
+          <div class="ch-bubble you">Why did churn spike last week?</div>
+
+          <div class="ch-bubble bot">
+            Weekly churn rose from <strong>2.1% → 3.4%</strong> (+62%). The increase is concentrated in <strong>annual SMB customers</strong> on the legacy Pro plan.
+            <div class="ch-card">
+              <div class="row"><span>Plan</span><b>Legacy Pro</b></div>
+              <div class="row"><span>Segment</span><b>SMB · Annual</b></div>
+              <div class="row"><span>Churned this week</span><b class="warn">42 accounts</b></div>
+              <div class="row"><span>Top reason (NPS)</span><b>"price increase"</b></div>
+            </div>
+            <span class="src">queried · fct_subscription_events · 7-day window</span>
+          </div>
+
+          <div class="ch-bubble you">What should we do about it?</div>
+
+          <div class="ch-bubble bot">
+            Two suggestions: <strong>(1)</strong> grandfather the 42 affected accounts at last year's price for 12 months - cost ≈₪34k, projected save ≈₪192k ARR. <strong>(2)</strong> add a 30-day price-change notice to the renewal flow.
+            <span class="src">model · gemini-2.0 · grounded · sources attached (3)</span>
+          </div>
+
+          <div class="ch-input">
+            <input placeholder="Ask anything about your data..." disabled/>
+            <button class="send">↑</button>
+          </div>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ──────── MASCOT MOMENT ──────── -->
+<div class="container">
+  <div class="mascot-moment reveal">
+    <img src="assets/mascot.png" alt=""/>
+    <div class="t">"It's like having a senior analyst on call - except it actually answers at 2 a.m."</div>
+  </div>
+</div>
+
+<!-- ──────── CTA ──────── -->
+<section class="cta" id="cta">
+  <img class="cta-mascot-l" src="assets/mascot.png" alt=""/>
+  <img class="cta-mascot-r" src="assets/mascot.png" alt=""/>
+  <div class="container-narrow" style="position:relative; z-index:2;">
+    <h2>Ready to see your business <br/><span class="serif">through clearer data?</span></h2>
+    <p>Free 60-minute diagnosis with one of our senior data engineers. No deck, no sales pitch - just a look at your stack and a plan.</p>
+    <div class="cta-btns">
+      <a href="about.html#contact" class="btn btn-blue btn-lg">Book a free diagnosis <span class="arrow">→</span></a>
+      <a href="agents.html" class="btn btn-on-dark btn-lg">Meet the AI agents</a>
+    </div>
+  </div>
+</section>
+
+<!-- ──────── FOOTER ──────── -->
+<footer class="footer">
+  <div class="container">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a href="index.html" class="brand"><img src="assets/mascot.png" alt=""/><span>Data Clinic</span></a>
+        <p>A collective of senior freelance data specialists - dashboards, AI agents, and the pipelines beneath them, built by the people who actually do the work.</p>
+      </div>
+      <div class="foot-col">
+        <h5>Product</h5>
+        <a href="dashboards.html">Dashboards</a>
+        <a href="agents.html">AI Agents</a>
+        <a href="#services">Services</a>
+      </div>
+      <div class="foot-col">
+        <h5>Company</h5>
+        <a href="about.html">About</a>
+        <a href="about.html#contact">Contact</a>
+        <a href="#">Customers</a>
+        <a href="#">Blog</a>
+      </div>
+      <div class="foot-col">
+        <h5>Resources</h5>
+        <a href="#">Docs</a>
+        <a href="#">Changelog</a>
+        <a href="#">Security</a>
+        <a href="#">Privacy</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Data Clinic. All rights reserved.</span>
+      <span>Made with care in Tel Aviv.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+
+</body>
+</html>

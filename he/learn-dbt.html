@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>מהו dbt? - Data Clinic</title>
+<meta name="description" content="מדריך בשפה פשוטה ל-dbt: מה זה, אבני הבניין, מבנה הפרויקט, מלכודות נפוצות, ואיך נראה dbt טוב." />
+<link rel="stylesheet" href="../site.css?v=4" />
+<link rel="icon" type="image/png" href="../assets/mascot.png" />
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="brand">
+      <img src="../assets/mascot.png" alt="" />
+      <span>Data Clinic</span>
+    </a>
+    <nav class="nav-links">
+      <a href="index.html">בית</a>
+      <a href="index.html#services">שירותים</a>
+      <a href="dashboards.html">דשבורדים</a>
+      <a href="agents.html">סוכני AI</a>
+      <a href="learn.html" class="active">מדריכים</a>
+      <a href="about.html">אודות</a>
+    </nav>
+    <div class="nav-cta-row">
+      <div class="lang-toggle">
+        <a href="../learn-dbt.html" class="lang-btn">EN</a>
+        <a href="learn-dbt.html" class="lang-btn active">HE</a>
+      </div>
+      <a href="about.html#contact" class="btn btn-primary">שכרו מומחה <span class="arrow">→</span></a>
+    </div>
+  </div>
+</header>
+
+<section class="page-hero" style="padding-bottom: 32px;">
+  <div class="container">
+    <div style="max-width: 820px; margin: 0 auto;">
+      <div class="crumb">
+        <a href="index.html">בית</a>
+        <span>/</span>
+        <a href="learn.html">מדריכים</a>
+        <span>/</span>
+        <span>dbt</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="learn-section" style="padding-top: 0;">
+  <div class="container">
+    <a href="learn.html" class="learn-back"><span class="ar">←</span> חזרה לכל המדריכים</a>
+
+    <article class="learn-article reveal">
+      <span class="learn-eyebrow">יסודות · 7 דקות קריאה</span>
+      <h1>מהו dbt?</h1>
+      <p class="learn-lead">ה-Git ל-SQL - בקרת גרסאות, בדיקות ותיעוד לשאילתות שמפעילות את הדשבורדים שלך.</p>
+
+      <h2>התשובה המהירה</h2>
+      <p>dbt (data build tool) הוא הסטנדרט להמרת נתונים בתוך מחסן הנתונים שלך. אתה כותב טרנספורמציות כקבצי SQL, dbt מבין את התלויות, מריץ אותן בסדר הנכון, בודק את הפלט, ויוצר תיעוד חי - הכל עם בקרת גרסאות מובנית.</p>
+      <p>במילים אחרות: dbt הוא מה שגרם ל"קוד של צוות הנתונים שלך" להיראות מקצועי כמו "הקוד של צוות ההנדסה שלך."</p>
+
+      <h2>מה dbt בעצם פותר?</h2>
+      <p>שלוש בעיות שכל צוות נתונים נתקל בהן בסוף:</p>
+      <ol>
+        <li><strong>אין בקרת גרסאות על SQL.</strong> מישהו משכתב מדד, שובר שלושה דשבורדים, אף אחד לא יכול לחזור אחורה.</li>
+        <li><strong>אין בדיקות.</strong> עמודה מתחילה להחזיר ערכי null. אף אחד לא שם לב במשך שבועיים.</li>
+        <li><strong>אין תיעוד.</strong> "מה המשמעות של העמודה הזו?" התשובה חיה בראש של מישהו.</li>
+      </ol>
+      <p>dbt פותר את שלושתן בדפוס אחד: קבצי SQL ב-Git, נבדקים בכל שינוי, מתועדים אוטומטית.</p>
+
+      <h2>ארבעת אבני הבניין</h2>
+      <ol>
+        <li><strong>Models (מודלים).</strong> משפטי SELECT שהופכים לטבלאות או views במחסן שלך. כל מודל הוא קובץ אחד.</li>
+        <li><strong>Tests (בדיקות).</strong> הצהרות על הנתונים שלך - "העמודה הזו אף פעם לא null", "זה ייחודי", "הערכים תואמים לרשימה הזו". רצים על כל מודל.</li>
+        <li><strong>Sources (מקורות).</strong> הצבעות לטבלאות raw (מ-Fivetran, Airbyte וכו'). מאפשר להפנות אליהן בבטחה ולתעד אותן.</li>
+        <li><strong>Refs (הפניות).</strong> איך מודלים תלויים במודלים אחרים. dbt בונה את גרף התלויות ומריץ הכל בסדר הנכון.</li>
+      </ol>
+
+      <h2>איך מאורגן פרויקט dbt</h2>
+      <ol>
+        <li><strong>Sources.</strong> טבלאות raw מבחוץ, מוצהרות אבל לא משונות.</li>
+        <li><strong>Staging.</strong> מודל staging אחד לכל טבלת מקור. שינוי שם עמודות, casting של טיפוסים, ניקוי קל.</li>
+        <li><strong>Intermediate.</strong> Joins ושינויי צורה שעדיין לא מיועדים לעסק.</li>
+        <li><strong>Marts.</strong> טבלאות נקיות וידידותיות לעסק לפי תחום - <code>finance.revenue</code>, <code>marketing.sessions</code>.</li>
+      </ol>
+
+      <h2>מלכודות נפוצות</h2>
+      <ul>
+        <li><strong>דילוג על בדיקות.</strong> "נוסיף אותן אחר כך" - לא תוסיף. הוסף אותן בזמן הבנייה.</li>
+        <li><strong>שימוש ב-macros מוקדם מדי.</strong> ל-dbt יש Jinja macros עוצמתיים, אבל הם הופכים את הדיבוג לקשה. שמור על פשטות עד שהכפילויות באמת מכאיבות.</li>
+        <li><strong>טבלאות גדולות, ללא incremental.</strong> בנייה מחדש של מודל של 500M שורות כל שעה תשרוף את חשבון המחסן. materializations של incremental קיימים בשביל זה.</li>
+        <li><strong>ללא CI.</strong> הרץ <code>dbt build</code> בכל PR. תפוס שבירות לפני המיזוג.</li>
+      </ul>
+
+      <h2>איך נראה dbt טוב?</h2>
+      <ul>
+        <li>לכל מודל יש לפחות בדיקה אחת (בדרך כלל <code>not_null</code> ו-<code>unique</code> על המפתח הראשי).</li>
+        <li>קונבנציה ברורה: staging, intermediate, marts.</li>
+        <li>אתר תיעוד שנוצר אוטומטית, מתארח על תת-דומיין שלך.</li>
+        <li>גרף lineage שאפשר ללחוץ עליו כדי לראות "מה תלוי בעמודה הזו?"</li>
+        <li>מודלי incremental לכל טבלה מעל ~100M שורות.</li>
+        <li>שכבת מדדים - "הכנסה" מוגדרת פעם אחת, בשימוש בכל מקום.</li>
+      </ul>
+
+      <h2>איפה Data Clinic נכנסת לתמונה</h2>
+      <p>המומחים שלנו בונים פרויקטי dbt מאפס, מבצעים בדיקה לקיימים, ומעבירים צוותים מ-SQL גולמי או stored procedures. אתם עובדים ישירות עם הפרילנסר הבכיר שמבצע את העבודה - ללא תיווך, ללא ג'וניורים, ללא העברות. כל פרויקט יוצא לאוויר עם בדיקות, תיעוד, CI/CD, ושכבת מדדים. הצוות שלך מחזיק במפתחות כשהעבודה מסתיימת - ללא נעילה, ללא דבק קנייני.</p>
+    </article>
+
+    <a href="learn.html" class="learn-back" style="margin-top: 24px;"><span class="ar">←</span> חזרה לכל המדריכים</a>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a href="index.html" class="brand"><img src="../assets/mascot.png" alt=""/><span>Data Clinic</span></a>
+        <p>קולקטיב של מומחי דאטה עצמאיים ובכירים - דשבורדים, סוכני AI והפייפליינים שמתחתיהם, בנויים בידי מי שבאמת מבצע את העבודה.</p>
+      </div>
+      <div class="foot-col">
+        <h5>מוצר</h5>
+        <a href="dashboards.html">דשבורדים</a>
+        <a href="agents.html">סוכני AI</a>
+        <a href="index.html#services">שירותים</a>
+      </div>
+      <div class="foot-col">
+        <h5>חברה</h5>
+        <a href="about.html">אודות</a>
+        <a href="about.html#contact">צור קשר</a>
+        <a href="#">לקוחות</a>
+        <a href="#">בלוג</a>
+      </div>
+      <div class="foot-col">
+        <h5>משאבים</h5>
+        <a href="learn.html">מדריכים</a>
+        <a href="#">שינויים</a>
+        <a href="#">אבטחה</a>
+        <a href="#">פרטיות</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Data Clinic. כל הזכויות שמורות.</span>
+      <span>נבנה באהבה בתל אביב.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+
+</body>
+</html>

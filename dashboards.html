@@ -1,0 +1,558 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Dashboards - Data Clinic</title>
+<meta name="description" content="Pre-built BI dashboards we tailor to your business - Management, Marketing, Finance, HR, Product, and Sales. Live data, ready in two weeks." />
+<link rel="stylesheet" href="site.css?v=4" />
+<link rel="icon" type="image/png" href="assets/mascot.png" />
+</head>
+<body>
+
+<!-- ──────── NAV ──────── -->
+<header class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="brand">
+      <img src="assets/mascot.png" alt="" />
+      <span>Data Clinic</span>
+    </a>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="index.html#services">Services</a>
+      <a href="dashboards.html" class="active">Dashboards</a>
+      <a href="agents.html">AI Agents</a>
+      <a href="learn.html">Learn</a>
+      <a href="about.html">About</a>
+    </nav>
+    <div class="nav-cta-row">
+      <div class="lang-toggle">
+        <a href="dashboards.html" class="lang-btn active">EN</a>
+        <a href="he/dashboards.html" class="lang-btn">HE</a>
+      </div>
+      <a href="about.html#contact" class="btn btn-primary">Hire a specialist <span class="arrow">→</span></a>
+    </div>
+  </div>
+</header>
+
+<!-- ──────── PAGE HERO ──────── -->
+<section class="page-hero">
+  <div class="container">
+    <div class="page-hero-grid">
+      <div>
+        <div class="crumb">
+          <a href="index.html">Home</a>
+          <span>/</span>
+          <span>Dashboards</span>
+        </div>
+        <h1>Our dashboards. <br/><span class="serif">One source of truth.</span></h1>
+        <p class="lead">Department dashboards we tailor to your data - live KPIs, the right filters, and the questions every team actually needs answered. Connect your warehouse and you're live in two weeks.</p>
+        <div style="display:flex; gap:10px; flex-wrap:wrap;">
+          <a href="#all-dashboards" class="btn btn-blue btn-lg">Explore the dashboards <span class="arrow">→</span></a>
+          <a href="about.html#contact" class="btn btn-ghost btn-lg">Book a demo</a>
+        </div>
+      </div>
+      <div class="page-hero-mascot">
+        <img src="assets/mascot.png" alt="Data Clinic mascot"/>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ──────── SPOTLIGHT (Management dashboard, full feature) ──────── -->
+<section class="section" style="padding: 96px 0 32px;">
+  <div class="container">
+    <div class="section-head reveal" style="text-align:left; margin-bottom: 36px; max-width: none;">
+      <span class="section-eyebrow">SPOTLIGHT</span>
+      <h2 style="font-size: clamp(28px, 3.4vw, 44px);">The CEO morning view, <span class="serif">at a glance.</span></h2>
+      <p style="margin: 0; max-width: 60ch;">Our most-requested dashboard - the one your leadership team checks before their first coffee.</p>
+    </div>
+
+    <div class="spotlight reveal">
+      <div class="spotlight-text">
+        <div class="eyebrow">Management Dashboard</div>
+        <h3>Revenue, growth, margin and runway - <span class="serif">together at last.</span></h3>
+        <p>Every team's headline metric on a single page. Refreshed every 15 minutes from your data warehouse, with anomaly alerts piped into Slack.</p>
+        <ul>
+          <li>Daily, weekly, monthly, and YTD comparisons</li>
+          <li>Drill-down from total revenue → channel → SKU → row</li>
+          <li>Variance vs. plan, budget, and rolling forecast</li>
+          <li>Automated commentary on movements above 5%</li>
+        </ul>
+        <div style="display:flex; gap:10px; flex-wrap:wrap;">
+          <a href="#all-dashboards" class="btn btn-blue">See all dashboards <span class="arrow">→</span></a>
+          <a href="about.html#contact" class="btn btn-on-dark">Book a 30-min demo</a>
+        </div>
+      </div>
+      <div class="spotlight-canvas">
+        <div class="spotlight-row">
+          <h4>Northwind · Q4 FY26 · Live</h4>
+          <span class="meta">last refresh 2 min ago</span>
+        </div>
+        <div class="spotlight-kpis">
+          <div class="sk"><div class="l">Revenue MTD</div><div class="v">₪2.84M</div><div class="d">+18.4% vs LY</div></div>
+          <div class="sk"><div class="l">Gross margin</div><div class="v">62.1%</div><div class="d">+1.2pp QoQ</div></div>
+          <div class="sk"><div class="l">Burn / mo</div><div class="v">₪410k</div><div class="d">on plan</div></div>
+          <div class="sk"><div class="l">Runway</div><div class="v">14.2m</div><div class="d">+0.4m</div></div>
+        </div>
+        <div class="spotlight-bigchart">
+          <svg viewBox="0 0 600 220" preserveAspectRatio="none">
+            <line class="gline" x1="0" y1="55"  x2="600" y2="55"/>
+            <line class="gline" x1="0" y1="110" x2="600" y2="110"/>
+            <line class="gline" x1="0" y1="165" x2="600" y2="165"/>
+            <path class="area" d="M0,160 L60,150 L120,140 L180,118 L240,124 L300,96 L360,84 L420,72 L480,60 L540,46 L600,38 L600,220 L0,220 Z"/>
+            <path class="line" d="M0,160 L60,150 L120,140 L180,118 L240,124 L300,96 L360,84 L420,72 L480,60 L540,46 L600,38"/>
+            <path class="line2" d="M0,170 L60,168 L120,162 L180,156 L240,148 L300,140 L360,132 L420,124 L480,116 L540,108 L600,100"/>
+            <circle class="pt" cx="600" cy="38" r="4"/>
+            <circle class="pt" cx="540" cy="46" r="3" opacity="0.7"/>
+          </svg>
+        </div>
+        <div style="display:flex; justify-content:space-between; font-family: var(--font-mono); font-size:11px; color: rgba(255,255,255,0.5);">
+          <span>Jan</span><span>Feb</span><span>Mar</span><span>Apr</span><span>May</span><span>Jun</span><span>Jul</span><span>Aug</span><span>Sep</span><span>Oct</span><span>Nov</span><span>Dec</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ──────── ALL DASHBOARDS ──────── -->
+<section class="section" id="all-dashboards" style="padding: 64px 0 96px;">
+  <div class="container">
+    <div class="section-head reveal" style="text-align:left; margin-bottom: 12px; max-width: none;">
+      <span class="section-eyebrow">ALL DASHBOARDS</span>
+      <h2 style="font-size: clamp(28px, 3.4vw, 44px);">Built for every team, <span class="serif">live in two weeks.</span></h2>
+      <p style="margin: 0; max-width: 60ch;">Pick a department, see the KPIs that come standard, and tell us what's missing. We tailor every dashboard to your business.</p>
+    </div>
+
+    <div class="filter-bar reveal">
+      <span class="label">Filter by team:</span>
+      <button class="filter-chip active" data-cat="all">All</button>
+      <button class="filter-chip" data-cat="exec">Leadership</button>
+      <button class="filter-chip" data-cat="marketing">Marketing</button>
+      <button class="filter-chip" data-cat="finance">Finance</button>
+      <button class="filter-chip" data-cat="hr">HR & people</button>
+      <button class="filter-chip" data-cat="product">Product</button>
+      <button class="filter-chip" data-cat="sales">Sales & CRM</button>
+    </div>
+
+    <div class="dash-detail-grid reveal" style="margin-top: 32px;">
+
+      <!-- 1. MANAGEMENT -->
+      <article class="dash-detail" data-cat="exec">
+        <div class="ddh">
+          <div class="ddh-left">
+            <div class="ddh-icon">M</div>
+            <div>
+              <div class="ddh-title">Management Dashboard</div>
+              <div class="ddh-sub">refresh · every 15min · BigQuery → Looker</div>
+            </div>
+          </div>
+          <span class="ddh-tag"><span class="pulse"></span>Live</span>
+        </div>
+        <div class="ddb">
+          <div class="dd-kpis">
+            <div class="dd-kpi"><div class="l">Revenue</div><div class="v">₪2.84M</div><div class="d">+18.4%</div></div>
+            <div class="dd-kpi"><div class="l">Gross %</div><div class="v">62.1%</div><div class="d">+1.2pp</div></div>
+            <div class="dd-kpi"><div class="l">Burn</div><div class="v">₪410k</div><div class="d">on plan</div></div>
+            <div class="dd-kpi"><div class="l">Runway</div><div class="v">14.2m</div><div class="d">+0.4m</div></div>
+          </div>
+          <div class="dd-chart">
+            <div class="h">
+              <span class="t">Revenue, last 6 months</span>
+              <div class="leg"><span><i style="background:#16A8EA;"></i>Actual</span><span><i style="background:#F97316;"></i>Plan</span></div>
+            </div>
+            <div class="body dd-line">
+              <svg viewBox="0 0 300 100" preserveAspectRatio="none">
+                <path d="M0,80 L60,68 L120,58 L180,42 L240,30 L300,18" stroke="#16A8EA" stroke-width="2" fill="rgba(22,168,234,0.12)"/>
+                <path d="M0,82 L60,72 L120,64 L180,52 L240,40 L300,30" stroke="#F97316" stroke-width="2" fill="none" stroke-dasharray="3 2"/>
+              </svg>
+            </div>
+          </div>
+          <div class="dd-meta">
+            <div class="dd-stack">
+              <span class="chip"><img src="assets/logos/looker.svg" alt=""/>Looker</span>
+              <span class="chip"><img src="assets/logos/bigquery.svg" alt=""/>BigQuery</span>
+              <span class="chip"><img src="assets/logos/dbt.svg" alt=""/>dbt</span>
+            </div>
+          </div>
+        </div>
+        <div class="dd-actions">
+          <a href="#" class="open-btn">Open dashboard <span>→</span></a>
+          <a href="#" class="ghost">View case study</a>
+        </div>
+      </article>
+
+      <!-- 2. MARKETING -->
+      <article class="dash-detail" data-cat="marketing">
+        <div class="ddh">
+          <div class="ddh-left">
+            <div class="ddh-icon">P</div>
+            <div>
+              <div class="ddh-title">Marketing Performance</div>
+              <div class="ddh-sub">refresh · daily · GA4 + Meta + Google Ads → Power BI</div>
+            </div>
+          </div>
+          <span class="ddh-tag"><span class="pulse"></span>Daily</span>
+        </div>
+        <div class="ddb">
+          <div class="dd-kpis">
+            <div class="dd-kpi"><div class="l">Spend</div><div class="v">₪184k</div><div class="d dn">+22%</div></div>
+            <div class="dd-kpi"><div class="l">ROAS</div><div class="v">4.2×</div><div class="d">+0.6×</div></div>
+            <div class="dd-kpi"><div class="l">CPA</div><div class="v">₪84</div><div class="d">−12%</div></div>
+            <div class="dd-kpi"><div class="l">CTR</div><div class="v">2.4%</div><div class="d">+0.3pp</div></div>
+          </div>
+          <div class="dd-chart">
+            <div class="h">
+              <span class="t">Spend vs revenue, by channel</span>
+              <div class="leg"><span><i style="background:#16A8EA;"></i>Revenue</span><span><i style="background:#F97316;"></i>Spend</span></div>
+            </div>
+            <div class="body">
+              <div class="dd-bars">
+                <div class="col"><div class="stack"><span style="height:62%; background:#16A8EA;"></span><span style="height:24%; background:#F97316;"></span></div><span class="lbl">Meta</span></div>
+                <div class="col"><div class="stack"><span style="height:48%; background:#16A8EA;"></span><span style="height:30%; background:#F97316;"></span></div><span class="lbl">Google</span></div>
+                <div class="col"><div class="stack"><span style="height:38%; background:#16A8EA;"></span><span style="height:14%; background:#F97316;"></span></div><span class="lbl">Email</span></div>
+                <div class="col"><div class="stack"><span style="height:30%; background:#16A8EA;"></span><span style="height:8%; background:#F97316;"></span></div><span class="lbl">Organic</span></div>
+                <div class="col"><div class="stack"><span style="height:18%; background:#16A8EA;"></span><span style="height:18%; background:#F97316;"></span></div><span class="lbl">Affiliate</span></div>
+                <div class="col"><div class="stack"><span style="height:12%; background:#16A8EA;"></span><span style="height:6%; background:#F97316;"></span></div><span class="lbl">TikTok</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="dd-meta">
+            <div class="dd-stack">
+              <span class="chip"><img src="assets/logos/powerbi.svg" alt=""/>Power BI</span>
+              <span class="chip"><img src="assets/logos/ga4.svg" alt=""/>GA4</span>
+              <span class="chip"><img src="assets/logos/hubspot.svg" alt=""/>HubSpot</span>
+            </div>
+          </div>
+        </div>
+        <div class="dd-actions">
+          <a href="#" class="open-btn">Open dashboard <span>→</span></a>
+          <a href="#" class="ghost">View case study</a>
+        </div>
+      </article>
+
+      <!-- 3. FINANCE -->
+      <article class="dash-detail" data-cat="finance">
+        <div class="ddh">
+          <div class="ddh-left">
+            <div class="ddh-icon">F</div>
+            <div>
+              <div class="ddh-title">Financial Reports</div>
+              <div class="ddh-sub">refresh · monthly close · NetSuite → Tableau</div>
+            </div>
+          </div>
+          <span class="ddh-tag" style="background:#FAEFCC; color:#A8690A;">Monthly</span>
+        </div>
+        <div class="ddb">
+          <div class="dd-kpis">
+            <div class="dd-kpi"><div class="l">MRR</div><div class="v">₪3.2M</div><div class="d">+9.4%</div></div>
+            <div class="dd-kpi"><div class="l">Gross %</div><div class="v">62%</div><div class="d">−1pp</div></div>
+            <div class="dd-kpi"><div class="l">AR aging</div><div class="v">22d</div><div class="d">−3d</div></div>
+            <div class="dd-kpi"><div class="l">Cash</div><div class="v">₪5.8M</div><div class="d">+₪0.3M</div></div>
+          </div>
+          <div class="dd-chart">
+            <div class="h">
+              <span class="t">P&L · Revenue vs OpEx</span>
+              <div class="leg"><span><i style="background:#16A8EA;"></i>Revenue</span><span><i style="background:#F97316;"></i>OpEx</span></div>
+            </div>
+            <div class="body">
+              <div class="dd-bars">
+                <div class="col"><div class="stack"><span style="height:58%; background:#16A8EA;"></span><span style="height:32%; background:#F97316;"></span></div><span class="lbl">Jan</span></div>
+                <div class="col"><div class="stack"><span style="height:62%; background:#16A8EA;"></span><span style="height:34%; background:#F97316;"></span></div><span class="lbl">Feb</span></div>
+                <div class="col"><div class="stack"><span style="height:68%; background:#16A8EA;"></span><span style="height:36%; background:#F97316;"></span></div><span class="lbl">Mar</span></div>
+                <div class="col"><div class="stack"><span style="height:72%; background:#16A8EA;"></span><span style="height:38%; background:#F97316;"></span></div><span class="lbl">Apr</span></div>
+                <div class="col"><div class="stack"><span style="height:80%; background:#16A8EA;"></span><span style="height:40%; background:#F97316;"></span></div><span class="lbl">May</span></div>
+                <div class="col"><div class="stack"><span style="height:84%; background:#16A8EA;"></span><span style="height:42%; background:#F97316;"></span></div><span class="lbl">Jun</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="dd-meta">
+            <div class="dd-stack">
+              <span class="chip"><img src="assets/logos/tableau.svg" alt=""/>Tableau</span>
+              <span class="chip"><img src="assets/logos/snowflake.svg" alt=""/>Snowflake</span>
+              <span class="chip"><img src="assets/logos/excel.svg" alt=""/>Excel sync</span>
+            </div>
+          </div>
+        </div>
+        <div class="dd-actions">
+          <a href="#" class="open-btn">Open dashboard <span>→</span></a>
+          <a href="#" class="ghost">View case study</a>
+        </div>
+      </article>
+
+      <!-- 4. HR -->
+      <article class="dash-detail" data-cat="hr">
+        <div class="ddh">
+          <div class="ddh-left">
+            <div class="ddh-icon">H</div>
+            <div>
+              <div class="ddh-title">People & HR</div>
+              <div class="ddh-sub">refresh · weekly · BambooHR → Looker</div>
+            </div>
+          </div>
+          <span class="ddh-tag" style="background:#E0E7FF; color:#4F46E5;">Weekly</span>
+        </div>
+        <div class="ddb">
+          <div class="dd-kpis">
+            <div class="dd-kpi"><div class="l">Headcount</div><div class="v">142</div><div class="d">+8</div></div>
+            <div class="dd-kpi"><div class="l">Attrition</div><div class="v">8.4%</div><div class="d dn">+0.6pp</div></div>
+            <div class="dd-kpi"><div class="l">eNPS</div><div class="v">+42</div><div class="d">+3</div></div>
+            <div class="dd-kpi"><div class="l">Time to hire</div><div class="v">23d</div><div class="d">−4d</div></div>
+          </div>
+          <div class="dd-chart">
+            <div class="h">
+              <span class="t">Headcount growth & open roles</span>
+              <div class="leg"><span><i style="background:#16A8EA;"></i>Filled</span><span><i style="background:#8593A6;"></i>Open</span></div>
+            </div>
+            <div class="body">
+              <div class="dd-bars">
+                <div class="col"><div class="stack"><span style="height:45%; background:#16A8EA;"></span><span style="height:8%; background:#CBE9FB;"></span></div><span class="lbl">Eng</span></div>
+                <div class="col"><div class="stack"><span style="height:30%; background:#16A8EA;"></span><span style="height:10%; background:#CBE9FB;"></span></div><span class="lbl">Sales</span></div>
+                <div class="col"><div class="stack"><span style="height:22%; background:#16A8EA;"></span><span style="height:6%; background:#CBE9FB;"></span></div><span class="lbl">Mkt</span></div>
+                <div class="col"><div class="stack"><span style="height:18%; background:#16A8EA;"></span><span style="height:4%; background:#CBE9FB;"></span></div><span class="lbl">Ops</span></div>
+                <div class="col"><div class="stack"><span style="height:14%; background:#16A8EA;"></span><span style="height:2%; background:#CBE9FB;"></span></div><span class="lbl">CS</span></div>
+                <div class="col"><div class="stack"><span style="height:10%; background:#16A8EA;"></span><span style="height:0%; background:#CBE9FB;"></span></div><span class="lbl">G&A</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="dd-meta">
+            <div class="dd-stack">
+              <span class="chip"><img src="assets/logos/looker.svg" alt=""/>Looker</span>
+              <span class="chip"><img src="assets/logos/sheets.svg" alt=""/>Sheets</span>
+              <span class="chip"><img src="assets/logos/bigquery.svg" alt=""/>BigQuery</span>
+            </div>
+          </div>
+        </div>
+        <div class="dd-actions">
+          <a href="#" class="open-btn">Open dashboard <span>→</span></a>
+          <a href="#" class="ghost">View case study</a>
+        </div>
+      </article>
+
+      <!-- 5. PRODUCT -->
+      <article class="dash-detail" data-cat="product">
+        <div class="ddh">
+          <div class="ddh-left">
+            <div class="ddh-icon">U</div>
+            <div>
+              <div class="ddh-title">Product Analytics</div>
+              <div class="ddh-sub">refresh · streaming · Segment → BigQuery → Looker</div>
+            </div>
+          </div>
+          <span class="ddh-tag"><span class="pulse"></span>Live</span>
+        </div>
+        <div class="ddb">
+          <div class="dd-kpis">
+            <div class="dd-kpi"><div class="l">DAU</div><div class="v">38,420</div><div class="d">+6.1%</div></div>
+            <div class="dd-kpi"><div class="l">D7 retention</div><div class="v">62%</div><div class="d">+2pp</div></div>
+            <div class="dd-kpi"><div class="l">Activation</div><div class="v">71%</div><div class="d">+4pp</div></div>
+            <div class="dd-kpi"><div class="l">Churn</div><div class="v">2.1%</div><div class="d">−0.3pp</div></div>
+          </div>
+          <div class="dd-chart">
+            <div class="h">
+              <span class="t">Onboarding funnel · last 30d</span>
+              <div class="leg"><span><i style="background:#16A8EA;"></i>Users</span></div>
+            </div>
+            <div class="body dd-line">
+              <svg viewBox="0 0 300 100" preserveAspectRatio="none">
+                <path d="M0,8 L60,8 L60,28 L120,28 L120,46 L180,46 L180,62 L240,62 L240,78 L300,78" stroke="#16A8EA" stroke-width="2" fill="rgba(22,168,234,0.14)"/>
+              </svg>
+              <div style="display:flex; justify-content: space-between; font-family: var(--font-mono); font-size: 9px; color:#8593A6; margin-top: 4px;">
+                <span>Sign-up 100%</span><span>Verify 84%</span><span>1st action 64%</span><span>Day 7 41%</span><span>Day 30 22%</span>
+              </div>
+            </div>
+          </div>
+          <div class="dd-meta">
+            <div class="dd-stack">
+              <span class="chip"><img src="assets/logos/looker.svg" alt=""/>Looker</span>
+              <span class="chip"><img src="assets/logos/bigquery.svg" alt=""/>BigQuery</span>
+              <span class="chip"><img src="assets/logos/dbt.svg" alt=""/>dbt</span>
+            </div>
+          </div>
+        </div>
+        <div class="dd-actions">
+          <a href="#" class="open-btn">Open dashboard <span>→</span></a>
+          <a href="#" class="ghost">View case study</a>
+        </div>
+      </article>
+
+      <!-- 6. SALES -->
+      <article class="dash-detail" data-cat="sales">
+        <div class="ddh">
+          <div class="ddh-left">
+            <div class="ddh-icon">S</div>
+            <div>
+              <div class="ddh-title">Sales & CRM Pipeline</div>
+              <div class="ddh-sub">refresh · hourly · Salesforce → Tableau</div>
+            </div>
+          </div>
+          <span class="ddh-tag"><span class="pulse"></span>Hourly</span>
+        </div>
+        <div class="ddb">
+          <div class="dd-kpis">
+            <div class="dd-kpi"><div class="l">Pipeline</div><div class="v">₪4.8M</div><div class="d">+₪0.4M</div></div>
+            <div class="dd-kpi"><div class="l">Win rate</div><div class="v">28%</div><div class="d">+3pp</div></div>
+            <div class="dd-kpi"><div class="l">Cycle</div><div class="v">42d</div><div class="d">−5d</div></div>
+            <div class="dd-kpi"><div class="l">Forecast</div><div class="v">₪1.6M</div><div class="d">on track</div></div>
+          </div>
+          <div class="dd-chart">
+            <div class="h">
+              <span class="t">Pipeline by stage</span>
+              <div class="leg"><span><i style="background:#16A8EA;"></i>Pipeline value</span></div>
+            </div>
+            <div class="body">
+              <div class="dd-bars">
+                <div class="col"><div class="stack"><span style="height:90%; background:#16A8EA;"></span></div><span class="lbl">Lead</span></div>
+                <div class="col"><div class="stack"><span style="height:72%; background:#7CD3F5;"></span></div><span class="lbl">Qualif.</span></div>
+                <div class="col"><div class="stack"><span style="height:55%; background:#9DD4F4;"></span></div><span class="lbl">Demo</span></div>
+                <div class="col"><div class="stack"><span style="height:42%; background:#F97316;"></span></div><span class="lbl">Prop.</span></div>
+                <div class="col"><div class="stack"><span style="height:28%; background:#FB9A3E;"></span></div><span class="lbl">Negot.</span></div>
+                <div class="col"><div class="stack"><span style="height:18%; background:#117E3E;"></span></div><span class="lbl">Won</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="dd-meta">
+            <div class="dd-stack">
+              <span class="chip"><img src="assets/logos/tableau.svg" alt=""/>Tableau</span>
+              <span class="chip"><img src="assets/logos/salesforce.svg" alt=""/>Salesforce</span>
+              <span class="chip"><img src="assets/logos/snowflake.svg" alt=""/>Snowflake</span>
+            </div>
+          </div>
+        </div>
+        <div class="dd-actions">
+          <a href="#" class="open-btn">Open dashboard <span>→</span></a>
+          <a href="#" class="ghost">View case study</a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ──────── SLIM STATS ──────── -->
+<section style="padding: 0 0 96px;">
+  <div class="container reveal">
+    <div class="slim-stats">
+      <div class="cell"><div class="num">40<span class="serif">+</span></div><div class="lbl">Dashboards shipped</div></div>
+      <div class="cell"><div class="num">12</div><div class="lbl">Industries served</div></div>
+      <div class="cell"><div class="num">99.9%</div><div class="lbl">Pipeline uptime</div></div>
+      <div class="cell"><div class="num">2 wks</div><div class="lbl">Avg. time to live</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ──────── HOW WE BUILD ──────── -->
+<section class="section" style="padding: 0 0 120px; background: linear-gradient(180deg, #fff, #F7F8FB);">
+  <div class="container">
+    <div class="section-head reveal" style="text-align:left; max-width: none; margin-bottom: 36px;">
+      <span class="section-eyebrow">HOW WE BUILD</span>
+      <h2 style="font-size: clamp(28px, 3.4vw, 44px);">Each dashboard is <span class="serif">a small project,</span> not a template drop.</h2>
+    </div>
+
+    <div class="arch-card reveal">
+      <div class="arch-row">
+        <div class="arch-step">
+          <span class="num">01</span>
+          <h5>Diagnose</h5>
+          <p>One-hour call with your team. We map sources, current pain, and the questions every stakeholder is asking.</p>
+        </div>
+        <div class="arch-arrow">→</div>
+        <div class="arch-step">
+          <span class="num">02</span>
+          <h5>Model</h5>
+          <p>We connect sources, build dbt models with tests and docs, and align metrics across teams in a metrics layer.</p>
+        </div>
+        <div class="arch-arrow">→</div>
+        <div class="arch-step">
+          <span class="num">03</span>
+          <h5>Ship & monitor</h5>
+          <p>Dashboards go live in your BI tool of choice. Anomaly Doctor watches every KPI and alerts on drift.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ──────── CTA BAND ──────── -->
+<section style="padding: 0 0 120px;">
+  <div class="container reveal">
+    <div class="cta-band">
+      <div>
+        <h2>Want a dashboard <span class="serif">for your team?</span></h2>
+        <p>Free 30-minute scoping call. We'll show you what your data looks like in our templates, and you'll leave with a roadmap.</p>
+        <div class="btns">
+          <a href="about.html#contact" class="btn btn-blue btn-lg">Book a free call <span class="arrow">→</span></a>
+          <a href="agents.html" class="btn btn-ghost btn-lg">Meet the AI agents</a>
+        </div>
+      </div>
+      <div class="cta-band-art">
+        <img src="assets/mascot.png" alt="">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ──────── FOOTER ──────── -->
+<footer class="footer">
+  <div class="container">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a href="index.html" class="brand"><img src="assets/mascot.png" alt=""/><span>Data Clinic</span></a>
+        <p>A collective of senior freelance data specialists - dashboards, AI agents, and the pipelines beneath them, built by the people who actually do the work.</p>
+      </div>
+      <div class="foot-col">
+        <h5>Product</h5>
+        <a href="dashboards.html">Dashboards</a>
+        <a href="agents.html">AI Agents</a>
+        <a href="index.html#services">Services</a>
+      </div>
+      <div class="foot-col">
+        <h5>Company</h5>
+        <a href="about.html">About</a>
+        <a href="about.html#contact">Contact</a>
+        <a href="#">Customers</a>
+        <a href="#">Blog</a>
+      </div>
+      <div class="foot-col">
+        <h5>Resources</h5>
+        <a href="#">Docs</a>
+        <a href="#">Changelog</a>
+        <a href="#">Security</a>
+        <a href="#">Privacy</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Data Clinic. All rights reserved.</span>
+      <span>Made with care in Tel Aviv.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Reveal on scroll
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  // Filter chips on dashboards
+  const chips = document.querySelectorAll('.filter-chip');
+  const cards = document.querySelectorAll('.dash-detail');
+  chips.forEach(chip => {
+    chip.addEventListener('click', () => {
+      chips.forEach(c => c.classList.remove('active'));
+      chip.classList.add('active');
+      const cat = chip.dataset.cat;
+      cards.forEach(card => {
+        if (cat === 'all' || card.dataset.cat === cat) {
+          card.style.display = '';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  });
+</script>
+
+</body>
+</html>

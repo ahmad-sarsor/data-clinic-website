@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>What is a BI system? - Data Clinic</title>
+<meta name="description" content="A plain-English guide to BI systems: what they are, the four pieces, common pitfalls, and what good looks like." />
+<link rel="stylesheet" href="site.css?v=4" />
+<link rel="icon" type="image/png" href="assets/mascot.png" />
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="brand">
+      <img src="assets/mascot.png" alt="" />
+      <span>Data Clinic</span>
+    </a>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="index.html#services">Services</a>
+      <a href="dashboards.html">Dashboards</a>
+      <a href="agents.html">AI Agents</a>
+      <a href="learn.html" class="active">Learn</a>
+      <a href="about.html">About</a>
+    </nav>
+    <div class="nav-cta-row">
+      <div class="lang-toggle">
+        <a href="learn-bi.html" class="lang-btn active">EN</a>
+        <a href="he/learn-bi.html" class="lang-btn">HE</a>
+      </div>
+      <a href="about.html#contact" class="btn btn-primary">Hire a specialist <span class="arrow">→</span></a>
+    </div>
+  </div>
+</header>
+
+<section class="page-hero" style="padding-bottom: 32px;">
+  <div class="container">
+    <div style="max-width: 820px; margin: 0 auto;">
+      <div class="crumb">
+        <a href="index.html">Home</a>
+        <span>/</span>
+        <a href="learn.html">Learn</a>
+        <span>/</span>
+        <span>BI system</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="learn-section" style="padding-top: 0;">
+  <div class="container">
+    <a href="learn.html" class="learn-back"><span class="ar">←</span> Back to all guides</a>
+
+    <article class="learn-article reveal">
+      <span class="learn-eyebrow">Fundamentals · 6 min read</span>
+      <h1>What is a BI system?</h1>
+      <p class="learn-lead">If your CEO ever asked "where do these numbers come from?", this guide is for you.</p>
+
+      <h2>The 30-second answer</h2>
+      <p>A BI (Business Intelligence) system is the chain of tools that takes raw events from your business - every order, every login, every cost - and turns them into the dashboards and reports your team uses to make decisions.</p>
+      <p>Said differently: it's the difference between someone asking "what's our revenue this month?" and getting an answer in 2 seconds versus 2 days.</p>
+
+      <h2>The four pieces every BI system has</h2>
+      <ol>
+        <li><strong>Sources.</strong> Your CRM, e-commerce platform, ad accounts, application database. Anywhere events happen - that's a source.</li>
+        <li><strong>Pipelines.</strong> The scheduled jobs that pull data from each source automatically. They retry on failure, alert when broken, and run while you sleep.</li>
+        <li><strong>Warehouse.</strong> A central database where clean, modeled data lives. Think BigQuery or Snowflake - the single place every dashboard reads from.</li>
+        <li><strong>Dashboards.</strong> The visual layer your team actually opens every morning. Power BI, Tableau, Looker, Metabase - whichever your team will use.</li>
+      </ol>
+
+      <h2>Why a BI system - not just spreadsheets?</h2>
+      <p>Spreadsheets work great until the business grows. Then three people are emailing different versions of "the same" report, no one knows which is right, and two hours per week disappear into reconciliation.</p>
+      <p>A BI system solves all three problems:</p>
+      <ul>
+        <li><strong>One source of truth.</strong> One number, valid for everyone.</li>
+        <li><strong>Auto-refresh.</strong> No more "hold on, let me update it."</li>
+        <li><strong>Scales with you.</strong> Works with 10 new sources and 100 more dashboards.</li>
+        <li><strong>Trustworthy.</strong> Every number traces back to the row that produced it.</li>
+      </ul>
+
+      <h2>Common pitfalls</h2>
+      <ul>
+        <li><strong>Building before defining.</strong> If there's no agreement on "what is revenue", the dashboard will contradict itself within a week.</li>
+        <li><strong>Tool sprawl.</strong> A company with 7 different BI tools spends more time on coordination than on insights.</li>
+        <li><strong>No documentation.</strong> Every metric should be defined once, in one place. If it's not, every team will reinvent it differently.</li>
+        <li><strong>No monitoring.</strong> Pipelines break. If you don't know, your CEO will before you do.</li>
+      </ul>
+
+      <h2>What good looks like</h2>
+      <ul>
+        <li>A dashboard your CEO opens every morning and trusts.</li>
+        <li>Every metric defined once, in one place - usually a metrics layer like dbt.</li>
+        <li>Data issues hit Slack before they hit leadership.</li>
+        <li>Your team is finding insights, not preparing reports.</li>
+        <li>New questions get answered in hours, not weeks.</li>
+      </ul>
+
+      <h2>Where Data Clinic fits in</h2>
+      <p>Our specialists build the whole chain - from connecting your sources, modeling the data in dbt, setting up the warehouse, all the way to live dashboards your team trusts. You work directly with the senior freelancer who does the work, with no agency markup and no handoffs. Most projects ship in two to six weeks. No long retainers, no junior engineers learning on your dime.</p>
+    </article>
+
+    <a href="learn.html" class="learn-back" style="margin-top: 24px;"><span class="ar">←</span> Back to all guides</a>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a href="index.html" class="brand"><img src="assets/mascot.png" alt=""/><span>Data Clinic</span></a>
+        <p>A collective of senior freelance data specialists - dashboards, AI agents, and the pipelines beneath them, built by the people who actually do the work.</p>
+      </div>
+      <div class="foot-col">
+        <h5>Product</h5>
+        <a href="dashboards.html">Dashboards</a>
+        <a href="agents.html">AI Agents</a>
+        <a href="index.html#services">Services</a>
+      </div>
+      <div class="foot-col">
+        <h5>Company</h5>
+        <a href="about.html">About</a>
+        <a href="about.html#contact">Contact</a>
+        <a href="#">Customers</a>
+        <a href="#">Blog</a>
+      </div>
+      <div class="foot-col">
+        <h5>Resources</h5>
+        <a href="learn.html">Learn</a>
+        <a href="#">Changelog</a>
+        <a href="#">Security</a>
+        <a href="#">Privacy</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Data Clinic. All rights reserved.</span>
+      <span>Made with care in Tel Aviv.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+
+</body>
+</html>

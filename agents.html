@@ -1,0 +1,524 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>AI Agents - Data Clinic</title>
+<meta name="description" content="Four specialist AI agents that work alongside your team - Anomaly Doctor, Insights Chat, Forecaster, and Narrator. Grounded in your data, embedded in Slack." />
+<link rel="stylesheet" href="site.css?v=4" />
+<link rel="icon" type="image/png" href="assets/mascot.png" />
+</head>
+<body>
+
+<!-- ──────── NAV ──────── -->
+<header class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="brand">
+      <img src="assets/mascot.png" alt="" />
+      <span>Data Clinic</span>
+    </a>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="index.html#services">Services</a>
+      <a href="dashboards.html">Dashboards</a>
+      <a href="agents.html" class="active">AI Agents</a>
+      <a href="learn.html">Learn</a>
+      <a href="about.html">About</a>
+    </nav>
+    <div class="nav-cta-row">
+      <div class="lang-toggle">
+        <a href="agents.html" class="lang-btn active">EN</a>
+        <a href="he/agents.html" class="lang-btn">HE</a>
+      </div>
+      <a href="about.html#contact" class="btn btn-primary">Hire a specialist <span class="arrow">→</span></a>
+    </div>
+  </div>
+</header>
+
+<!-- ──────── PAGE HERO ──────── -->
+<section class="page-hero">
+  <div class="container">
+    <div class="page-hero-grid">
+      <div>
+        <div class="crumb">
+          <a href="index.html">Home</a>
+          <span>/</span>
+          <span>AI Agents</span>
+        </div>
+        <h1>Four specialists, <br/><span class="serif">on call 24/7.</span></h1>
+        <p class="lead">Each agent is purpose-built for one job, grounded in your warehouse, and trained on your business definitions. They live in Slack, Teams, or right inside your dashboards - and they don't sleep.</p>
+        <div style="display:flex; gap:10px; flex-wrap:wrap;">
+          <a href="#agents-list" class="btn btn-blue btn-lg">Meet the agents <span class="arrow">→</span></a>
+          <a href="#how-they-work" class="btn btn-ghost btn-lg">How they work</a>
+        </div>
+      </div>
+      <div class="page-hero-mascot">
+        <img src="assets/mascot.png" alt="Data Clinic mascot"/>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ──────── AGENTS AT A GLANCE ──────── -->
+<section class="section" style="padding: 88px 0 0;">
+  <div class="container">
+    <div class="section-head reveal" style="text-align:left; max-width: none; margin-bottom: 32px;">
+      <span class="section-eyebrow">THE LINEUP</span>
+      <h2 style="font-size: clamp(28px, 3.4vw, 44px);">Four agents, <span class="serif">one mission:</span> turn data into decisions.</h2>
+      <p style="margin: 0; max-width: 60ch;">Click any agent below to scroll to their full profile, sample chat, and integrations.</p>
+    </div>
+
+    <div class="agents-strip reveal">
+      <a href="#agent-anomaly" class="agent-strip-card">
+        <div class="ava"><img src="assets/mascot.png" alt=""/></div>
+        <span class="role">Monitor</span>
+        <h5>Anomaly Doctor</h5>
+        <p class="tagline">Spots what's off - before you do.</p>
+        <span class="arr">View profile →</span>
+      </a>
+      <a href="#agent-insights" class="agent-strip-card">
+        <div class="ava"><img src="assets/mascot.png" alt=""/></div>
+        <span class="role">Analyst</span>
+        <h5>Insights Chat</h5>
+        <p class="tagline">Answers questions in plain English.</p>
+        <span class="arr">View profile →</span>
+      </a>
+      <a href="#agent-forecast" class="agent-strip-card">
+        <div class="ava"><img src="assets/mascot.png" alt=""/></div>
+        <span class="role">Predictor</span>
+        <h5>Forecaster</h5>
+        <p class="tagline">Projects next quarter, not last.</p>
+        <span class="arr">View profile →</span>
+      </a>
+      <a href="#agent-narrator" class="agent-strip-card">
+        <div class="ava"><img src="assets/mascot.png" alt=""/></div>
+        <span class="role">Writer</span>
+        <h5>Narrator</h5>
+        <p class="tagline">Drafts the weekly update for you.</p>
+        <span class="arr">View profile →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ──────── AGENT DETAIL CARDS ──────── -->
+<section id="agents-list" class="section" style="padding: 24px 0 96px;">
+  <div class="container">
+    <div class="agent-detail-grid reveal" style="display:flex; flex-direction:column; gap: 32px;">
+
+      <!-- 1. ANOMALY DOCTOR -->
+      <article class="agent-detail" id="agent-anomaly">
+        <div class="panel-l">
+          <div class="agent-head">
+            <div class="ava"><img src="assets/mascot.png" alt=""/></div>
+            <div>
+              <span class="role">Monitor · 24/7</span>
+              <h3>Anomaly Doctor</h3>
+              <div class="tagline">"Detects what's off - before you do."</div>
+            </div>
+          </div>
+          <p class="desc">Watches every critical KPI in your warehouse around the clock. The moment a metric deviates from its expected pattern - by hour-of-day, day-of-week, or trend - you get a Slack message with the value, the context, and a likely root cause.</p>
+          <div class="skills-row">
+            <span class="skill-chip">Anomaly detection</span>
+            <span class="skill-chip">Root-cause analysis</span>
+            <span class="skill-chip">Severity ranking</span>
+            <span class="skill-chip">Slack &amp; email alerts</span>
+            <span class="skill-chip">Holiday-aware</span>
+          </div>
+          <div class="integrations">
+            <div class="lbl">Lives in</div>
+            <div class="integ-row">
+              <span class="integ-pill"><span class="ic" style="background:#4A154B;">S</span>Slack</span>
+              <span class="integ-pill"><span class="ic" style="background:#7B83EB;">T</span>Teams</span>
+              <span class="integ-pill"><span class="ic" style="background:#11182A;">@</span>Email</span>
+              <span class="integ-pill"><span class="ic" style="background:#16A8EA;">L</span>Looker</span>
+            </div>
+          </div>
+          <div class="agent-actions">
+            <a href="about.html#contact" class="btn btn-blue">Try this agent <span class="arrow">→</span></a>
+            <a href="dashboards.html" class="btn btn-ghost">See on a dashboard</a>
+          </div>
+        </div>
+        <div class="panel-r">
+          <div class="agent-chat">
+            <div class="ch-head">
+              <div class="ava"><img src="assets/mascot.png" alt=""/></div>
+              <div>
+                <div class="nm">Anomaly Doctor</div>
+              </div>
+              <div class="st"><span class="dot"></span>monitoring 47 metrics</div>
+            </div>
+
+            <div class="ch-bubble bot">
+              <strong>⚠ Anomaly detected</strong>: checkout conversion dropped 32% in the last 90 minutes.
+              <div class="ch-card">
+                <div class="row"><span>Current</span><b class="warn">1.4%</b></div>
+                <div class="row"><span>Expected band</span><b>2.0% – 2.4%</b></div>
+                <div class="row"><span>Z-score</span><b class="warn">−3.8</b></div>
+                <div class="row"><span>Severity</span><b class="warn">High</b></div>
+              </div>
+              <span class="src">source · events.checkout_completed · last 90m</span>
+            </div>
+
+            <div class="ch-bubble you">What's driving it?</div>
+
+            <div class="ch-bubble bot">
+              Likely a payment-provider issue. <strong>Stripe Israel</strong> auth-success rate dropped from 98% → 71% at 14:22. Mobile-Safari users are most affected. I've paged @ops-oncall.
+              <span class="src">root-cause confidence · 84%</span>
+            </div>
+
+            <div class="ch-input">
+              <input placeholder="Ask Anomaly Doctor anything..." disabled/>
+              <button class="send">↑</button>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- 2. INSIGHTS CHAT -->
+      <article class="agent-detail" id="agent-insights">
+        <div class="panel-l">
+          <div class="agent-head">
+            <div class="ava"><img src="assets/mascot.png" alt=""/></div>
+            <div>
+              <span class="role">Analyst · NL → SQL</span>
+              <h3>Insights Chat</h3>
+              <div class="tagline">"Ask anything. Get a sourced answer."</div>
+            </div>
+          </div>
+          <p class="desc">Your business question, in plain English, becomes SQL - runs against your warehouse - and comes back as a cited number, a chart, or a short narrative. Every answer is traceable to the row that produced it.</p>
+          <div class="skills-row">
+            <span class="skill-chip">Natural language → SQL</span>
+            <span class="skill-chip">Cited answers</span>
+            <span class="skill-chip">Drill-down</span>
+            <span class="skill-chip">Metrics-layer aware</span>
+            <span class="skill-chip">Chart auto-pick</span>
+          </div>
+          <div class="integrations">
+            <div class="lbl">Connects to</div>
+            <div class="integ-row">
+              <span class="integ-pill"><img src="assets/logos/bigquery.svg" alt="" style="width:18px; height:18px;"/>BigQuery</span>
+              <span class="integ-pill"><img src="assets/logos/snowflake.svg" alt="" style="width:18px; height:18px;"/>Snowflake</span>
+              <span class="integ-pill"><img src="assets/logos/redshift.svg" alt="" style="width:18px; height:18px;"/>Redshift</span>
+              <span class="integ-pill"><img src="assets/logos/dbt.svg" alt="" style="width:18px; height:18px;"/>dbt metrics</span>
+            </div>
+          </div>
+          <div class="agent-actions">
+            <a href="about.html#contact" class="btn btn-blue">Try this agent <span class="arrow">→</span></a>
+            <a href="#" class="btn btn-ghost">Watch demo (2 min)</a>
+          </div>
+        </div>
+        <div class="panel-r">
+          <div class="agent-chat">
+            <div class="ch-head">
+              <div class="ava"><img src="assets/mascot.png" alt=""/></div>
+              <div>
+                <div class="nm">Insights Chat</div>
+              </div>
+              <div class="st"><span class="dot"></span>online</div>
+            </div>
+
+            <div class="ch-bubble you">Why did churn spike last week?</div>
+
+            <div class="ch-bubble bot">
+              Weekly churn rose from <strong>2.1% → 3.4%</strong> (+62%). The increase is concentrated in <strong>annual SMB customers</strong> on the legacy Pro plan.
+              <div class="ch-card">
+                <div class="row"><span>Plan</span><b>Legacy Pro</b></div>
+                <div class="row"><span>Segment</span><b>SMB · Annual</b></div>
+                <div class="row"><span>Churned this week</span><b class="warn">42 accounts</b></div>
+                <div class="row"><span>Top reason (NPS)</span><b>"price increase"</b></div>
+              </div>
+              <span class="src">queried · fct_subscription_events · 7-day window</span>
+            </div>
+
+            <div class="ch-bubble you">Show me the SQL.</div>
+
+            <div class="ch-bubble bot">
+              <div class="ch-card" style="font-family: var(--font-mono); white-space: pre-wrap;">SELECT plan, segment,
+       COUNT(*) AS churned
+FROM   prod.fct_subscription_events
+WHERE  event = 'churn'
+       AND week_of = '2026-04-29'
+GROUP  BY 1,2
+ORDER  BY churned DESC
+LIMIT  10;</div>
+            </div>
+
+            <div class="ch-input">
+              <input placeholder="Ask anything about your data..." disabled/>
+              <button class="send">↑</button>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- 3. FORECASTER -->
+      <article class="agent-detail" id="agent-forecast">
+        <div class="panel-l">
+          <div class="agent-head">
+            <div class="ava"><img src="assets/mascot.png" alt=""/></div>
+            <div>
+              <span class="role">Predictor · Time series</span>
+              <h3>Forecaster</h3>
+              <div class="tagline">"Looks forward, not backward."</div>
+            </div>
+          </div>
+          <p class="desc">Time-series models trained on your actuals, refreshed weekly. Revenue, demand, headcount, inventory - with confidence intervals and scenario toggles you can play with from a dashboard or Slack.</p>
+          <div class="skills-row">
+            <span class="skill-chip">Time-series modeling</span>
+            <span class="skill-chip">Confidence intervals</span>
+            <span class="skill-chip">Scenario toggles</span>
+            <span class="skill-chip">Holiday &amp; seasonality</span>
+            <span class="skill-chip">Backtest reports</span>
+          </div>
+          <div class="integrations">
+            <div class="lbl">Outputs to</div>
+            <div class="integ-row">
+              <span class="integ-pill"><img src="assets/logos/looker.svg" alt="" style="width:18px; height:18px;"/>Looker</span>
+              <span class="integ-pill"><img src="assets/logos/powerbi.svg" alt="" style="width:18px; height:18px;"/>Power BI</span>
+              <span class="integ-pill"><img src="assets/logos/sheets.svg" alt="" style="width:18px; height:18px;"/>Sheets</span>
+              <span class="integ-pill"><span class="ic" style="background:#4A154B;">S</span>Slack</span>
+            </div>
+          </div>
+          <div class="agent-actions">
+            <a href="about.html#contact" class="btn btn-blue">Try this agent <span class="arrow">→</span></a>
+            <a href="#" class="btn btn-ghost">View backtest report</a>
+          </div>
+        </div>
+        <div class="panel-r">
+          <div class="agent-chat">
+            <div class="ch-head">
+              <div class="ava"><img src="assets/mascot.png" alt=""/></div>
+              <div>
+                <div class="nm">Forecaster</div>
+              </div>
+              <div class="st"><span class="dot"></span>refreshed 4h ago</div>
+            </div>
+
+            <div class="ch-bubble you">What's our revenue forecast for Q3?</div>
+
+            <div class="ch-bubble bot">
+              My base case for <strong>Q3 FY26</strong> is <strong>₪9.4M</strong> (±₪0.7M, 80% confidence).
+              <div class="ch-card">
+                <div class="row"><span>Low (P10)</span><b>₪8.4M</b></div>
+                <div class="row"><span>Base (P50)</span><b class="ok">₪9.4M</b></div>
+                <div class="row"><span>High (P90)</span><b>₪10.3M</b></div>
+                <div class="row"><span>vs plan (₪9.0M)</span><b class="ok">+4.4%</b></div>
+              </div>
+              <span class="src">model · prophet · trained on 36 months · backtest MAPE 6.2%</span>
+            </div>
+
+            <div class="ch-bubble you">What if we cut paid spend by 20%?</div>
+
+            <div class="ch-bubble bot">
+              Re-running with <strong>−20% paid spend</strong> from week 28...<br/>
+              Q3 base case drops to <strong>₪8.6M</strong> (−8.5%). Most of the loss is in net-new acquisitions; renewals are unaffected.
+              <span class="src">scenario · paid_spend × 0.80 · holding all else constant</span>
+            </div>
+
+            <div class="ch-input">
+              <input placeholder="Run a what-if scenario..." disabled/>
+              <button class="send">↑</button>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- 4. NARRATOR -->
+      <article class="agent-detail" id="agent-narrator">
+        <div class="panel-l">
+          <div class="agent-head">
+            <div class="ava"><img src="assets/mascot.png" alt=""/></div>
+            <div>
+              <span class="role">Writer · Auto reports</span>
+              <h3>Narrator</h3>
+              <div class="tagline">"Writes the weekly update for you."</div>
+            </div>
+          </div>
+          <p class="desc">Drafts your Monday business review with the right charts, the right numbers, and the tone of voice you've trained it on. Drops it in Notion, sends it as a board email, or pastes it into Slack - all before you sit down with your coffee.</p>
+          <div class="skills-row">
+            <span class="skill-chip">Auto-narrative</span>
+            <span class="skill-chip">Multi-channel delivery</span>
+            <span class="skill-chip">Tone-trained</span>
+            <span class="skill-chip">Source links</span>
+            <span class="skill-chip">Editable drafts</span>
+          </div>
+          <div class="integrations">
+            <div class="lbl">Posts to</div>
+            <div class="integ-row">
+              <span class="integ-pill"><span class="ic" style="background:#000;">N</span>Notion</span>
+              <span class="integ-pill"><span class="ic" style="background:#4A154B;">S</span>Slack</span>
+              <span class="integ-pill"><span class="ic" style="background:#11182A;">@</span>Email</span>
+              <span class="integ-pill"><span class="ic" style="background:#7B83EB;">T</span>Teams</span>
+            </div>
+          </div>
+          <div class="agent-actions">
+            <a href="about.html#contact" class="btn btn-blue">Try this agent <span class="arrow">→</span></a>
+            <a href="#" class="btn btn-ghost">See a sample report</a>
+          </div>
+        </div>
+        <div class="panel-r">
+          <div class="agent-chat">
+            <div class="ch-head">
+              <div class="ava"><img src="assets/mascot.png" alt=""/></div>
+              <div>
+                <div class="nm">Narrator</div>
+              </div>
+              <div class="st"><span class="dot"></span>scheduled · Mon 07:00</div>
+            </div>
+
+            <div class="ch-bubble bot">
+              <strong>Weekly Business Review · Wk 18</strong><br/><br/>
+              Revenue closed at <strong>₪684k</strong>, <strong>+12% WoW</strong> and <strong>+24% YoY</strong>: driven by a strong Tuesday push from the new annual offer.<br/><br/>
+              <strong>What worked:</strong> Email/SMS lifecycle (+38% revenue), Meta retargeting (+22%).<br/>
+              <strong>What didn't:</strong> Google Brand spend up 18%, but conversions flat.<br/>
+              <strong>Watch:</strong> Mobile-Safari checkout dropped Wed–Thu (now resolved).
+              <span class="src">draft · ready to post to #leadership · sources attached (4)</span>
+            </div>
+
+            <div class="ch-bubble you">Make it shorter and post to Slack.</div>
+
+            <div class="ch-bubble bot">
+              Tightened to 4 lines and posted to <strong>#leadership</strong>. Full draft saved to Notion.
+              <span class="src">posted 09:14 · message link · undo</span>
+            </div>
+
+            <div class="ch-input">
+              <input placeholder="Edit the report or post somewhere else..." disabled/>
+              <button class="send">↑</button>
+            </div>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ──────── HOW THEY WORK ──────── -->
+<section id="how-they-work" class="section" style="padding: 0 0 96px; background: linear-gradient(180deg, #fff, #F7F8FB);">
+  <div class="container">
+    <div class="section-head reveal" style="text-align:left; max-width: none; margin-bottom: 36px;">
+      <span class="section-eyebrow">UNDER THE HOOD</span>
+      <h2 style="font-size: clamp(28px, 3.4vw, 44px);">How the agents <span class="serif">stay grounded.</span></h2>
+      <p style="margin: 0; max-width: 60ch;">Every agent answer comes from your data, your definitions, and your business rules - not a generic LLM guessing. Here's how.</p>
+    </div>
+
+    <div class="arch-card reveal">
+      <div class="arch-row">
+        <div class="arch-step">
+          <span class="num">01</span>
+          <h5>Your warehouse</h5>
+          <p>Agents read from your BigQuery, Snowflake, or Redshift - never a third-party copy. Reads only, scoped tables.</p>
+        </div>
+        <div class="arch-arrow">→</div>
+        <div class="arch-step">
+          <span class="num">02</span>
+          <h5>Your metrics layer</h5>
+          <p>Definitions live in dbt or your semantic layer. "Revenue" means the same thing across every agent and every team.</p>
+        </div>
+        <div class="arch-arrow">→</div>
+        <div class="arch-step">
+          <span class="num">03</span>
+          <h5>Cited answers</h5>
+          <p>Every number an agent emits links back to the SQL, the model, and the row. No hallucinations, no opaque AI.</p>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top: 28px; display:grid; grid-template-columns: repeat(3, 1fr); gap: 20px;" class="reveal value-grid">
+      <div class="value-card">
+        <div class="vi">⚿</div>
+        <h4>Read-only by default</h4>
+        <p>Agents never write to your warehouse. Service accounts are scoped to the schemas you explicitly approve.</p>
+      </div>
+      <div class="value-card">
+        <div class="vi">⚙</div>
+        <h4>Bring your own LLM</h4>
+        <p>Use OpenAI, Anthropic Claude, Gemini, or your private Vertex/Bedrock endpoint - your data stays in your tenant.</p>
+      </div>
+      <div class="value-card">
+        <div class="vi">↻</div>
+        <h4>Audited &amp; explainable</h4>
+        <p>Every agent action is logged: question asked, SQL run, source rows, model used, latency, and approval chain.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ──────── SLIM STATS ──────── -->
+<section style="padding: 0 0 96px;">
+  <div class="container reveal">
+    <div class="slim-stats">
+      <div class="cell"><div class="num">4</div><div class="lbl">Specialist agents</div></div>
+      <div class="cell"><div class="num">24<span class="serif">/</span>7</div><div class="lbl">Always on</div></div>
+      <div class="cell"><div class="num">&lt; 3<span class="serif">s</span></div><div class="lbl">Median answer time</div></div>
+      <div class="cell"><div class="num">100%</div><div class="lbl">Cited to source row</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ──────── CTA BAND ──────── -->
+<section style="padding: 0 0 120px;">
+  <div class="container reveal">
+    <div class="cta-band">
+      <div>
+        <h2>Want to <span class="serif">deploy an agent?</span></h2>
+        <p>We'll demo the agents on your data, in a private sandbox. You see what they say, where the numbers come from, and whether they belong on your team.</p>
+        <div class="btns">
+          <a href="about.html#contact" class="btn btn-blue btn-lg">Book a private demo <span class="arrow">→</span></a>
+          <a href="dashboards.html" class="btn btn-ghost btn-lg">See the dashboards</a>
+        </div>
+      </div>
+      <div class="cta-band-art">
+        <img src="assets/mascot.png" alt="">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ──────── FOOTER ──────── -->
+<footer class="footer">
+  <div class="container">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a href="index.html" class="brand"><img src="assets/mascot.png" alt=""/><span>Data Clinic</span></a>
+        <p>A collective of senior freelance data specialists - dashboards, AI agents, and the pipelines beneath them, built by the people who actually do the work.</p>
+      </div>
+      <div class="foot-col">
+        <h5>Product</h5>
+        <a href="dashboards.html">Dashboards</a>
+        <a href="agents.html">AI Agents</a>
+        <a href="index.html#services">Services</a>
+      </div>
+      <div class="foot-col">
+        <h5>Company</h5>
+        <a href="about.html">About</a>
+        <a href="about.html#contact">Contact</a>
+        <a href="#">Customers</a>
+        <a href="#">Blog</a>
+      </div>
+      <div class="foot-col">
+        <h5>Resources</h5>
+        <a href="#">Docs</a>
+        <a href="#">Changelog</a>
+        <a href="#">Security</a>
+        <a href="#">Privacy</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Data Clinic. All rights reserved.</span>
+      <span>Made with care in Tel Aviv.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+
+</body>
+</html>

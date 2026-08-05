@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>What is a Data Warehouse? - Data Clinic</title>
+<meta name="description" content="A plain-English guide to data warehouses: what they are, the four layers, the big players, and what to avoid." />
+<link rel="stylesheet" href="site.css?v=4" />
+<link rel="icon" type="image/png" href="assets/mascot.png" />
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="brand">
+      <img src="assets/mascot.png" alt="" />
+      <span>Data Clinic</span>
+    </a>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="index.html#services">Services</a>
+      <a href="dashboards.html">Dashboards</a>
+      <a href="agents.html">AI Agents</a>
+      <a href="learn.html" class="active">Learn</a>
+      <a href="about.html">About</a>
+    </nav>
+    <div class="nav-cta-row">
+      <div class="lang-toggle">
+        <a href="learn-dwh.html" class="lang-btn active">EN</a>
+        <a href="he/learn-dwh.html" class="lang-btn">HE</a>
+      </div>
+      <a href="about.html#contact" class="btn btn-primary">Hire a specialist <span class="arrow">→</span></a>
+    </div>
+  </div>
+</header>
+
+<section class="page-hero" style="padding-bottom: 32px;">
+  <div class="container">
+    <div style="max-width: 820px; margin: 0 auto;">
+      <div class="crumb">
+        <a href="index.html">Home</a>
+        <span>/</span>
+        <a href="learn.html">Learn</a>
+        <span>/</span>
+        <span>Data Warehouse</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="learn-section" style="padding-top: 0;">
+  <div class="container">
+    <a href="learn.html" class="learn-back"><span class="ar">←</span> Back to all guides</a>
+
+    <article class="learn-article reveal">
+      <span class="learn-eyebrow">Fundamentals · 7 min read</span>
+      <h1>What is a Data Warehouse (DWH)?</h1>
+      <p class="learn-lead">A library for your data - sorted, indexed, and built for asking questions, not for running your app.</p>
+
+      <h2>The 30-second answer</h2>
+      <p>A data warehouse is a database designed for <strong>analysis</strong>, not for running your app. Your application database (Postgres, MySQL, MongoDB) is built for fast inserts and updates - adding orders, recording logins, the operational side. A warehouse is built for fast reads across millions of rows - answering questions like "what was revenue by channel by week, last quarter?"</p>
+      <p>Same data, different job.</p>
+
+      <h2>Why you can't just query your app database</h2>
+      <p>Three reasons most teams hit a wall:</p>
+      <ol>
+        <li><strong>Performance.</strong> Heavy analytical queries lock tables and slow down your live app. Customers feel it.</li>
+        <li><strong>Joining sources.</strong> Your CRM is in HubSpot, your orders are in Postgres, your ads are in Meta. They never meet - until you put them in one warehouse.</li>
+        <li><strong>History.</strong> Your app database stores the current state. Warehouses store every change, so you can ask "what was this customer's plan six months ago?"</li>
+      </ol>
+
+      <h2>The four layers inside a warehouse</h2>
+      <ol>
+        <li><strong>Raw.</strong> Exact copy of source data, untouched. The "audit trail" - you can always go back.</li>
+        <li><strong>Staging.</strong> Cleaned and lightly modeled. Renamed columns, fixed types, deduped rows.</li>
+        <li><strong>Marts.</strong> Business-friendly tables grouped by domain - <code>marketing.attribution</code>, <code>finance.revenue</code>, <code>product.activation</code>. This is what dashboards read.</li>
+        <li><strong>Metrics layer.</strong> Definitions of "revenue", "MRR", "active user" - defined once, used everywhere.</li>
+      </ol>
+
+      <h2>The big players</h2>
+      <ul>
+        <li><strong>BigQuery (Google).</strong> Serverless, pay-per-query. Best for teams already on GCP.</li>
+        <li><strong>Snowflake.</strong> Multi-cloud, separates storage from compute. Great for teams that need fine-grained scaling.</li>
+        <li><strong>Redshift (AWS).</strong> Mature, AWS-native, predictable pricing.</li>
+        <li><strong>Databricks.</strong> If your data team is heavily ML / Python.</li>
+      </ul>
+      <p>For most teams under 50 people, BigQuery wins on simplicity and cost. Above that, the choice is more about ecosystem fit than features.</p>
+
+      <h2>Common pitfalls</h2>
+      <ul>
+        <li><strong>Skipping staging.</strong> Going from raw → dashboards directly. Works for a month, breaks the moment a source schema changes.</li>
+        <li><strong>No naming convention.</strong> <code>revenue_v2_FINAL_use_this_one</code> ends up in production. We've all seen it.</li>
+        <li><strong>Over-engineering early.</strong> You don't need a real-time streaming pipeline on day one. Start with hourly batches and add streaming when a real use case demands it.</li>
+        <li><strong>No tests.</strong> The first time a column starts returning nulls silently, you'll wish you had dbt tests in place.</li>
+      </ul>
+
+      <h2>What good looks like</h2>
+      <ul>
+        <li>Source data lands in raw within an hour of the event.</li>
+        <li>A new dashboard takes a day to build, not a week.</li>
+        <li>Cost is predictable and tracked per team or per dashboard.</li>
+        <li>Every metric has a definition, an owner, and a test.</li>
+        <li>When something breaks, you know first - not your CEO.</li>
+      </ul>
+
+      <h2>Where Data Clinic fits in</h2>
+      <p>Our specialists design and build warehouses end-to-end. Source connectors, dbt models, CI/CD, monitoring - the whole chain. You work directly with the senior data engineer who does the work - no agency, no juniors, no handoffs. Most warehouse projects ship in four to six weeks. We work in your cloud (GCP / AWS / Azure) with read-only service accounts on your sources, so your data never leaves your tenant.</p>
+    </article>
+
+    <a href="learn.html" class="learn-back" style="margin-top: 24px;"><span class="ar">←</span> Back to all guides</a>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a href="index.html" class="brand"><img src="assets/mascot.png" alt=""/><span>Data Clinic</span></a>
+        <p>A collective of senior freelance data specialists - dashboards, AI agents, and the pipelines beneath them, built by the people who actually do the work.</p>
+      </div>
+      <div class="foot-col">
+        <h5>Product</h5>
+        <a href="dashboards.html">Dashboards</a>
+        <a href="agents.html">AI Agents</a>
+        <a href="index.html#services">Services</a>
+      </div>
+      <div class="foot-col">
+        <h5>Company</h5>
+        <a href="about.html">About</a>
+        <a href="about.html#contact">Contact</a>
+        <a href="#">Customers</a>
+        <a href="#">Blog</a>
+      </div>
+      <div class="foot-col">
+        <h5>Resources</h5>
+        <a href="learn.html">Learn</a>
+        <a href="#">Changelog</a>
+        <a href="#">Security</a>
+        <a href="#">Privacy</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Data Clinic. All rights reserved.</span>
+      <span>Made with care in Tel Aviv.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+
+</body>
+</html>

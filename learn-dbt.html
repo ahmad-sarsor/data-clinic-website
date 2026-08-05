@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>What is dbt? - Data Clinic</title>
+<meta name="description" content="A plain-English guide to dbt: what it is, the building blocks, project structure, common pitfalls, and what good looks like." />
+<link rel="stylesheet" href="site.css?v=4" />
+<link rel="icon" type="image/png" href="assets/mascot.png" />
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="brand">
+      <img src="assets/mascot.png" alt="" />
+      <span>Data Clinic</span>
+    </a>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="index.html#services">Services</a>
+      <a href="dashboards.html">Dashboards</a>
+      <a href="agents.html">AI Agents</a>
+      <a href="learn.html" class="active">Learn</a>
+      <a href="about.html">About</a>
+    </nav>
+    <div class="nav-cta-row">
+      <div class="lang-toggle">
+        <a href="learn-dbt.html" class="lang-btn active">EN</a>
+        <a href="he/learn-dbt.html" class="lang-btn">HE</a>
+      </div>
+      <a href="about.html#contact" class="btn btn-primary">Hire a specialist <span class="arrow">→</span></a>
+    </div>
+  </div>
+</header>
+
+<section class="page-hero" style="padding-bottom: 32px;">
+  <div class="container">
+    <div style="max-width: 820px; margin: 0 auto;">
+      <div class="crumb">
+        <a href="index.html">Home</a>
+        <span>/</span>
+        <a href="learn.html">Learn</a>
+        <span>/</span>
+        <span>dbt</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="learn-section" style="padding-top: 0;">
+  <div class="container">
+    <a href="learn.html" class="learn-back"><span class="ar">←</span> Back to all guides</a>
+
+    <article class="learn-article reveal">
+      <span class="learn-eyebrow">Fundamentals · 7 min read</span>
+      <h1>What is dbt?</h1>
+      <p class="learn-lead">The Git for SQL - version control, tests, and documentation for the queries that power your dashboards.</p>
+
+      <h2>The 30-second answer</h2>
+      <p>dbt (data build tool) is the standard for transforming data inside your warehouse. You write transformations as SQL files, dbt figures out the dependencies, runs them in the right order, tests the output, and generates living documentation - all with version control built in.</p>
+      <p>Said differently: dbt is what made "your data team's code" look as professional as "your engineering team's code."</p>
+
+      <h2>What does dbt actually solve?</h2>
+      <p>Three problems hit every data team eventually:</p>
+      <ol>
+        <li><strong>No version control on SQL.</strong> Someone rewrites a metric, breaks three dashboards, no one can roll back.</li>
+        <li><strong>No tests.</strong> A column starts returning nulls. No one notices for two weeks.</li>
+        <li><strong>No documentation.</strong> "What does this column mean?" The answer lives in someone's head.</li>
+      </ol>
+      <p>dbt solves all three with one pattern: SQL files in Git, tested on every change, documented automatically.</p>
+
+      <h2>The four building blocks</h2>
+      <ol>
+        <li><strong>Models.</strong> SELECT statements that become tables or views in your warehouse. Each model is one file.</li>
+        <li><strong>Tests.</strong> Assertions about your data - "this column is never null", "this is unique", "values match this list". Run on every model.</li>
+        <li><strong>Sources.</strong> Pointers to raw tables (from Fivetran, Airbyte, etc.). Lets you reference them safely and document them.</li>
+        <li><strong>Refs.</strong> How models depend on other models. dbt builds the dependency graph and runs everything in the right order.</li>
+      </ol>
+
+      <h2>How a dbt project is organized</h2>
+      <ol>
+        <li><strong>Sources.</strong> Raw tables from outside, declared but not modified.</li>
+        <li><strong>Staging.</strong> One staging model per source table. Renames columns, casts types, light cleanup.</li>
+        <li><strong>Intermediate.</strong> Joins and reshapes that aren't yet business-facing.</li>
+        <li><strong>Marts.</strong> Clean, business-friendly tables organized by domain - <code>finance.revenue</code>, <code>marketing.sessions</code>.</li>
+      </ol>
+
+      <h2>Common pitfalls</h2>
+      <ul>
+        <li><strong>Skipping tests.</strong> "We'll add them later" - you won't. Add them as you build.</li>
+        <li><strong>Going macro-heavy too early.</strong> dbt has powerful Jinja macros, but they make debugging hard. Stay simple until duplication actually hurts.</li>
+        <li><strong>Big tables, no incremental.</strong> Rebuilding a 500M-row model every hour will burn your warehouse bill. Incremental materializations exist for this.</li>
+        <li><strong>No CI.</strong> Run <code>dbt build</code> on every PR. Catch breaks before they merge.</li>
+      </ul>
+
+      <h2>What good looks like</h2>
+      <ul>
+        <li>Every model has at least one test (usually <code>not_null</code> and <code>unique</code> on the primary key).</li>
+        <li>A clear convention: staging, intermediate, marts.</li>
+        <li>Auto-generated docs site, hosted on your subdomain.</li>
+        <li>A lineage graph you can click through to see "what depends on this column?"</li>
+        <li>Incremental models for any table over ~100M rows.</li>
+        <li>A metrics layer - "revenue" defined once, used everywhere.</li>
+      </ul>
+
+      <h2>Where Data Clinic fits in</h2>
+      <p>You work directly with the senior specialist who builds your dbt project from scratch, audits an existing one, or migrates teams off raw SQL or stored procedures. Every project ships with tests, docs, CI/CD, and a metrics layer. Your team owns the keys when the work is done - no lock-in, no proprietary glue, no agency markup.</p>
+    </article>
+
+    <a href="learn.html" class="learn-back" style="margin-top: 24px;"><span class="ar">←</span> Back to all guides</a>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a href="index.html" class="brand"><img src="assets/mascot.png" alt=""/><span>Data Clinic</span></a>
+        <p>A collective of senior freelance data specialists - dashboards, AI agents, and the pipelines beneath them, built by the people who actually do the work.</p>
+      </div>
+      <div class="foot-col">
+        <h5>Product</h5>
+        <a href="dashboards.html">Dashboards</a>
+        <a href="agents.html">AI Agents</a>
+        <a href="index.html#services">Services</a>
+      </div>
+      <div class="foot-col">
+        <h5>Company</h5>
+        <a href="about.html">About</a>
+        <a href="about.html#contact">Contact</a>
+        <a href="#">Customers</a>
+        <a href="#">Blog</a>
+      </div>
+      <div class="foot-col">
+        <h5>Resources</h5>
+        <a href="learn.html">Learn</a>
+        <a href="#">Changelog</a>
+        <a href="#">Security</a>
+        <a href="#">Privacy</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Data Clinic. All rights reserved.</span>
+      <span>Made with care in Tel Aviv.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+
+</body>
+</html>

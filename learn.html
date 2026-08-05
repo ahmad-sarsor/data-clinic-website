@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Learn - Data Clinic</title>
+<meta name="description" content="Plain-English guides to BI systems, data warehouses, AI agents, and the modern data stack - written by senior engineers, not marketers." />
+<link rel="stylesheet" href="site.css?v=4" />
+<link rel="icon" type="image/png" href="assets/mascot.png" />
+</head>
+<body>
+
+<!-- ──────── NAV ──────── -->
+<header class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="brand">
+      <img src="assets/mascot.png" alt="" />
+      <span>Data Clinic</span>
+    </a>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="index.html#services">Services</a>
+      <a href="dashboards.html">Dashboards</a>
+      <a href="agents.html">AI Agents</a>
+      <a href="learn.html" class="active">Learn</a>
+      <a href="about.html">About</a>
+    </nav>
+    <div class="nav-cta-row">
+      <div class="lang-toggle">
+        <a href="learn.html" class="lang-btn active">EN</a>
+        <a href="he/learn.html" class="lang-btn">HE</a>
+      </div>
+      <a href="about.html#contact" class="btn btn-primary">Hire a specialist <span class="arrow">→</span></a>
+    </div>
+  </div>
+</header>
+
+<!-- ──────── PAGE HERO ──────── -->
+<section class="page-hero">
+  <div class="container">
+    <div class="page-hero-grid">
+      <div>
+        <div class="crumb">
+          <a href="index.html">Home</a>
+          <span>/</span>
+          <span>Learn</span>
+        </div>
+        <h1>Learn the basics. <br/><span class="serif">Master your data.</span></h1>
+        <p class="lead">Plain-English guides to BI systems, data warehouses, AI agents, and the modern data stack - written by senior engineers, not marketers.</p>
+      </div>
+      <div class="page-hero-mascot">
+        <img src="assets/mascot.png" alt="Data Clinic mascot"/>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ──────── ARTICLES GRID ──────── -->
+<section class="learn-section">
+  <div class="container">
+    <div class="learn-grid reveal">
+
+      <a href="learn-bi.html" class="learn-card">
+        <div class="lc-icon">B</div>
+        <span class="lc-eyebrow">Fundamentals · 6 min</span>
+        <h3>What is a BI system?</h3>
+        <p>If your CEO ever asked "where do these numbers come from?" - this is for you. The four pieces, common pitfalls, and what good looks like.</p>
+        <span class="lc-cta">Read article <span class="ar">→</span></span>
+      </a>
+
+      <a href="learn-dwh.html" class="learn-card">
+        <div class="lc-icon">W</div>
+        <span class="lc-eyebrow">Fundamentals · 7 min</span>
+        <h3>What is a Data Warehouse?</h3>
+        <p>A library for your data - sorted, indexed, built for asking questions. The four layers, the big players (BigQuery, Snowflake), and what to avoid.</p>
+        <span class="lc-cta">Read article <span class="ar">→</span></span>
+      </a>
+
+      <a href="learn-dbt.html" class="learn-card">
+        <div class="lc-icon">D</div>
+        <span class="lc-eyebrow">Fundamentals · 7 min</span>
+        <h3>What is dbt?</h3>
+        <p>The Git for SQL - version control, tests, and documentation for the queries that power your dashboards. Building blocks, project structure, and pitfalls.</p>
+        <span class="lc-cta">Read article <span class="ar">→</span></span>
+      </a>
+
+      <!-- Add more learn-card links below as you grow the section -->
+
+    </div>
+
+    <div class="learn-future">
+      <strong>More guides coming soon.</strong><br/>
+      dbt &amp; metrics layer · AI agents · Pipelines &amp; orchestration · Choosing a BI tool
+    </div>
+  </div>
+</section>
+
+<!-- ──────── FOOTER ──────── -->
+<footer class="footer">
+  <div class="container">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a href="index.html" class="brand"><img src="assets/mascot.png" alt=""/><span>Data Clinic</span></a>
+        <p>A collective of senior freelance data specialists - dashboards, AI agents, and the pipelines beneath them, built by the people who actually do the work.</p>
+      </div>
+      <div class="foot-col">
+        <h5>Product</h5>
+        <a href="dashboards.html">Dashboards</a>
+        <a href="agents.html">AI Agents</a>
+        <a href="index.html#services">Services</a>
+      </div>
+      <div class="foot-col">
+        <h5>Company</h5>
+        <a href="about.html">About</a>
+        <a href="about.html#contact">Contact</a>
+        <a href="#">Customers</a>
+        <a href="#">Blog</a>
+      </div>
+      <div class="foot-col">
+        <h5>Resources</h5>
+        <a href="learn.html">Learn</a>
+        <a href="#">Changelog</a>
+        <a href="#">Security</a>
+        <a href="#">Privacy</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Data Clinic. All rights reserved.</span>
+      <span>Made with care in Tel Aviv.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+
+</body>
+</html>
