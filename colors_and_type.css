@@ -1,0 +1,346 @@
+/*
+ * Data Clinic.ai — Design System
+ * colors_and_type.css
+ *
+ * Brand: modern, premium, data-driven. Colors pulled straight from the mascot logo.
+ * Palette: cool paper-white, the logo's bright sky-blue carrying the brand (buttons,
+ *          links, KPI accents), the logo's orange as the second accent (arrows, alerts,
+ *          stars, CTAs), navy ink darks. Blue + orange + navy = the logo.
+ *
+ * Fonts: Schibsted Grotesk (display + UI) — crisp modern grotesque
+ *        Inter (body) — neutral, highly legible
+ *        Accent words (.serif) — Schibsted Grotesk italic (the display font, slanted)
+ *        JetBrains Mono (code/data) — for stats, KPIs, code
+ *        Hebrew/RTL: Heebo (UI/body) + Frank Ruhl Libre (serif accent)
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap');
+
+:root {
+
+  /* ─── BRAND ─────────────────────────────────────────────────────────────
+   * Pulled directly from the mascot:
+   *  - Mascot ring + bars  → primary blue
+   *  - Mascot accent + arrow → orange
+   *  - Mascot body + face   → ink + white
+   */
+
+  --brand-blue:           #16A8EA;   /* Mascot ring — primary */
+  --brand-blue-deep:      #0B72B5;   /* Pressed / link-hover */
+  --brand-blue-light:     #7CD3F5;   /* Highlight */
+  --brand-blue-50:        #E3F5FD;   /* Tint surfaces */
+  --brand-blue-100:       #C0E9FB;
+  --brand-blue-200:       #8CD9F7;
+
+  --brand-orange:         #F97316;   /* Secondary — exclamation, growth arrow */
+  --brand-orange-deep:    #C75A0F;
+  --brand-orange-light:   #FB9A3E;
+  --brand-orange-50:      #FFF1E2;
+  --brand-orange-100:     #FFD9B5;
+
+  --brand-ink:            #141B2E;   /* Mascot body — near-black */
+  --brand-cream:          #FCFDFF;   /* Off-white surface — softer than #FFF */
+
+  /* ─── NEUTRALS ───────────────────────────────────────────────────────── */
+
+  --neutral-0:            #FFFFFF;
+  --neutral-25:           #FAFBFE;
+  --neutral-50:           #F2F5FA;
+  --neutral-100:          #E9EEF6;
+  --neutral-200:          #D6DEEA;
+  --neutral-300:          #BFC9D9;
+  --neutral-400:          #8593A6;
+  --neutral-500:          #5B6B82;
+  --neutral-600:          #4E5D77;
+  --neutral-700:          #3D4B63;
+  --neutral-800:          #212C45;
+  --neutral-900:          #11182A;
+
+  /* ─── SEMANTIC SURFACES ──────────────────────────────────────────────── */
+
+  --bg-page:              var(--neutral-25);
+  --bg-surface:           var(--neutral-0);
+  --bg-elevated:          var(--neutral-0);
+  --bg-subtle:            var(--neutral-50);
+  --bg-tint:              var(--brand-blue-50);
+  --bg-ink:               var(--brand-ink);
+  --bg-deep:              #0B1020;        /* Inverted hero band */
+
+  /* ─── TEXT ───────────────────────────────────────────────────────────── */
+
+  --fg-primary:           var(--neutral-900);
+  --fg-secondary:         var(--neutral-700);
+  --fg-tertiary:          var(--neutral-500);
+  --fg-muted:             var(--neutral-400);
+  --fg-on-brand:          var(--neutral-0);
+  --fg-on-dark:           var(--neutral-0);
+  --fg-on-dark-muted:     rgba(255,255,255,0.62);
+
+  /* ─── ACTION ─────────────────────────────────────────────────────────── */
+
+  --action-primary-bg:    var(--brand-blue);
+  --action-primary-bg-hover: var(--brand-blue-deep);
+  --action-primary-fg:    var(--neutral-0);
+
+  --action-secondary-bg:  var(--brand-orange);
+  --action-secondary-bg-hover: var(--brand-orange-deep);
+  --action-secondary-fg:  var(--neutral-0);
+
+  --action-ghost-bg:      transparent;
+  --action-ghost-bg-hover: var(--neutral-100);
+  --action-ghost-fg:      var(--fg-primary);
+
+  --link:                 var(--brand-blue-deep);
+  --link-hover:           var(--brand-blue);
+
+  /* ─── BORDERS ────────────────────────────────────────────────────────── */
+
+  --border-subtle:        var(--neutral-100);
+  --border-default:       var(--neutral-200);
+  --border-strong:        var(--neutral-300);
+  --border-focus:         var(--brand-blue);
+  --border-on-dark:       rgba(255,255,255,0.10);
+
+  /* ─── STATUS ─────────────────────────────────────────────────────────── */
+
+  --success:              #117E3E;
+  --success-bg:           #D8F3E0;
+  --warning:              #A8690A;
+  --warning-bg:           #FAEFCC;
+  --danger:               #D62F3F;
+  --danger-bg:            #FBE2E3;
+  --info:                 var(--brand-blue);
+  --info-bg:              var(--brand-blue-50);
+
+  /* ─── DATA VIZ ────────────────────────────────────────────────────────── */
+
+  --chart-1:              var(--brand-blue);       /* primary series */
+  --chart-2:              var(--brand-orange);     /* highlight series */
+  --chart-3:              #5B6B82;                 /* neutral */
+  --chart-4:              #7CD3F5;                 /* secondary blue */
+  --chart-5:              #FB9A3E;                 /* secondary orange */
+  --chart-6:              #117E3E;                 /* growth */
+  --chart-grid:           rgba(20,27,46,0.06);
+
+  /* ─── TYPE: families ─────────────────────────────────────────────────── */
+
+  --font-display:         'Schibsted Grotesk', system-ui, -apple-system, sans-serif;
+  --font-body:            'Inter', system-ui, -apple-system, sans-serif;
+  --font-mono:            'JetBrains Mono', ui-monospace, Menlo, monospace;
+
+  /* ─── TYPE: weights ──────────────────────────────────────────────────── */
+
+  --weight-regular:       400;
+  --weight-medium:        500;
+  --weight-semibold:      600;
+  --weight-bold:          700;
+  --weight-extrabold:     800;
+
+  /* ─── TYPE: scale ────────────────────────────────────────────────────── */
+
+  --fs-3xs:               0.6875rem;   /* 11 — micro/legal */
+  --fs-2xs:               0.75rem;     /* 12 — chip/eyebrow */
+  --fs-xs:                0.8125rem;   /* 13 — caption */
+  --fs-sm:                0.875rem;    /* 14 — small UI */
+  --fs-base:              1rem;        /* 16 — body */
+  --fs-md:                1.0625rem;   /* 17 — comfy body */
+  --fs-lg:                1.25rem;     /* 20 — lead */
+  --fs-xl:                1.5rem;      /* 24 — h4 */
+  --fs-2xl:               1.875rem;    /* 30 — h3 */
+  --fs-3xl:               2.25rem;     /* 36 — h2 */
+  --fs-4xl:               3rem;        /* 48 — h1 */
+  --fs-5xl:               3.75rem;     /* 60 — hero */
+  --fs-6xl:               4.5rem;      /* 72 — display */
+
+  /* ─── TYPE: leading ──────────────────────────────────────────────────── */
+
+  --lh-tight:             1.05;
+  --lh-snug:              1.2;
+  --lh-normal:            1.5;
+  --lh-relaxed:           1.65;
+  --lh-loose:             1.8;
+
+  /* ─── TYPE: tracking ─────────────────────────────────────────────────── */
+
+  --ls-tight:             -0.03em;     /* big display headings */
+  --ls-snug:              -0.02em;     /* h1/h2 */
+  --ls-normal:            -0.005em;    /* body */
+  --ls-wide:              0.02em;
+  --ls-eyebrow:           0.08em;      /* uppercase eyebrows */
+
+  /* ─── SPACING SCALE (4px base) ───────────────────────────────────────── */
+
+  --space-0:              0;
+  --space-1:              0.25rem;     /* 4 */
+  --space-2:              0.5rem;      /* 8 */
+  --space-3:              0.75rem;     /* 12 */
+  --space-4:              1rem;        /* 16 */
+  --space-5:              1.25rem;     /* 20 */
+  --space-6:              1.5rem;      /* 24 */
+  --space-8:              2rem;        /* 32 */
+  --space-10:             2.5rem;      /* 40 */
+  --space-12:             3rem;        /* 48 */
+  --space-16:             4rem;        /* 64 */
+  --space-20:             5rem;        /* 80 */
+  --space-24:             6rem;        /* 96 */
+  --space-32:             8rem;        /* 128 */
+
+  /* ─── RADII ───────────────────────────────────────────────────────────── */
+
+  --radius-xs:            6px;
+  --radius-sm:            10px;
+  --radius-md:            14px;
+  --radius-lg:            20px;
+  --radius-xl:            28px;
+  --radius-2xl:           36px;
+  --radius-pill:          999px;
+  --radius-circle:        50%;
+
+  /* ─── ELEVATION (soft, friendly) ──────────────────────────────────────── */
+
+  --shadow-xs:            0 1px 2px rgba(17,24,42,0.04);
+  --shadow-sm:            0 2px 6px rgba(17,24,42,0.05), 0 1px 2px rgba(17,24,42,0.04);
+  --shadow-md:            0 6px 16px rgba(17,24,42,0.06), 0 2px 6px rgba(17,24,42,0.04);
+  --shadow-lg:            0 14px 40px rgba(17,24,42,0.10), 0 4px 12px rgba(17,24,42,0.05);
+  --shadow-xl:            0 24px 60px rgba(17,24,42,0.14), 0 8px 20px rgba(17,24,42,0.06);
+  --shadow-pop-blue:      0 12px 30px rgba(22,168,234,0.30);
+  --shadow-pop-orange:    0 12px 30px rgba(249,115,22,0.28);
+
+  /* ─── LAYOUT ──────────────────────────────────────────────────────────── */
+
+  --container:            1200px;
+  --container-narrow:     880px;
+  --nav-height:           72px;
+
+  /* ─── MOTION ──────────────────────────────────────────────────────────── */
+
+  --ease-out:             cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in-out:          cubic-bezier(0.65, 0, 0.35, 1);
+  --ease-spring:          cubic-bezier(0.34, 1.56, 0.64, 1);
+  --dur-fast:             0.15s;
+  --dur-base:             0.25s;
+  --dur-slow:             0.5s;
+  --dur-page:             0.8s;
+
+  /* ─── Z-INDEX ─────────────────────────────────────────────────────────── */
+
+  --z-nav:                100;
+  --z-overlay:            500;
+  --z-modal:              1000;
+  --z-toast:              2000;
+}
+
+/* ─── Semantic Type Helpers ─────────────────────────────────────────────── */
+
+.t-eyebrow {
+  font-family: var(--font-display);
+  font-weight: var(--weight-semibold);
+  font-size: var(--fs-2xs);
+  letter-spacing: var(--ls-eyebrow);
+  text-transform: uppercase;
+  color: var(--brand-blue-deep);
+}
+
+.t-display {
+  font-family: var(--font-display);
+  font-weight: var(--weight-extrabold);
+  font-size: var(--fs-6xl);
+  line-height: var(--lh-tight);
+  letter-spacing: var(--ls-tight);
+  color: var(--fg-primary);
+}
+
+.t-hero {
+  font-family: var(--font-display);
+  font-weight: var(--weight-extrabold);
+  font-size: var(--fs-5xl);
+  line-height: var(--lh-tight);
+  letter-spacing: var(--ls-tight);
+  color: var(--fg-primary);
+}
+
+.t-h1 {
+  font-family: var(--font-display);
+  font-weight: var(--weight-bold);
+  font-size: var(--fs-4xl);
+  line-height: var(--lh-snug);
+  letter-spacing: var(--ls-snug);
+  color: var(--fg-primary);
+}
+
+.t-h2 {
+  font-family: var(--font-display);
+  font-weight: var(--weight-bold);
+  font-size: var(--fs-3xl);
+  line-height: var(--lh-snug);
+  letter-spacing: var(--ls-snug);
+  color: var(--fg-primary);
+}
+
+.t-h3 {
+  font-family: var(--font-display);
+  font-weight: var(--weight-bold);
+  font-size: var(--fs-2xl);
+  line-height: 1.25;
+  letter-spacing: var(--ls-snug);
+  color: var(--fg-primary);
+}
+
+.t-h4 {
+  font-family: var(--font-display);
+  font-weight: var(--weight-bold);
+  font-size: var(--fs-xl);
+  line-height: 1.3;
+  letter-spacing: var(--ls-normal);
+  color: var(--fg-primary);
+}
+
+.t-lead {
+  font-family: var(--font-body);
+  font-weight: var(--weight-regular);
+  font-size: var(--fs-lg);
+  line-height: var(--lh-relaxed);
+  color: var(--fg-secondary);
+}
+
+.t-body {
+  font-family: var(--font-body);
+  font-weight: var(--weight-regular);
+  font-size: var(--fs-base);
+  line-height: var(--lh-relaxed);
+  color: var(--fg-secondary);
+}
+
+.t-body-strong {
+  font-family: var(--font-body);
+  font-weight: var(--weight-semibold);
+  font-size: var(--fs-base);
+  line-height: var(--lh-relaxed);
+  color: var(--fg-primary);
+}
+
+.t-caption {
+  font-family: var(--font-body);
+  font-weight: var(--weight-regular);
+  font-size: var(--fs-xs);
+  line-height: var(--lh-normal);
+  color: var(--fg-tertiary);
+}
+
+.t-mono {
+  font-family: var(--font-mono);
+  font-weight: var(--weight-medium);
+  font-size: var(--fs-sm);
+  letter-spacing: 0;
+  color: var(--fg-primary);
+}
+
+.t-stat {
+  font-family: var(--font-display);
+  font-weight: var(--weight-extrabold);
+  font-size: var(--fs-4xl);
+  line-height: 1;
+  letter-spacing: var(--ls-tight);
+  color: var(--fg-primary);
+  font-variant-numeric: tabular-nums;
+}
