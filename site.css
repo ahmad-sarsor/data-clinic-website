@@ -1,5 +1,5 @@
 /* ui_kits/website/site.css — Data Clinic, Hex.tech-inspired layout */
-@import url('colors_and_type.css?v=9');
+@import url('colors_and_type.css?v=10');
 @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700;800&family=Frank+Ruhl+Libre:wght@400;500;700&display=swap');
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -1953,3 +1953,23 @@ html[dir="rtl"] .hb-cta:hover .arrow { transform: translateX(-2px); }
   .tech-chip { font-size: 13px; padding: 8px 13px; gap: 7px; }
   .tech-chip img { width: 18px; height: 18px; }
 }
+
+/* ══════════ AGENT DEMO PANEL: standalone dark chat mockup ══════════ */
+.agent-demo-panel {
+  background: #11182A;
+  border-radius: 24px;
+  padding: 28px;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  max-width: 620px;
+  margin: 0 auto;
+  box-shadow: 0 24px 60px -30px rgba(17,24,42,0.5);
+}
+.agent-demo-panel::before {
+  content: ''; position: absolute; inset: 0;
+  background: radial-gradient(ellipse 60% 60% at 30% 0%, rgba(22,168,234,0.22), transparent 60%);
+  pointer-events: none;
+}
+.agent-demo-panel .ch-input input { cursor: default; }
+.agent-demo-panel .ch-input .send { cursor: default; }
