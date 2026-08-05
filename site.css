@@ -1,5 +1,5 @@
 /* ui_kits/website/site.css — Data Clinic, Hex.tech-inspired layout */
-@import url('colors_and_type.css?v=8');
+@import url('colors_and_type.css?v=9');
 @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700;800&family=Frank+Ruhl+Libre:wght@400;500;700&display=swap');
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -1918,3 +1918,38 @@ html[dir="rtl"] .hb-cta:hover .arrow { transform: translateX(-2px); }
 /* ══════════ NAV LOCK: tab present but disabled ══════════ */
 .nav-lock { color: #BFC9D9; cursor: default; user-select: none; }
 .nav-links .nav-lock { font-family: var(--font-display); font-weight: 500; font-size: 14px; padding: 8px 14px; }
+
+/* ══════════ TECH BOX: static prominent technology grid ══════════ */
+.tech-box {
+  background: linear-gradient(180deg, #FFFFFF 0%, #F7F8FB 100%);
+  border: 1px solid rgba(17,24,42,0.07);
+  border-radius: 22px;
+  padding: 34px 36px 30px;
+  box-shadow: 0 16px 40px -22px rgba(17,24,42,0.14), 0 1px 0 rgba(255,255,255,0.6) inset;
+}
+.tech-label {
+  text-align: center;
+  font-family: var(--font-display);
+  font-size: 13px; font-weight: 700;
+  color: #11182A;
+  letter-spacing: 0.1em;
+  margin-bottom: 24px;
+}
+.tech-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; }
+.tech-chip {
+  display: inline-flex; align-items: center; gap: 9px;
+  background: #fff;
+  border: 1px solid rgba(17,24,42,0.08);
+  border-radius: 999px;
+  padding: 10px 18px;
+  font-family: var(--font-display); font-weight: 600; font-size: 14px; color: #26374D;
+  box-shadow: 0 4px 14px -8px rgba(17,24,42,0.18);
+  transition: transform .15s ease, border-color .15s ease;
+}
+.tech-chip:hover { transform: translateY(-2px); border-color: #8CD9F7; }
+.tech-chip img { width: 22px; height: 22px; flex-shrink: 0; }
+@media (max-width: 640px) {
+  .tech-box { padding: 26px 16px 22px; }
+  .tech-chip { font-size: 13px; padding: 8px 13px; gap: 7px; }
+  .tech-chip img { width: 18px; height: 18px; }
+}
