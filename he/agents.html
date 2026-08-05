@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>סוכני AI - Data Clinic</title>
 <meta name="description" content="אנחנו בונים סוכני AI שעונים על שאלות בשפה חופשית ישירות מהנתונים שלכם, עם מקורות." />
-<link rel="stylesheet" href="../site.css?v=10" />
+<link rel="stylesheet" href="../site.css?v=11" />
 <link rel="icon" type="image/png" href="../assets/mascot.png" />
 </head>
 <body>
@@ -58,40 +58,67 @@
   </div>
 </section>
 
-<!-- ──────── AGENT UI DEMO ──────── -->
-<section class="section" style="padding: 16px 0 110px;">
+<!-- ──────── AGENT APP MOCK ──────── -->
+<section class="section" style="padding: 8px 0 110px;">
   <div class="container">
-    <div class="agent-demo-panel reveal">
-      <div class="agent-chat">
-        <div class="ch-head">
-          <div class="ava"><img src="../assets/mascot.png" alt=""/></div>
-          <div><div class="nm">שיחת תובנות</div></div>
-          <div class="st"><span class="dot"></span>מחובר</div>
-        </div>
-
-        <div class="ch-bubble you">למה הנטישה קפצה בשבוע שעבר?</div>
-
-        <div class="ch-bubble bot">
-          נטישה שבועית עלתה מ-<strong>2.1% → 3.4%</strong> (+62%). הגידול מרוכז ב<strong>לקוחות SMB שנתיים</strong> בתוכנית Legacy Pro.
-          <div class="ch-card">
-            <div class="row"><span>תוכנית</span><b>Legacy Pro</b></div>
-            <div class="row"><span>סגמנט</span><b>SMB · שנתי</b></div>
-            <div class="row"><span>עזבו השבוע</span><b class="warn">42 חשבונות</b></div>
-            <div class="row"><span>סיבה עיקרית (NPS)</span><b>"העלאת מחיר"</b></div>
+    <div class="app-mock reveal" role="img" aria-label="הדגמת ממשק הסוכן">
+      <div class="app-bar">
+        <span class="app-dots"><i></i><i></i><i></i></span>
+        <span class="app-title">Data Clinic · שיחת תובנות</span>
+      </div>
+      <div class="app-body">
+        <aside class="app-side">
+          <div class="side-agent">
+            <img src="../assets/mascot.png" alt=""/>
+            <div>
+              <b>שיחת תובנות</b>
+              <span><i class="on"></i> מחובר למחסן הנתונים</span>
+            </div>
           </div>
-          <span class="src">שאילתה · fct_subscription_events · חלון 7 ימים</span>
-        </div>
+          <div class="side-new">+ שיחה חדשה</div>
+          <div class="side-label">שיחות אחרונות</div>
+          <div class="side-item active">נטישת לקוחות · שבוע 31</div>
+          <div class="side-item">מכירות מול יעד · יולי</div>
+          <div class="side-item">תחזית הכנסות · Q3</div>
+          <div class="side-item">עומס שירות לפי ערוץ</div>
+          <div class="side-foot">
+            <span class="side-user">ד</span>
+            <span>דנה · מנהלת כספים</span>
+          </div>
+        </aside>
+        <div class="app-chat">
+          <div class="chat-day">היום · 09:12</div>
 
-        <div class="ch-bubble you">מה לעשות?</div>
+          <div class="msg you">למה הנטישה קפצה בשבוע שעבר?</div>
 
-        <div class="ch-bubble bot">
-          שתי הצעות: <strong>(1)</strong> הקפאת מחיר ל-42 החשבונות ל-12 חודשים - עלות ≈₪34k, חיסכון משוקלל ≈₪192k ARR. <strong>(2)</strong> הוספת הודעת שינוי מחיר של 30 יום לתהליך החידוש.
-          <span class="src">מודל · gemini-2.0 · מבוסס מקורות (3)</span>
-        </div>
+          <div class="msg bot">
+            <div class="msg-ava"><img src="../assets/mascot.png" alt=""/></div>
+            <div class="msg-body">
+              נטישה שבועית עלתה מ-<strong>2.1% ל-3.4%</strong> (+62%). הגידול מרוכז ב<strong>לקוחות SMB שנתיים</strong> בתוכנית Legacy Pro.
+              <div class="msg-card">
+                <div class="row"><span>תוכנית</span><b>Legacy Pro</b></div>
+                <div class="row"><span>סגמנט</span><b>SMB · שנתי</b></div>
+                <div class="row"><span>עזבו השבוע</span><b class="warn">42 חשבונות</b></div>
+                <div class="row"><span>סיבה עיקרית (NPS)</span><b>"העלאת מחיר"</b></div>
+              </div>
+              <span class="msg-src">מקור: fct_subscription_events · חלון 7 ימים</span>
+            </div>
+          </div>
 
-        <div class="ch-input">
-          <input placeholder="שאל כל שאלה על הנתונים שלך..." disabled/>
-          <button class="send" disabled>↑</button>
+          <div class="msg you">מה לעשות?</div>
+
+          <div class="msg bot">
+            <div class="msg-ava"><img src="../assets/mascot.png" alt=""/></div>
+            <div class="msg-body">
+              שתי הצעות: <strong>(1)</strong> הקפאת מחיר ל-42 החשבונות ל-12 חודשים, עלות ≈₪34k מול חיסכון ≈₪192k ARR. <strong>(2)</strong> הוספת הודעת שינוי מחיר של 30 יום לתהליך החידוש.
+              <span class="msg-src">מבוסס על 3 מקורות</span>
+            </div>
+          </div>
+
+          <div class="chat-input">
+            <input placeholder="שאלו כל שאלה על הנתונים..." disabled/>
+            <button disabled>שלח</button>
+          </div>
         </div>
       </div>
     </div>

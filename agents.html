@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>AI Agents - Data Clinic</title>
 <meta name="description" content="We build AI agents that answer plain-language questions straight from your data, with sources." />
-<link rel="stylesheet" href="site.css?v=10" />
+<link rel="stylesheet" href="site.css?v=11" />
 <link rel="icon" type="image/png" href="assets/mascot.png" />
 </head>
 <body>
@@ -58,40 +58,67 @@
   </div>
 </section>
 
-<!-- ──────── AGENT UI DEMO ──────── -->
-<section class="section" style="padding: 16px 0 110px;">
+<!-- ──────── AGENT APP MOCK ──────── -->
+<section class="section" style="padding: 8px 0 110px;">
   <div class="container">
-    <div class="agent-demo-panel reveal">
-      <div class="agent-chat">
-        <div class="ch-head">
-          <div class="ava"><img src="assets/mascot.png" alt=""/></div>
-          <div><div class="nm">Insights Chat</div></div>
-          <div class="st"><span class="dot"></span>online</div>
-        </div>
-
-        <div class="ch-bubble you">Why did churn spike last week?</div>
-
-        <div class="ch-bubble bot">
-          Weekly churn rose from <strong>2.1% → 3.4%</strong> (+62%). The increase is concentrated in <strong>annual SMB customers</strong> on the legacy Pro plan.
-          <div class="ch-card">
-            <div class="row"><span>Plan</span><b>Legacy Pro</b></div>
-            <div class="row"><span>Segment</span><b>SMB · Annual</b></div>
-            <div class="row"><span>Churned this week</span><b class="warn">42 accounts</b></div>
-            <div class="row"><span>Top reason (NPS)</span><b>"price increase"</b></div>
+    <div class="app-mock reveal" role="img" aria-label="Agent interface demo">
+      <div class="app-bar">
+        <span class="app-dots"><i></i><i></i><i></i></span>
+        <span class="app-title">Data Clinic · Insights Chat</span>
+      </div>
+      <div class="app-body">
+        <aside class="app-side">
+          <div class="side-agent">
+            <img src="assets/mascot.png" alt=""/>
+            <div>
+              <b>Insights Chat</b>
+              <span><i class="on"></i> Connected to your warehouse</span>
+            </div>
           </div>
-          <span class="src">queried · fct_subscription_events · 7-day window</span>
-        </div>
+          <div class="side-new">+ New chat</div>
+          <div class="side-label">Recent chats</div>
+          <div class="side-item active">Customer churn · Week 31</div>
+          <div class="side-item">Sales vs target · July</div>
+          <div class="side-item">Revenue forecast · Q3</div>
+          <div class="side-item">Support load by channel</div>
+          <div class="side-foot">
+            <span class="side-user">D</span>
+            <span>Dana · Finance lead</span>
+          </div>
+        </aside>
+        <div class="app-chat">
+          <div class="chat-day">Today · 09:12</div>
 
-        <div class="ch-bubble you">What should we do about it?</div>
+          <div class="msg you">Why did churn spike last week?</div>
 
-        <div class="ch-bubble bot">
-          Two suggestions: <strong>(1)</strong> grandfather the 42 affected accounts at last year's price for 12 months - cost ≈₪34k, projected save ≈₪192k ARR. <strong>(2)</strong> add a 30-day price-change notice to the renewal flow.
-          <span class="src">model · gemini-2.0 · grounded · sources attached (3)</span>
-        </div>
+          <div class="msg bot">
+            <div class="msg-ava"><img src="assets/mascot.png" alt=""/></div>
+            <div class="msg-body">
+              Weekly churn rose from <strong>2.1% to 3.4%</strong> (+62%). The increase is concentrated in <strong>annual SMB customers</strong> on the legacy Pro plan.
+              <div class="msg-card">
+                <div class="row"><span>Plan</span><b>Legacy Pro</b></div>
+                <div class="row"><span>Segment</span><b>SMB · Annual</b></div>
+                <div class="row"><span>Churned this week</span><b class="warn">42 accounts</b></div>
+                <div class="row"><span>Top reason (NPS)</span><b>"price increase"</b></div>
+              </div>
+              <span class="msg-src">Source: fct_subscription_events · 7-day window</span>
+            </div>
+          </div>
 
-        <div class="ch-input">
-          <input placeholder="Ask anything about your data..." disabled/>
-          <button class="send" disabled>↑</button>
+          <div class="msg you">What should we do about it?</div>
+
+          <div class="msg bot">
+            <div class="msg-ava"><img src="assets/mascot.png" alt=""/></div>
+            <div class="msg-body">
+              Two suggestions: <strong>(1)</strong> grandfather the 42 affected accounts at last year's price for 12 months, cost ≈₪34k against ≈₪192k ARR saved. <strong>(2)</strong> add a 30-day price-change notice to the renewal flow.
+              <span class="msg-src">Grounded in 3 sources</span>
+            </div>
+          </div>
+
+          <div class="chat-input">
+            <input placeholder="Ask anything about your data..." disabled/>
+            <button disabled>Send</button>
+          </div>
         </div>
       </div>
     </div>
