@@ -1,6 +1,6 @@
 # Data Clinic.ai
 
-Data & BI consultancy website — static HTML/CSS, English + Hebrew.
+Data & BI consultancy website. Static HTML/CSS, English + Hebrew.
 
 **Live site:** https://ahmad-sarsor.github.io/data-clinic-website/
 
