@@ -1,6 +1,4 @@
 User-agent: *
 Allow: /
-Disallow: /dashboards.html
-Disallow: /he/dashboards.html
 
 Sitemap: https://ahmad-sarsor.github.io/data-clinic-website/sitemap.xml

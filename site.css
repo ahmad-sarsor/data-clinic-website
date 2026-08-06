@@ -1,5 +1,5 @@
 /* ui_kits/website/site.css — Data Clinic, Hex.tech-inspired layout */
-@import url('colors_and_type.css?v=14');
+@import url('colors_and_type.css?v=15');
 @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700;800&family=Frank+Ruhl+Libre:wght@400;500;700&display=swap');
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -2253,4 +2253,10 @@ html { overflow-x: clip; }
     transform: translateX(-50%) scaleX(-1);
     opacity: .9;
   }
+}
+
+/* ── Spotlight block clipped its own content on phones (4 KPI tiles forced a 492px track) ── */
+@media (max-width: 860px) {
+  .spotlight-kpis { grid-template-columns: 1fr 1fr; }
+  .spotlight-text, .spotlight-canvas { padding: 24px 20px; }
 }
