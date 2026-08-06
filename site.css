@@ -1,9 +1,9 @@
 /* ui_kits/website/site.css — Data Clinic, Hex.tech-inspired layout */
-@import url('colors_and_type.css?v=13');
+@import url('colors_and_type.css?v=14');
 @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700;800&family=Frank+Ruhl+Libre:wght@400;500;700&display=swap');
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; scroll-padding-top: 88px; }
 body {
   font-family: var(--font-body);
   background: #F7F8FB;
@@ -2084,10 +2084,19 @@ html[dir="rtl"] .hb-cta:hover .arrow { transform: translateX(-2px); }
 }
 
 /* ── Hamburger menu ── */
+html { overflow-x: clip; }
 .nav-toggle { display: none; }
 .nav-burger { display: none; }
 @media (max-width: 960px) {
   .nav-inner { padding: 12px 20px; gap: 12px; flex-wrap: wrap; }
+  html { scroll-padding-top: 78px; }
+  .nav-toggle {
+    display: block;
+    position: absolute; width: 1px; height: 1px;
+    margin: -1px; padding: 0; border: 0;
+    clip-path: inset(50%); overflow: hidden; white-space: nowrap;
+  }
+  .nav-toggle:focus-visible ~ .nav-burger { outline: 2px solid #0B72B5; outline-offset: 2px; }
   .nav-burger {
     display: flex; flex-direction: column; justify-content: center; gap: 5px;
     width: 44px; height: 44px; margin-inline-start: auto;
@@ -2118,11 +2127,12 @@ html[dir="rtl"] .hb-cta:hover .arrow { transform: translateX(-2px); }
 
 /* ── Global phone corrections ── */
 @media (max-width: 640px) {
-  html, body { overflow-x: hidden; }
+  /* clip (not hidden) so the sticky header keeps working */
   .container, .container-narrow { padding-inline: 20px; }
 
   /* Section rhythm: 120px is enormous on a phone */
-  .section { padding: 56px 0; }
+  .section { padding-block: 56px !important; }
+  .section.tight { padding-block: 8px 56px !important; }
   .section-head { margin-bottom: 34px; }
   .section-head h2 { font-size: clamp(26px, 7.4vw, 34px); line-height: 1.15; }
   .section-head p { font-size: 15px; }
@@ -2170,7 +2180,8 @@ html[dir="rtl"] .hb-cta:hover .arrow { transform: translateX(-2px); }
   .value-card p, .role-card p { font-size: 14px; }
 
   /* Contact form */
-  .contact-shell { border-radius: 18px; }
+  .contact-shell { padding: 0; border-radius: 18px; overflow: hidden; gap: 0; }
+  .contact-form { border-top: 1px solid rgba(17,24,42,0.08); }
   .contact-side, .contact-form { padding: 26px 20px; }
   .form-grid { grid-template-columns: 1fr; gap: 14px; }
   .form-field.full { grid-column: auto; }
