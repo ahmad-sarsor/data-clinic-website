@@ -4,9 +4,21 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>אודות - Data Clinic</title>
-<meta name="description" content="צוות טכנולוגי שעוסק בעולם הדאטה: מערכות BI, מחסני נתונים (DWH), אפליקציות דאטה וסוכני AI." />
-<link rel="stylesheet" href="../site.css?v=11" />
+<meta name="description" content="צוות טכנולוגי שעוסק בעולם הדאטה: מערכות BI, מחסני נתונים (DWH), אפליקציות דאטה, מערכות אקסל וסוכני AI." />
+<link rel="stylesheet" href="../site.css?v=12" />
 <link rel="icon" type="image/png" href="../assets/mascot.png" />
+<link rel="apple-touch-icon" href="../assets/mascot.png" />
+<meta name="theme-color" content="#16A8EA" />
+<link rel="canonical" href="https://ahmad-sarsor.github.io/data-clinic-website/he/about.html" />
+<link rel="alternate" hreflang="he" href="https://ahmad-sarsor.github.io/data-clinic-website/he/about.html" />
+<link rel="alternate" hreflang="en" href="https://ahmad-sarsor.github.io/data-clinic-website/about.html" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://ahmad-sarsor.github.io/data-clinic-website/he/about.html" />
+<meta property="og:title" content="אודות - Data Clinic" />
+<meta property="og:description" content="צוות טכנולוגי שעוסק בעולם הדאטה: מערכות BI, מחסני נתונים (DWH), אפליקציות דאטה, מערכות אקסל וסוכני AI." />
+<meta property="og:image" content="https://ahmad-sarsor.github.io/data-clinic-website/assets/mascot.png" />
+<meta property="og:locale" content="he_IL" />
+<meta name="twitter:card" content="summary" />
 </head>
 <body>
 
@@ -17,6 +29,8 @@
       <img src="../assets/mascot.png" alt="" />
       <span>Data Clinic</span>
     </a>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle" hidden />
+    <label for="nav-toggle" class="nav-burger" aria-label="Menu"><span></span><span></span><span></span></label>
     <nav class="nav-links">
       <a href="index.html">בית</a>
       <a href="index.html#services">שירותים</a>
@@ -45,7 +59,7 @@
         <span>אודות</span>
       </div>
       <h1>צוות טכנולוגי שחי <br/><span class="serif">את עולם הדאטה.</span></h1>
-      <p class="lead">Data Clinic הוא צוות טכנולוגי שעוסק בעולם הדאטה: מערכות BI, מחסני נתונים (DWH), אפליקציות דאטה וסוכני AI. אנחנו הופכים נתונים מפוזרים לתמונה אחת ברורה שמניעה החלטות.</p>
+      <p class="lead">Data Clinic הוא צוות טכנולוגי שעוסק בעולם הדאטה: מערכות BI, מחסני נתונים (DWH), אפליקציות דאטה, מערכות אקסל וסוכני AI. אנחנו הופכים נתונים מפוזרים לתמונה אחת ברורה שמניעה החלטות.</p>
       <div style="display:flex; gap:10px; flex-wrap:wrap;">
         <a href="#contact" class="btn btn-blue btn-lg">דברו איתנו <span class="arrow">→</span></a>
       </div>
@@ -56,7 +70,7 @@
 <!-- ──────── STORY ──────── -->
 <section class="section" style="padding: 96px 0 0;">
   <div class="container">
-    <div style="display:grid; grid-template-columns: 1fr 1.4fr; gap: 64px; align-items: start;" class="reveal">
+    <div class="about-story reveal">
       <div>
         <span class="section-eyebrow">מי אנחנו</span>
         <h2 class="t-h2" style="font-size: clamp(28px, 3.4vw, 44px); margin-top: 14px;">למה קליניקה, <span class="serif">ולא עוד ספק.</span></h2>
@@ -75,7 +89,7 @@
   <div class="container">
     <div class="section-head reveal" style="text-align:right; max-width: none; margin-bottom: 36px;">
       <span class="section-eyebrow">מה אנחנו עושים</span>
-      <h2 style="font-size: clamp(28px, 3.4vw, 44px);">ארבעה שירותים, <span class="serif">מטרה אחת.</span></h2>
+      <h2 style="font-size: clamp(28px, 3.4vw, 44px);">חמישה שירותים, <span class="serif">מטרה אחת.</span></h2>
       <p style="margin: 0; max-width: 60ch;">מהתשתית ועד המסך: כל מה שצריך כדי שהנתונים שלכם יעבדו בשבילכם.</p>
     </div>
     <div class="role-grid reveal">
@@ -101,6 +115,12 @@
         <div class="role-top"><span class="role-ava b">AI</span><h4>סוכני AI</h4></div>
         <p>סוכן שמחובר לנתונים שלכם ועונה על שאלות בשפה חופשית, עם מקורות.</p>
         <div class="role-chips"><span class="role-chip">Gemini</span><span class="role-chip">Vertex AI</span><span class="role-chip">RAG</span></div>
+        <a href="#contact" class="role-hire">דברו איתנו <span>→</span></a>
+      </div>
+      <div class="role-card">
+        <div class="role-top"><span class="role-ava o">XL</span><h4>מערכות אקסל</h4></div>
+        <p>מערכות ניהול ומעקב באקסל לעסקים קטנים וגדולים, עם אוטומציה ודוחות.</p>
+        <div class="role-chips"><span class="role-chip">Excel</span><span class="role-chip">Power Query</span><span class="role-chip">Sheets</span></div>
         <a href="#contact" class="role-hire">דברו איתנו <span>→</span></a>
       </div>
     </div>
@@ -227,6 +247,7 @@
               <option>מערכת BI ודשבורדים</option>
               <option>הקמת מחסן נתונים (DWH)</option>
               <option>אפליקציית דאטה</option>
+              <option>מערכת אקסל לעסק</option>
               <option>סוכן AI לנתונים</option>
               <option>עדיין לא בטוח, רוצה לדבר</option>
             </select>
@@ -256,7 +277,7 @@
       <h2 style="font-size: clamp(28px, 3.4vw, 44px);">שאלות נפוצות, <span class="serif">תשובות כנות.</span></h2>
     </div>
 
-    <div style="display:grid; grid-template-columns: 1fr 1fr; gap: 20px;" class="reveal">
+    <div class="faq-grid reveal">
       <details class="value-card" style="cursor:pointer;">
         <summary style="font-family: var(--font-display); font-weight: 700; font-size: 16px; color:#11182A; list-style: none;">כמה זמן לוקח פרויקט טיפוסי?</summary>
         <p style="margin-top: 10px;">דשבורד ראשון עולה תוך שבועות ספורים מההתנעה. מחסן נתונים מלא לפי היקף. בכל מקרה סוגרים ציר זמן מראש, לפני שמתחילים.</p>
@@ -308,7 +329,7 @@
     <div class="foot-grid">
       <div class="foot-brand">
         <a href="index.html" class="brand"><img src="../assets/mascot.png" alt=""/><span>Data Clinic</span></a>
-        <p>קולקטיב של מומחי דאטה עצמאיים ובכירים - דשבורדים, סוכני AI והפייפליינים שמתחתיהם, בנויים בידי מי שבאמת מבצע את העבודה.</p>
+        <p>צוות טכנולוגי שעוסק בעולם הדאטה. מערכות BI, מחסני נתונים, אפליקציות דאטה, מערכות אקסל וסוכני AI.</p>
       </div>
       <div class="foot-col">
         <h5>מוצר</h5>
@@ -320,15 +341,12 @@
         <h5>חברה</h5>
         <a href="about.html">אודות</a>
         <a href="about.html#contact">צור קשר</a>
-        <a href="#">לקוחות</a>
-        <a href="#">בלוג</a>
       </div>
       <div class="foot-col">
-        <h5>משאבים</h5>
-        <a href="#">תיעוד</a>
-        <a href="#">שינויים</a>
-        <a href="#">אבטחה</a>
-        <a href="#">פרטיות</a>
+        <h5>מדריכים</h5>
+        <a href="learn-bi.html">מהו BI</a>
+        <a href="learn-dwh.html">מחסן נתונים</a>
+        <a href="learn-dbt.html">dbt</a>
       </div>
     </div>
     <div class="foot-bottom">

@@ -3,10 +3,22 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Data Clinic - Dashboards, AI agents, and pipelines that just work</title>
-<meta name="description" content="A Tel Aviv collective of senior freelance data specialists - engineers, analysts, BI developers, and business analysts. Hire the right expert for your dashboards, pipelines, and AI." />
-<link rel="stylesheet" href="site.css?v=11" />
+<title>Data Clinic - BI systems, data warehouses and data apps</title>
+<meta name="description" content="A technology team in the world of data: BI systems, data warehouses (DWH), data apps, Excel systems and AI agents." />
+<link rel="stylesheet" href="site.css?v=12" />
 <link rel="icon" type="image/png" href="assets/mascot.png" />
+<link rel="apple-touch-icon" href="assets/mascot.png" />
+<meta name="theme-color" content="#16A8EA" />
+<link rel="canonical" href="https://ahmad-sarsor.github.io/data-clinic-website/index.html" />
+<link rel="alternate" hreflang="en" href="https://ahmad-sarsor.github.io/data-clinic-website/index.html" />
+<link rel="alternate" hreflang="he" href="https://ahmad-sarsor.github.io/data-clinic-website/he/index.html" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://ahmad-sarsor.github.io/data-clinic-website/index.html" />
+<meta property="og:title" content="Data Clinic - BI systems, data warehouses and data apps" />
+<meta property="og:description" content="A technology team in the world of data: BI systems, data warehouses (DWH), data apps, Excel systems and AI agents." />
+<meta property="og:image" content="https://ahmad-sarsor.github.io/data-clinic-website/assets/mascot.png" />
+<meta property="og:locale" content="en_US" />
+<meta name="twitter:card" content="summary" />
 </head>
 <body>
 
@@ -17,6 +29,8 @@
       <img src="assets/mascot.png" alt="" />
       <span>Data Clinic</span>
     </a>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle" hidden />
+    <label for="nav-toggle" class="nav-burger" aria-label="Menu"><span></span><span></span><span></span></label>
     <nav class="nav-links">
       <a href="index.html" class="active">Home</a>
       <a href="#services">Services</a>
@@ -41,7 +55,7 @@
     <div class="hero-clean-grid">
       <div>
         <span class="hero-clean-badge">
-          <span class="dot"></span> A senior data collective
+          <span class="dot"></span> A technology team for data
         </span>
         <h1>
           Raw data in,<br/>
@@ -79,7 +93,7 @@
         <div class="hero-float hero-float-chat">
           <div class="head">
             <span class="ava"><img src="assets/mascot.png" alt=""/></span>
-            <span>Anomaly Doctor</span>
+            <span>Metric monitoring</span>
             <span class="status"><span></span>just now</span>
           </div>
           <p>⚠ Checkout conversion dropped <b>−32%</b> in the last 90m. Likely Stripe IL - paged @ops.</p>
@@ -128,7 +142,7 @@
 <section class="services-blue" id="services">
   <div class="container">
     <h2 class="sb-title reveal">What we <span class="serif">do.</span></h2>
-    <p class="sb-subtitle reveal">Nine specialties, one collective. Every project is delivered by a vetted senior freelancer - the person you meet is the person who builds it.</p>
+    <p class="sb-subtitle reveal">Ten specialties, one team. The person you meet is the person who builds it.</p>
 
     <div class="sb-frame reveal">
       <div class="sb-grid">
@@ -140,7 +154,7 @@
 
         <div class="sb-item">
           <div class="sb-check">✓</div>
-          <div class="sb-text"><b>Dashboard development</b>: Department dashboards built on the BI tool you already use - Power BI, Tableau, Looker. Live in two weeks.</div>
+          <div class="sb-text"><b>Dashboard development</b>: Department dashboards on Power BI, Tableau or Looker, whichever already works for you.</div>
         </div>
 
         <div class="sb-item">
@@ -155,27 +169,32 @@
 
         <div class="sb-item">
           <div class="sb-check">✓</div>
-          <div class="sb-text"><b>Engineers on-demand</b>: Senior data engineers and analysts embedded with your team for as long as you need. No juniors in disguise.</div>
+          <div class="sb-text"><b>Embedded with your team</b>: We work alongside your people for the length of the project, with ongoing support and knowledge transfer as we go.</div>
         </div>
 
         <div class="sb-item">
           <div class="sb-check">✓</div>
-          <div class="sb-text"><b>AI agents</b>: Anomaly Doctor, Insights Chat, Forecaster, Narrator - purpose-built agents grounded in your warehouse and metrics layer.</div>
+          <div class="sb-text"><b>AI agents</b>: An agent connected to your data that answers plain-language questions with sources, and alerts you when something drifts.</div>
         </div>
 
         <div class="sb-item">
           <div class="sb-check">✓</div>
-          <div class="sb-text"><b>Pipelines &amp; automation</b>: Production orchestration with Airflow and Cloud Run, plus robust Excel and Sheets setups for teams living in spreadsheets.</div>
+          <div class="sb-text"><b>Pipelines &amp; automation</b>: Production orchestration with Airflow and Cloud Run, so your data refreshes itself with nobody running anything by hand.</div>
         </div>
 
         <div class="sb-item">
           <div class="sb-check">✓</div>
-          <div class="sb-text"><b>Training &amp; handoff</b>: Loom walkthroughs, dbt docs, and live workshops. Your team owns the keys when we leave - no lock-in.</div>
+          <div class="sb-text"><b>Training &amp; handoff</b>: Documentation, recorded walkthroughs and workshops. Your team owns the keys when we finish, with no vendor lock-in.</div>
         </div>
 
         <div class="sb-item">
           <div class="sb-check">✓</div>
           <div class="sb-text"><b>Data app development</b>: Custom apps for viewing your data, live tracking and alerts, built on your warehouse and usable on any device.</div>
+        </div>
+
+        <div class="sb-item">
+          <div class="sb-check">✓</div>
+          <div class="sb-text"><b>Excel systems</b>: Management and tracking systems in Excel for businesses of any size, with formulas, automation and reports that refresh themselves.</div>
         </div>
 
       </div>
@@ -191,7 +210,7 @@
 <section class="domains-section" id="domains">
   <div class="container">
     <h2 class="domains-title reveal">A BI system for every field</h2>
-    <p class="domains-subtitle reveal">Dashboards, data apps and AI agents, from sales to the factory floor.</p>
+    <p class="domains-subtitle reveal">Dashboards, data apps, Excel systems and AI agents, from sales to the factory floor.</p>
     <div class="domains-grid reveal">
 
       <div class="domain-card">
@@ -266,24 +285,17 @@
         <p>Custom apps for viewing your data, live tracking and alerts, on any device</p>
       </div>
 
+      <div class="domain-card">
+        <div class="domain-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M3 9h18"/><path d="M9 9v12"/><path d="m14 13 4 4"/><path d="m18 13-4 4"/></svg></div>
+        <h3>Excel systems</h3>
+        <p>Management and tracking systems in Excel for businesses of any size</p>
+      </div>
+
     </div>
   </div>
 </section>
 
 <!-- ──────── LOGO STRIP ──────── -->
-<section class="logos">
-  <div class="container">
-    <div class="logos-label">Trusted by data teams at companies that take their numbers seriously</div>
-    <div class="logos-row">
-      <div class="logo-tile">◆ Northwind</div>
-      <div class="logo-tile">▲ Atlas Group</div>
-      <div class="logo-tile">⬡ Hexford</div>
-      <div class="logo-tile">◐ Lumen Labs</div>
-      <div class="logo-tile">✦ Polaris</div>
-      <div class="logo-tile">◇ Meridian</div>
-    </div>
-  </div>
-</section>
 
 
 <!-- ──────── AI AGENT SHOWCASE ──────── -->
@@ -392,7 +404,7 @@
     <div class="foot-grid">
       <div class="foot-brand">
         <a href="index.html" class="brand"><img src="assets/mascot.png" alt=""/><span>Data Clinic</span></a>
-        <p>A collective of senior freelance data specialists - dashboards, AI agents, and the pipelines beneath them, built by the people who actually do the work.</p>
+        <p>A technology team in the world of data. BI systems, data warehouses, data apps, Excel systems and AI agents.</p>
       </div>
       <div class="foot-col">
         <h5>Product</h5>
@@ -404,15 +416,12 @@
         <h5>Company</h5>
         <a href="about.html">About</a>
         <a href="about.html#contact">Contact</a>
-        <a href="#">Customers</a>
-        <a href="#">Blog</a>
       </div>
       <div class="foot-col">
-        <h5>Resources</h5>
-        <a href="#">Docs</a>
-        <a href="#">Changelog</a>
-        <a href="#">Security</a>
-        <a href="#">Privacy</a>
+        <h5>Guides</h5>
+        <a href="learn-bi.html">What is BI</a>
+        <a href="learn-dwh.html">Data warehouse</a>
+        <a href="learn-dbt.html">dbt</a>
       </div>
     </div>
     <div class="foot-bottom">

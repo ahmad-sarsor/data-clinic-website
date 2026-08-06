@@ -1,5 +1,5 @@
 /* ui_kits/website/site.css — Data Clinic, Hex.tech-inspired layout */
-@import url('colors_and_type.css?v=11');
+@import url('colors_and_type.css?v=12');
 @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700;800&family=Frank+Ruhl+Libre:wght@400;500;700&display=swap');
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -2075,4 +2075,149 @@ html[dir="rtl"] .hb-cta:hover .arrow { transform: translateX(-2px); }
   .app-chat { padding: 18px 14px 16px; }
   .app-mock { border-radius: 14px; }
   .app-chat .msg { max-width: 92%; }
+}
+
+/* ══════════════════════════════════════════════════════════
+   MOBILE LAYER: phone-first corrections (iPhone 375-430px)
+   ══════════════════════════════════════════════════════════ */
+
+/* ── About page grids (were inline styles that never collapsed) ── */
+.about-story { display: grid; grid-template-columns: 1fr 1.4fr; gap: 64px; align-items: start; }
+.faq-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+@media (max-width: 860px) {
+  .about-story { grid-template-columns: 1fr; gap: 24px; }
+  .faq-grid { grid-template-columns: 1fr; gap: 14px; }
+}
+
+/* ── Hamburger menu ── */
+.nav-toggle { display: none; }
+.nav-burger { display: none; }
+@media (max-width: 900px) {
+  .nav-inner { padding: 12px 20px; gap: 12px; flex-wrap: wrap; }
+  .nav-burger {
+    display: flex; flex-direction: column; justify-content: center; gap: 5px;
+    width: 44px; height: 44px; margin-inline-start: auto;
+    padding: 10px; border-radius: 10px; cursor: pointer;
+    border: 1px solid rgba(17,24,42,0.10); background: #fff;
+  }
+  .nav-burger span { display: block; height: 2px; width: 100%; background: #11182A; border-radius: 2px; transition: transform .2s, opacity .2s; }
+  .nav-toggle:checked ~ .nav-burger span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .nav-toggle:checked ~ .nav-burger span:nth-child(2) { opacity: 0; }
+  .nav-toggle:checked ~ .nav-burger span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+  .nav-links, .nav-cta-row { display: none; }
+  .nav-toggle:checked ~ .nav-links,
+  .nav-toggle:checked ~ .nav-cta-row { display: flex; width: 100%; }
+  .nav-toggle:checked ~ .nav-links {
+    flex-direction: column; gap: 2px;
+    padding-top: 10px; margin-top: 4px;
+    border-top: 1px solid rgba(17,24,42,0.08);
+  }
+  .nav-links a, .nav-links .nav-lock { padding: 12px 10px; font-size: 15px; border-radius: 10px; }
+  .nav-toggle:checked ~ .nav-cta-row {
+    flex-direction: column; align-items: stretch; gap: 10px;
+    padding-bottom: 12px; margin-top: 8px;
+  }
+  .nav-cta-row .lang-toggle { align-self: flex-start; }
+  .nav-cta-row .btn { justify-content: center; padding: 12px 18px; font-size: 15px; }
+}
+
+/* ── Global phone corrections ── */
+@media (max-width: 640px) {
+  html, body { overflow-x: hidden; }
+  .container, .container-narrow { padding-inline: 20px; }
+
+  /* Section rhythm: 120px is enormous on a phone */
+  .section { padding: 56px 0; }
+  .section-head { margin-bottom: 34px; }
+  .section-head h2 { font-size: clamp(26px, 7.4vw, 34px); line-height: 1.15; }
+  .section-head p { font-size: 15px; }
+  .section-eyebrow { margin-bottom: 12px; }
+
+  /* Hero */
+  .hero-clean { padding: 34px 0 8px; }
+  .hero-clean h1 { font-size: clamp(31px, 9vw, 40px); line-height: 1.1; margin-bottom: 16px; }
+  .hero-clean p.lead { font-size: 16px; line-height: 1.65; }
+  .hero-clean-ctas { flex-direction: column; align-items: stretch; }
+  .hero-clean-ctas .btn { justify-content: center; width: 100%; }
+  .hero-clean-right { height: 260px; }
+  .hero-mascot-orb { width: 190px; height: 190px; }
+  .hero-clean-badge { font-size: 12px; }
+
+  /* Page hero (inner pages) */
+  .page-hero { padding: 40px 0 24px; }
+  .page-hero h1 { font-size: clamp(28px, 8.4vw, 38px); line-height: 1.14; }
+  .page-hero .lead { font-size: 16px; }
+  .page-hero-mascot { display: none; }
+
+  /* Long English tech terms must never push the layout sideways */
+  h1, h2, h3, h4, p, li, .lead, .sb-text, .msg-body { overflow-wrap: break-word; word-break: normal; }
+
+  /* Services checklist */
+  .services-blue { padding: 56px 0; }
+  .sb-title { font-size: clamp(26px, 7.4vw, 34px); }
+  .sb-subtitle { font-size: 15px; }
+  .sb-text { font-size: 14.5px; line-height: 1.6; }
+  .sb-cta .btn { width: 100%; justify-content: center; }
+
+  /* Tech chips */
+  .tech-section { padding: 34px 0; }
+  .tech-label { font-size: 12px; margin-bottom: 18px; }
+
+  /* Domains */
+  .domains-section { padding: 46px 0 34px; }
+  .domains-title { font-size: clamp(24px, 7vw, 30px); }
+  .domains-subtitle { font-size: 14.5px; margin-bottom: 32px; }
+  .domain-card p { font-size: 13px; }
+
+  /* Cards, values, roles, steps */
+  .value-card, .role-card, .step-how { padding: 22px 20px; }
+  .value-card h4, .role-card h4 { font-size: 16px; }
+  .value-card p, .role-card p { font-size: 14px; }
+
+  /* Contact form */
+  .contact-shell { border-radius: 18px; }
+  .contact-side, .contact-form { padding: 26px 20px; }
+  .form-grid { grid-template-columns: 1fr; gap: 14px; }
+  .form-field.full { grid-column: auto; }
+  .contact-form .btn { width: 100%; justify-content: center; }
+  /* iOS zooms the page in when a focused input is under 16px */
+  .form-field input, .form-field textarea, .form-field select, input, select, textarea { font-size: 16px; }
+
+  /* CTA band + footer */
+  .cta-band { padding: 32px 22px; }
+  .cta-band h2 { font-size: clamp(24px, 7vw, 30px); }
+  .cta-band .btns .btn { width: 100%; justify-content: center; }
+  .footer { padding: 44px 0 30px; }
+  .foot-grid { grid-template-columns: 1fr 1fr; gap: 26px 18px; }
+  .foot-brand { grid-column: 1 / -1; }
+  .foot-bottom { flex-direction: column; gap: 8px; text-align: center; }
+
+  /* Agent app mockup */
+  .app-mock { border-radius: 14px; }
+  .app-title { font-size: 11px; padding-inline-end: 0; }
+  .msg-card .row { flex-direction: column; gap: 2px; }
+  .chat-input button { padding: 9px 16px; font-size: 13px; }
+
+  /* Learn pages */
+  .learn-article { padding: 26px 18px; }
+  .learn-article h2 { font-size: 22px; }
+  .learn-article p, .learn-article li { font-size: 15px; }
+}
+
+/* ── Touch targets and keyboard focus ── */
+@media (hover: none) {
+  .btn, .nav-links a, .lang-btn, .role-hire { min-height: 44px; display: inline-flex; align-items: center; }
+  .btn:hover, .domain-card:hover .domain-icon, .tech-chip:hover { transform: none; }
+}
+:where(a, button, input, select, textarea, label[for]):focus-visible {
+  outline: 2px solid #0B72B5;
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+/* ── Respect reduced motion ── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+  .reveal { opacity: 1 !important; transform: none !important; }
 }

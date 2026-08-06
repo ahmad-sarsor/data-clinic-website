@@ -3,10 +3,22 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Data Clinic - דשבורדים, סוכני AI ופייפליינים שפשוט עובדים</title>
-<meta name="description" content="קולקטיב מתל אביב של מומחי דאטה עצמאיים ובכירים - מהנדסים, אנליסטים, מפתחי BI ואנליסטים עסקיים." />
-<link rel="stylesheet" href="../site.css?v=11" />
+<title>Data Clinic - מערכות BI, מחסני נתונים ואפליקציות דאטה</title>
+<meta name="description" content="צוות טכנולוגי שעוסק בעולם הדאטה: מערכות BI, מחסני נתונים (DWH), אפליקציות דאטה, מערכות אקסל וסוכני AI." />
+<link rel="stylesheet" href="../site.css?v=12" />
 <link rel="icon" type="image/png" href="../assets/mascot.png" />
+<link rel="apple-touch-icon" href="../assets/mascot.png" />
+<meta name="theme-color" content="#16A8EA" />
+<link rel="canonical" href="https://ahmad-sarsor.github.io/data-clinic-website/he/index.html" />
+<link rel="alternate" hreflang="he" href="https://ahmad-sarsor.github.io/data-clinic-website/he/index.html" />
+<link rel="alternate" hreflang="en" href="https://ahmad-sarsor.github.io/data-clinic-website/index.html" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://ahmad-sarsor.github.io/data-clinic-website/he/index.html" />
+<meta property="og:title" content="Data Clinic - מערכות BI, מחסני נתונים ואפליקציות דאטה" />
+<meta property="og:description" content="צוות טכנולוגי שעוסק בעולם הדאטה: מערכות BI, מחסני נתונים (DWH), אפליקציות דאטה, מערכות אקסל וסוכני AI." />
+<meta property="og:image" content="https://ahmad-sarsor.github.io/data-clinic-website/assets/mascot.png" />
+<meta property="og:locale" content="he_IL" />
+<meta name="twitter:card" content="summary" />
 </head>
 <body>
 
@@ -17,6 +29,8 @@
       <img src="../assets/mascot.png" alt="" />
       <span>Data Clinic</span>
     </a>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle" hidden />
+    <label for="nav-toggle" class="nav-burger" aria-label="Menu"><span></span><span></span><span></span></label>
     <nav class="nav-links">
       <a href="index.html" class="active">בית</a>
       <a href="#services">שירותים</a>
@@ -41,7 +55,7 @@
     <div class="hero-clean-grid">
       <div>
         <span class="hero-clean-badge">
-          <span class="dot"></span> קולקטיב דאטה בכיר
+          <span class="dot"></span> צוות טכנולוגי לעולם הדאטה
         </span>
         <h1>
           נתונים גולמיים,<br/>
@@ -79,7 +93,7 @@
         <div class="hero-float hero-float-chat">
           <div class="head">
             <span class="ava"><img src="../assets/mascot.png" alt=""/></span>
-            <span>רופא החריגות</span>
+            <span>ניטור מדדים</span>
             <span class="status"><span></span>הרגע</span>
           </div>
           <p>⚠ המרת תשלום ירדה <b>−32%</b> ב-90 הדקות האחרונות. כנראה Stripe IL - @ops עודכן.</p>
@@ -128,19 +142,19 @@
 <section class="services-blue" id="services">
   <div class="container">
     <h2 class="sb-title reveal">מה אנחנו יודעים <span class="serif">לעשות?</span></h2>
-    <p class="sb-subtitle reveal">תשע התמחויות, קולקטיב אחד. כל פרויקט נמסר על ידי פרילנסר בכיר ומסונן - מי שאתם פוגשים הוא מי שבונה.</p>
+    <p class="sb-subtitle reveal">עשר התמחויות, צוות אחד. מי שאתם פוגשים הוא מי שבונה בפועל.</p>
 
     <div class="sb-frame reveal">
       <div class="sb-grid">
 
         <div class="sb-item">
           <div class="sb-check">✓</div>
-          <div class="sb-text"><b>ייעוץ אסטרטגי</b>: סקירת מקורות הנתונים שלך, הגדרת ה-KPI שחשובים, וכתיבת מפת הדרכים שהצוות שלך באמת ישיק.</div>
+          <div class="sb-text"><b>ייעוץ אסטרטגי</b>: סקירת מקורות הנתונים שלכם, הגדרת המדדים שבאמת חשובים, ובניית מפת דרכים מעשית.</div>
         </div>
 
         <div class="sb-item">
           <div class="sb-check">✓</div>
-          <div class="sb-text"><b>פיתוח דשבורדים</b>: דשבורדים לכל מחלקה על כלי ה-BI שאתה כבר משתמש בו - Power BI, Tableau, Looker. חיים בשבועיים.</div>
+          <div class="sb-text"><b>פיתוח דשבורדים</b>: דשבורדים לכל מחלקה על Power BI, Tableau או Looker, לפי מה שכבר עובד אצלכם.</div>
         </div>
 
         <div class="sb-item">
@@ -155,27 +169,32 @@
 
         <div class="sb-item">
           <div class="sb-check">✓</div>
-          <div class="sb-text"><b>מהנדסים לפי דרישה</b>: מהנדסי נתונים ואנליסטים בכירים משולבים בצוות שלך כל זמן שאתה צריך. לא ג'וניור בתחפושת.</div>
+          <div class="sb-text"><b>ליווי צמוד לצוות</b>: משתלבים בצוות שלכם לאורך הפרויקט, עם מענה שוטף והעברת ידע תוך כדי עבודה.</div>
         </div>
 
         <div class="sb-item">
           <div class="sb-check">✓</div>
-          <div class="sb-text"><b>סוכני AI</b>: רופא החריגות, שיחת תובנות, מנבא, מספר - סוכנים מומחים מבוססים על מחסן הנתונים ושכבת המדדים שלך.</div>
+          <div class="sb-text"><b>סוכני AI</b>: סוכן שמחובר לנתונים שלכם, עונה על שאלות בשפה חופשית עם מקורות, ומתריע כשמשהו חורג.</div>
         </div>
 
         <div class="sb-item">
           <div class="sb-check">✓</div>
-          <div class="sb-text"><b>פייפליינים ואוטומציה</b>: תזמור פרודקשן עם Airflow ו-Cloud Run, וגם פתרונות חזקים ל-Excel ו-Sheets לצוותים שחיים בגיליונות.</div>
+          <div class="sb-text"><b>פייפליינים ואוטומציה</b>: תזמור פרודקשן עם Airflow ו-Cloud Run, כך שהנתונים מתעדכנים לבד בלי שאף אחד יריץ משהו ידנית.</div>
         </div>
 
         <div class="sb-item">
           <div class="sb-check">✓</div>
-          <div class="sb-text"><b>הכשרה והעברת ידע</b>: סיורי Loom, תיעוד dbt, וסדנאות חיות. הצוות שלך מחזיק במפתחות כשאנחנו עוזבים - ללא נעילה.</div>
+          <div class="sb-text"><b>הכשרה והעברת ידע</b>: תיעוד, הדרכות מוקלטות וסדנאות. הצוות שלכם מחזיק במפתחות כשאנחנו מסיימים, בלי נעילה לספק.</div>
         </div>
 
         <div class="sb-item">
           <div class="sb-check">✓</div>
           <div class="sb-text"><b>פיתוח אפליקציות דאטה</b>: אפליקציות ייעודיות לצפייה בנתונים, מעקב חי והתראות, בנויות על המחסן שלכם ונגישות מכל מכשיר.</div>
+        </div>
+
+        <div class="sb-item">
+          <div class="sb-check">✓</div>
+          <div class="sb-text"><b>מערכות אקסל</b>: מערכות ניהול ומעקב באקסל לעסקים קטנים וגדולים, עם נוסחאות, אוטומציה ודוחות שמתעדכנים לבד.</div>
         </div>
 
       </div>
@@ -191,7 +210,7 @@
 <section class="domains-section" id="domains">
   <div class="container">
     <h2 class="domains-title reveal">מערכת BI לכל תחום</h2>
-    <p class="domains-subtitle reveal">דשבורדים, אפליקציות דאטה וסוכני AI, מהמכירות ועד רצפת הייצור.</p>
+    <p class="domains-subtitle reveal">דשבורדים, אפליקציות דאטה, מערכות אקסל וסוכני AI, מהמכירות ועד רצפת הייצור.</p>
     <div class="domains-grid reveal">
 
       <div class="domain-card">
@@ -266,24 +285,17 @@
         <p>אפליקציות מותאמות לצפייה בנתונים, מעקב חי והתראות, מכל מכשיר</p>
       </div>
 
+      <div class="domain-card">
+        <div class="domain-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M3 9h18"/><path d="M9 9v12"/><path d="m14 13 4 4"/><path d="m18 13-4 4"/></svg></div>
+        <h3>מערכות אקסל</h3>
+        <p>מערכות ניהול ומעקב באקסל לעסקים קטנים וגדולים, עם אוטומציה</p>
+      </div>
+
     </div>
   </div>
 </section>
 
 <!-- ──────── LOGO STRIP ──────── -->
-<section class="logos">
-  <div class="container">
-    <div class="logos-label">מוסמך על ידי צוותי נתונים שמתייחסים ברצינות למספרים שלהם</div>
-    <div class="logos-row">
-      <div class="logo-tile">◆ Northwind</div>
-      <div class="logo-tile">▲ Atlas Group</div>
-      <div class="logo-tile">⬡ Hexford</div>
-      <div class="logo-tile">◐ Lumen Labs</div>
-      <div class="logo-tile">✦ Polaris</div>
-      <div class="logo-tile">◇ Meridian</div>
-    </div>
-  </div>
-</section>
 
 
 <!-- ──────── AI AGENT SHOWCASE ──────── -->
@@ -392,7 +404,7 @@
     <div class="foot-grid">
       <div class="foot-brand">
         <a href="index.html" class="brand"><img src="../assets/mascot.png" alt=""/><span>Data Clinic</span></a>
-        <p>קולקטיב של מומחי דאטה עצמאיים ובכירים. דשבורדים, סוכני AI ופייפליינים בנויים על ידי מהנדסי ואנליסטי נתונים בכירים.</p>
+        <p>צוות טכנולוגי שעוסק בעולם הדאטה. מערכות BI, מחסני נתונים, אפליקציות דאטה, מערכות אקסל וסוכני AI.</p>
       </div>
       <div class="foot-col">
         <h5>מוצר</h5>
@@ -404,15 +416,12 @@
         <h5>חברה</h5>
         <a href="about.html">אודות</a>
         <a href="about.html#contact">צור קשר</a>
-        <a href="#">לקוחות</a>
-        <a href="#">בלוג</a>
       </div>
       <div class="foot-col">
-        <h5>משאבים</h5>
-        <a href="#">תיעוד</a>
-        <a href="#">שינויים</a>
-        <a href="#">אבטחה</a>
-        <a href="#">פרטיות</a>
+        <h5>מדריכים</h5>
+        <a href="learn-bi.html">מהו BI</a>
+        <a href="learn-dwh.html">מחסן נתונים</a>
+        <a href="learn-dbt.html">dbt</a>
       </div>
     </div>
     <div class="foot-bottom">

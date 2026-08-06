@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ahmad-sarsor.github.io/data-clinic-website/sitemap.xml
