@@ -5,9 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>מהו מחסן נתונים? - Data Clinic</title>
 <meta name="description" content="מדריך בשפה פשוטה למחסני נתונים: מה זה, ארבע השכבות, השחקנים הגדולים, ומה להימנע ממנו." />
-<link rel="stylesheet" href="../site.css?v=12" />
-<link rel="icon" type="image/png" href="../assets/mascot.png" />
-<link rel="apple-touch-icon" href="../assets/mascot.png" />
+<link rel="stylesheet" href="../site.css?v=13" />
+<noscript><style>.reveal{opacity:1!important;transform:none!important}</style></noscript>
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="../assets/apple-touch-icon.png" />
 <meta name="theme-color" content="#16A8EA" />
 <link rel="canonical" href="https://ahmad-sarsor.github.io/data-clinic-website/he/learn-dwh.html" />
 <link rel="alternate" hreflang="he" href="https://ahmad-sarsor.github.io/data-clinic-website/he/learn-dwh.html" />
@@ -16,7 +17,7 @@
 <meta property="og:url" content="https://ahmad-sarsor.github.io/data-clinic-website/he/learn-dwh.html" />
 <meta property="og:title" content="מהו מחסן נתונים? - Data Clinic" />
 <meta property="og:description" content="מדריך בשפה פשוטה למחסני נתונים: מה זה, ארבע השכבות, השחקנים הגדולים, ומה להימנע ממנו." />
-<meta property="og:image" content="https://ahmad-sarsor.github.io/data-clinic-website/assets/mascot.png" />
+<meta property="og:image" content="https://ahmad-sarsor.github.io/data-clinic-website/assets/mascot-480.png" />
 <meta property="og:locale" content="he_IL" />
 <meta name="twitter:card" content="summary" />
 </head>
@@ -25,7 +26,7 @@
 <header class="nav">
   <div class="nav-inner">
     <a href="index.html" class="brand">
-      <img src="../assets/mascot.png" alt="" />
+      <img src="../assets/mascot-480.png" alt="" />
       <span>Data Clinic</span>
     </a>
     <input type="checkbox" id="nav-toggle" class="nav-toggle" hidden />
@@ -118,7 +119,7 @@
       </ul>
 
       <h2>איפה Data Clinic נכנסת לתמונה</h2>
-      <p>אתם עובדים ישירות עם מהנדס נתונים בכיר שמתכנן ובונה מחסנים מקצה לקצה. מחברי מקור, מודלי dbt, CI/CD, ניטור - כל השרשרת. רוב פרויקטי המחסן יוצאים לאוויר בין ארבעה לשישה שבועות. המומחים שלנו עובדים בענן שלך (GCP / AWS / Azure) עם חשבונות שירות של קריאה בלבד על המקורות שלך, כך שהנתונים שלך לא יוצאים מה-tenant שלך.</p>
+      <p>אנחנו בונים את המחסן שלכם מקצה לקצה: מחברי מקור, מודלי dbt, CI/CD וניטור. העבודה מתבצעת בתוך הענן שלכם (GCP / AWS / Azure) עם חשבונות שירות של קריאה בלבד על המקורות, כך שהנתונים הגולמיים נשארים בסביבה שלכם.</p>
     </article>
 
     <a href="learn.html" class="learn-back" style="margin-top: 24px;"><span class="ar">←</span> חזרה לכל המדריכים</a>
@@ -129,7 +130,7 @@
   <div class="container">
     <div class="foot-grid">
       <div class="foot-brand">
-        <a href="index.html" class="brand"><img src="../assets/mascot.png" alt=""/><span>Data Clinic</span></a>
+        <a href="index.html" class="brand"><img src="../assets/mascot-480.png" loading="lazy" width="32" height="32" alt=""/><span>Data Clinic</span></a>
         <p>צוות טכנולוגי שעוסק בעולם הדאטה. מערכות BI, מחסני נתונים, אפליקציות דאטה, מערכות אקסל וסוכני AI.</p>
       </div>
       <div class="foot-col">
@@ -157,10 +158,15 @@
 </footer>
 
 <script>
-  const io = new IntersectionObserver((entries) => {
-    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
-  }, { threshold: 0.12 });
-  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  var els = document.querySelectorAll(".reveal");
+  if (!("IntersectionObserver" in window)) {
+    els.forEach(function (el) { el.classList.add("in"); });
+  } else {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } });
+    }, { threshold: 0.12 });
+    els.forEach(function (el) { io.observe(el); });
+  }
 </script>
 
 </body>

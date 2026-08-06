@@ -5,9 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>AI Agents - Data Clinic</title>
 <meta name="description" content="We build AI agents that answer plain-language questions straight from your data, with sources." />
-<link rel="stylesheet" href="site.css?v=12" />
-<link rel="icon" type="image/png" href="assets/mascot.png" />
-<link rel="apple-touch-icon" href="assets/mascot.png" />
+<link rel="stylesheet" href="site.css?v=13" />
+<noscript><style>.reveal{opacity:1!important;transform:none!important}</style></noscript>
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png" />
 <meta name="theme-color" content="#16A8EA" />
 <link rel="canonical" href="https://ahmad-sarsor.github.io/data-clinic-website/agents.html" />
 <link rel="alternate" hreflang="en" href="https://ahmad-sarsor.github.io/data-clinic-website/agents.html" />
@@ -16,7 +17,7 @@
 <meta property="og:url" content="https://ahmad-sarsor.github.io/data-clinic-website/agents.html" />
 <meta property="og:title" content="AI Agents - Data Clinic" />
 <meta property="og:description" content="We build AI agents that answer plain-language questions straight from your data, with sources." />
-<meta property="og:image" content="https://ahmad-sarsor.github.io/data-clinic-website/assets/mascot.png" />
+<meta property="og:image" content="https://ahmad-sarsor.github.io/data-clinic-website/assets/mascot-480.png" />
 <meta property="og:locale" content="en_US" />
 <meta name="twitter:card" content="summary" />
 </head>
@@ -26,7 +27,7 @@
 <header class="nav">
   <div class="nav-inner">
     <a href="index.html" class="brand">
-      <img src="assets/mascot.png" alt="" />
+      <img src="assets/mascot-480.png" alt="" />
       <span>Data Clinic</span>
     </a>
     <input type="checkbox" id="nav-toggle" class="nav-toggle" hidden />
@@ -66,7 +67,7 @@
         </div>
       </div>
       <div class="page-hero-mascot">
-        <img src="assets/mascot.png" alt="Data Clinic mascot"/>
+        <img src="assets/mascot-480.png" alt="Data Clinic mascot"/>
       </div>
     </div>
   </div>
@@ -83,7 +84,7 @@
       <div class="app-body">
         <aside class="app-side">
           <div class="side-agent">
-            <img src="assets/mascot.png" alt=""/>
+            <img src="assets/mascot-480.png" alt=""/>
             <div>
               <b>Insights Chat</b>
               <span><i class="on"></i> Connected to your warehouse</span>
@@ -106,7 +107,7 @@
           <div class="msg you">Why did churn spike last week?</div>
 
           <div class="msg bot">
-            <div class="msg-ava"><img src="assets/mascot.png" alt=""/></div>
+            <div class="msg-ava"><img src="assets/mascot-480.png" alt=""/></div>
             <div class="msg-body">
               Weekly churn rose from <strong>2.1% to 3.4%</strong> (+62%). The increase is concentrated in <strong>annual SMB customers</strong> on the legacy Pro plan.
               <div class="msg-card">
@@ -122,7 +123,7 @@
           <div class="msg you">What should we do about it?</div>
 
           <div class="msg bot">
-            <div class="msg-ava"><img src="assets/mascot.png" alt=""/></div>
+            <div class="msg-ava"><img src="assets/mascot-480.png" alt=""/></div>
             <div class="msg-body">
               Two suggestions: <strong>(1)</strong> grandfather the 42 affected accounts at last year's price for 12 months, cost ≈₪34k against ≈₪192k ARR saved. <strong>(2)</strong> add a 30-day price-change notice to the renewal flow.
               <span class="msg-src">Grounded in 3 sources</span>
@@ -144,7 +145,7 @@
   <div class="container">
     <div class="foot-grid">
       <div class="foot-brand">
-        <a href="index.html" class="brand"><img src="assets/mascot.png" alt=""/><span>Data Clinic</span></a>
+        <a href="index.html" class="brand"><img src="assets/mascot-480.png" loading="lazy" width="32" height="32" alt=""/><span>Data Clinic</span></a>
         <p>A technology team in the world of data. BI systems, data warehouses, data apps, Excel systems and AI agents.</p>
       </div>
       <div class="foot-col">
@@ -173,10 +174,15 @@
 </footer>
 
 <script>
-  const io = new IntersectionObserver((entries) => {
-    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
-  }, { threshold: 0.12 });
-  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  var els = document.querySelectorAll(".reveal");
+  if (!("IntersectionObserver" in window)) {
+    els.forEach(function (el) { el.classList.add("in"); });
+  } else {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } });
+    }, { threshold: 0.12 });
+    els.forEach(function (el) { io.observe(el); });
+  }
 </script>
 
 </body>

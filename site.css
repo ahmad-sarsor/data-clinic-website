@@ -1,5 +1,5 @@
 /* ui_kits/website/site.css — Data Clinic, Hex.tech-inspired layout */
-@import url('colors_and_type.css?v=12');
+@import url('colors_and_type.css?v=13');
 @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700;800&family=Frank+Ruhl+Libre:wght@400;500;700&display=swap');
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -1274,7 +1274,10 @@ button { font-family: inherit; cursor: pointer; }
   transition: border-color .15s, background .15s;
 }
 .form-field input:focus, .form-field textarea:focus, .form-field select:focus {
-  outline: 0; border-color:#16A8EA; background:#fff; box-shadow: 0 0 0 3px rgba(22,168,234,0.12);
+  border-color:#16A8EA; background:#fff;
+}
+.form-field input:focus-visible, .form-field textarea:focus-visible, .form-field select:focus-visible {
+  outline: 2px solid #0B72B5; outline-offset: 2px; box-shadow: none;
 }
 .form-field textarea { min-height: 110px; resize: vertical; }
 
@@ -1675,19 +1678,10 @@ button { font-family: inherit; cursor: pointer; }
 [dir="rtl"] .mini-dash .md-foot .ar { display:inline-block; transform: scaleX(-1); }
 [dir="rtl"] .mini-dash:hover .md-foot .ar { transform: scaleX(-1) translateX(3px); }
 
-/* ── Mobile menu (hamburger trigger) ── */
-.nav-toggle { display: none; background: transparent; border: 0; padding: 6px; }
-.nav-toggle svg { width: 26px; height: 26px; }
-@media (max-width: 960px) {
-  .nav-toggle { display: inline-flex; align-items:center; justify-content:center; }
-  .nav-cta-row .btn { display:none; }
-}
-
 /* ── Responsive ── */
 @media (max-width: 960px) {
   .feature-row, .stats-grid, .steps, .foot-grid { grid-template-columns: 1fr !important; gap: 32px; }
   .feature-row.flip .text-col { order: 0; }
-  .nav-links { display: none; }
   .mockup-body { grid-template-columns: 1fr; }
   .mockup-side { display: none; }
   .mockup-floater, .mockup-floater-l { display: none; }
@@ -2092,7 +2086,7 @@ html[dir="rtl"] .hb-cta:hover .arrow { transform: translateX(-2px); }
 /* ── Hamburger menu ── */
 .nav-toggle { display: none; }
 .nav-burger { display: none; }
-@media (max-width: 900px) {
+@media (max-width: 960px) {
   .nav-inner { padding: 12px 20px; gap: 12px; flex-wrap: wrap; }
   .nav-burger {
     display: flex; flex-direction: column; justify-content: center; gap: 5px;
@@ -2220,4 +2214,32 @@ html[dir="rtl"] .hb-cta:hover .arrow { transform: translateX(-2px); }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
   .reveal { opacity: 1 !important; transform: none !important; }
+}
+
+/* ── Focus ring must stay visible on the dark sections ── */
+.cta :focus-visible, .services-blue :focus-visible { outline-color: #fff; }
+
+/* ── Phone: sections the first mobile pass missed ── */
+@media (max-width: 640px) {
+  .mascot-moment {
+    flex-direction: column;
+    text-align: center;
+    gap: 14px;
+    padding: 24px 20px;
+    border-radius: 20px;
+  }
+  .mascot-moment img { width: 78px; height: 78px; }
+  .mascot-moment .t { font-size: 18px; line-height: 1.45; overflow-wrap: break-word; }
+
+  .cta { padding: 56px 0 148px; }
+  .cta h2 { font-size: clamp(26px, 7.6vw, 34px); line-height: 1.15; }
+  .cta p { font-size: 15.5px; margin-bottom: 26px; }
+  .cta-btns { flex-direction: column; align-items: stretch; }
+  .cta-btns .btn { width: 100%; justify-content: center; }
+  .cta-mascot-l { display: none; }
+  .cta-mascot-r {
+    width: 116px; right: auto; left: 50%;
+    transform: translateX(-50%) scaleX(-1);
+    opacity: .9;
+  }
 }

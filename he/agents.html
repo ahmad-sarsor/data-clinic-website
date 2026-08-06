@@ -5,9 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>סוכני AI - Data Clinic</title>
 <meta name="description" content="אנחנו בונים סוכני AI שעונים על שאלות בשפה חופשית ישירות מהנתונים שלכם, עם מקורות." />
-<link rel="stylesheet" href="../site.css?v=12" />
-<link rel="icon" type="image/png" href="../assets/mascot.png" />
-<link rel="apple-touch-icon" href="../assets/mascot.png" />
+<link rel="stylesheet" href="../site.css?v=13" />
+<noscript><style>.reveal{opacity:1!important;transform:none!important}</style></noscript>
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="../assets/apple-touch-icon.png" />
 <meta name="theme-color" content="#16A8EA" />
 <link rel="canonical" href="https://ahmad-sarsor.github.io/data-clinic-website/he/agents.html" />
 <link rel="alternate" hreflang="he" href="https://ahmad-sarsor.github.io/data-clinic-website/he/agents.html" />
@@ -16,7 +17,7 @@
 <meta property="og:url" content="https://ahmad-sarsor.github.io/data-clinic-website/he/agents.html" />
 <meta property="og:title" content="סוכני AI - Data Clinic" />
 <meta property="og:description" content="אנחנו בונים סוכני AI שעונים על שאלות בשפה חופשית ישירות מהנתונים שלכם, עם מקורות." />
-<meta property="og:image" content="https://ahmad-sarsor.github.io/data-clinic-website/assets/mascot.png" />
+<meta property="og:image" content="https://ahmad-sarsor.github.io/data-clinic-website/assets/mascot-480.png" />
 <meta property="og:locale" content="he_IL" />
 <meta name="twitter:card" content="summary" />
 </head>
@@ -26,7 +27,7 @@
 <header class="nav">
   <div class="nav-inner">
     <a href="index.html" class="brand">
-      <img src="../assets/mascot.png" alt="" />
+      <img src="../assets/mascot-480.png" alt="" />
       <span>Data Clinic</span>
     </a>
     <input type="checkbox" id="nav-toggle" class="nav-toggle" hidden />
@@ -66,7 +67,7 @@
         </div>
       </div>
       <div class="page-hero-mascot">
-        <img src="../assets/mascot.png" alt="מסקוט Data Clinic"/>
+        <img src="../assets/mascot-480.png" alt="מסקוט Data Clinic"/>
       </div>
     </div>
   </div>
@@ -83,7 +84,7 @@
       <div class="app-body">
         <aside class="app-side">
           <div class="side-agent">
-            <img src="../assets/mascot.png" alt=""/>
+            <img src="../assets/mascot-480.png" alt=""/>
             <div>
               <b>שיחת תובנות</b>
               <span><i class="on"></i> מחובר למחסן הנתונים</span>
@@ -106,7 +107,7 @@
           <div class="msg you">למה הנטישה קפצה בשבוע שעבר?</div>
 
           <div class="msg bot">
-            <div class="msg-ava"><img src="../assets/mascot.png" alt=""/></div>
+            <div class="msg-ava"><img src="../assets/mascot-480.png" alt=""/></div>
             <div class="msg-body">
               נטישה שבועית עלתה מ-<strong>2.1% ל-3.4%</strong> (+62%). הגידול מרוכז ב<strong>לקוחות SMB שנתיים</strong> בתוכנית Legacy Pro.
               <div class="msg-card">
@@ -122,7 +123,7 @@
           <div class="msg you">מה לעשות?</div>
 
           <div class="msg bot">
-            <div class="msg-ava"><img src="../assets/mascot.png" alt=""/></div>
+            <div class="msg-ava"><img src="../assets/mascot-480.png" alt=""/></div>
             <div class="msg-body">
               שתי הצעות: <strong>(1)</strong> הקפאת מחיר ל-42 החשבונות ל-12 חודשים, עלות ≈₪34k מול חיסכון ≈₪192k ARR. <strong>(2)</strong> הוספת הודעת שינוי מחיר של 30 יום לתהליך החידוש.
               <span class="msg-src">מבוסס על 3 מקורות</span>
@@ -144,7 +145,7 @@
   <div class="container">
     <div class="foot-grid">
       <div class="foot-brand">
-        <a href="index.html" class="brand"><img src="../assets/mascot.png" alt=""/><span>Data Clinic</span></a>
+        <a href="index.html" class="brand"><img src="../assets/mascot-480.png" loading="lazy" width="32" height="32" alt=""/><span>Data Clinic</span></a>
         <p>צוות טכנולוגי שעוסק בעולם הדאטה. מערכות BI, מחסני נתונים, אפליקציות דאטה, מערכות אקסל וסוכני AI.</p>
       </div>
       <div class="foot-col">
@@ -173,10 +174,15 @@
 </footer>
 
 <script>
-  const io = new IntersectionObserver((entries) => {
-    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
-  }, { threshold: 0.12 });
-  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  var els = document.querySelectorAll(".reveal");
+  if (!("IntersectionObserver" in window)) {
+    els.forEach(function (el) { el.classList.add("in"); });
+  } else {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } });
+    }, { threshold: 0.12 });
+    els.forEach(function (el) { io.observe(el); });
+  }
 </script>
 
 </body>

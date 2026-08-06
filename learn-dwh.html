@@ -5,9 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>What is a Data Warehouse? - Data Clinic</title>
 <meta name="description" content="A plain-English guide to data warehouses: what they are, the four layers, the big players, and what to avoid." />
-<link rel="stylesheet" href="site.css?v=12" />
-<link rel="icon" type="image/png" href="assets/mascot.png" />
-<link rel="apple-touch-icon" href="assets/mascot.png" />
+<link rel="stylesheet" href="site.css?v=13" />
+<noscript><style>.reveal{opacity:1!important;transform:none!important}</style></noscript>
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png" />
 <meta name="theme-color" content="#16A8EA" />
 <link rel="canonical" href="https://ahmad-sarsor.github.io/data-clinic-website/learn-dwh.html" />
 <link rel="alternate" hreflang="en" href="https://ahmad-sarsor.github.io/data-clinic-website/learn-dwh.html" />
@@ -16,7 +17,7 @@
 <meta property="og:url" content="https://ahmad-sarsor.github.io/data-clinic-website/learn-dwh.html" />
 <meta property="og:title" content="What is a Data Warehouse? - Data Clinic" />
 <meta property="og:description" content="A plain-English guide to data warehouses: what they are, the four layers, the big players, and what to avoid." />
-<meta property="og:image" content="https://ahmad-sarsor.github.io/data-clinic-website/assets/mascot.png" />
+<meta property="og:image" content="https://ahmad-sarsor.github.io/data-clinic-website/assets/mascot-480.png" />
 <meta property="og:locale" content="en_US" />
 <meta name="twitter:card" content="summary" />
 </head>
@@ -25,7 +26,7 @@
 <header class="nav">
   <div class="nav-inner">
     <a href="index.html" class="brand">
-      <img src="assets/mascot.png" alt="" />
+      <img src="assets/mascot-480.png" alt="" />
       <span>Data Clinic</span>
     </a>
     <input type="checkbox" id="nav-toggle" class="nav-toggle" hidden />
@@ -118,7 +119,7 @@
       </ul>
 
       <h2>Where Data Clinic fits in</h2>
-      <p>Our specialists design and build warehouses end-to-end. Source connectors, dbt models, CI/CD, monitoring - the whole chain. We build your warehouse end to end, working inside your own cloud (GCP / AWS / Azure) with read-only service accounts on your sources, so your data never leaves your tenant.</p>
+      <p>We build your warehouse end to end: source connectors, dbt models, CI/CD and monitoring. We work inside your own cloud (GCP / AWS / Azure) with read-only service accounts on your sources, so raw data stays inside your own environment.</p>
     </article>
 
     <a href="learn.html" class="learn-back" style="margin-top: 24px;"><span class="ar">←</span> Back to all guides</a>
@@ -129,7 +130,7 @@
   <div class="container">
     <div class="foot-grid">
       <div class="foot-brand">
-        <a href="index.html" class="brand"><img src="assets/mascot.png" alt=""/><span>Data Clinic</span></a>
+        <a href="index.html" class="brand"><img src="assets/mascot-480.png" loading="lazy" width="32" height="32" alt=""/><span>Data Clinic</span></a>
         <p>A technology team in the world of data. BI systems, data warehouses, data apps, Excel systems and AI agents.</p>
       </div>
       <div class="foot-col">
@@ -157,10 +158,15 @@
 </footer>
 
 <script>
-  const io = new IntersectionObserver((entries) => {
-    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
-  }, { threshold: 0.12 });
-  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  var els = document.querySelectorAll(".reveal");
+  if (!("IntersectionObserver" in window)) {
+    els.forEach(function (el) { el.classList.add("in"); });
+  } else {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } });
+    }, { threshold: 0.12 });
+    els.forEach(function (el) { io.observe(el); });
+  }
 </script>
 
 </body>
