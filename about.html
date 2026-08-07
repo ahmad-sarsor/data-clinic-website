@@ -2,15 +2,15 @@
 <html lang="en">
 <head>
 <meta charset="utf-8" />
+<script>document.documentElement.classList.add("js")</script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>About - Data Clinic</title>
 <meta name="description" content="A technology team in the world of data: BI systems, data warehouses (DWH), data apps, Excel systems and AI agents." />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" />
-<link rel="stylesheet" href="colors_and_type.css?v=20" />
-<link rel="stylesheet" href="site.css?v=20" />
-<noscript><style>.reveal{opacity:1!important;transform:none!important}</style></noscript>
+<link rel="stylesheet" href="colors_and_type.css?v=21" />
+<link rel="stylesheet" href="site.css?v=21" />
 <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
 <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png" />
 <meta name="theme-color" content="#16A8EA" />
@@ -196,7 +196,7 @@
     <div class="section-head reveal" style="text-align:left; max-width: none; margin-bottom: 36px;">
       <span class="section-eyebrow">Contact</span>
       <h2 style="font-size: clamp(28px, 3.4vw, 44px);">Tell us about your data, <br/><span class="serif">we'll tell you what's possible.</span></h2>
-      <p style="margin: 0; max-width: 60ch;">Fill in the form or send an email. We answer within one business day, always a real person.</p>
+      <p style="margin: 0; max-width: 60ch;">Fill in the form or just call. We answer within one business day, always a real person.</p>
     </div>
 
     <div class="contact-shell reveal">
@@ -241,19 +241,10 @@
             <label for="cf-phone">Phone</label>
             <input id="cf-phone" name="Phone" type="tel" inputmode="tel" placeholder="+972 50 000 0000"/>
           </div>
-          <div class="form-field full">
-            <label for="cf-role">Role</label>
-            <select id="cf-role" name="Role">
-              <option>CEO / Founder</option>
-              <option>Head of Data / Analytics</option>
-              <option>VP Marketing / Sales / Finance</option>
-              <option>Engineer / Analyst</option>
-              <option>Other</option>
-            </select>
-          </div>
-          <div class="form-field full">
+                    <div class="form-field full">
             <label for="cf-need">What do you need?</label>
             <select id="cf-need" name="Need">
+              <option value="" disabled selected>Choose one...</option>
               <option>A BI system and dashboards</option>
               <option>A data warehouse (DWH)</option>
               <option>A data app</option>

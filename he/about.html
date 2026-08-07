@@ -2,15 +2,15 @@
 <html lang="he" dir="rtl">
 <head>
 <meta charset="utf-8" />
+<script>document.documentElement.classList.add("js")</script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>אודות - Data Clinic</title>
 <meta name="description" content="צוות טכנולוגי שעוסק בעולם הדאטה: מערכות BI, מחסני נתונים (DWH), אפליקציות דאטה, מערכות אקסל וסוכני AI." />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700;800&family=Frank+Ruhl+Libre:wght@400;500;700&display=swap" />
-<link rel="stylesheet" href="../colors_and_type.css?v=20" />
-<link rel="stylesheet" href="../site.css?v=20" />
-<noscript><style>.reveal{opacity:1!important;transform:none!important}</style></noscript>
+<link rel="stylesheet" href="../colors_and_type.css?v=21" />
+<link rel="stylesheet" href="../site.css?v=21" />
 <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32.png" />
 <link rel="apple-touch-icon" sizes="180x180" href="../assets/apple-touch-icon.png" />
 <meta name="theme-color" content="#16A8EA" />
@@ -196,7 +196,7 @@
     <div class="section-head reveal" style="text-align:right; max-width: none; margin-bottom: 36px;">
       <span class="section-eyebrow">צור קשר</span>
       <h2 style="font-size: clamp(28px, 3.4vw, 44px);">ספרו לנו על הנתונים שלכם, <br/><span class="serif">נספר לכם מה אפשרי.</span></h2>
-      <p style="margin: 0; max-width: 60ch;">מלאו את הטופס או שלחו אימייל. עונים תוך יום עסקים אחד, תמיד מאדם אמיתי.</p>
+      <p style="margin: 0; max-width: 60ch;">מלאו את הטופס או פשוט תתקשרו. עונים תוך יום עסקים אחד, תמיד אדם אמיתי.</p>
     </div>
 
     <div class="contact-shell reveal">
@@ -241,19 +241,10 @@
             <label for="cf-phone">טלפון</label>
             <input id="cf-phone" name="טלפון" type="tel" inputmode="tel" placeholder="050-0000000"/>
           </div>
-          <div class="form-field full">
-            <label for="cf-role">תפקיד</label>
-            <select id="cf-role" name="תפקיד">
-              <option>מנכ"ל / מייסד</option>
-              <option>ראש Data / Analytics</option>
-              <option>VP שיווק / מכירות / פיננסים</option>
-              <option>מהנדס / אנליסט</option>
-              <option>אחר</option>
-            </select>
-          </div>
-          <div class="form-field full">
+                    <div class="form-field full">
             <label for="cf-need">מה אתם צריכים?</label>
             <select id="cf-need" name="צורך">
+              <option value="" disabled selected>בחרו מהרשימה...</option>
               <option>מערכת BI ודשבורדים</option>
               <option>הקמת מחסן נתונים (DWH)</option>
               <option>אפליקציית דאטה</option>

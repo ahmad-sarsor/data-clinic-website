@@ -683,7 +683,7 @@ button { font-family: inherit; cursor: pointer; }
 .foot-bottom { padding-top: 24px; border-top: 1px solid rgba(17,24,42,0.06); display:flex; justify-content:space-between; font-size: 13px; color:#8593A6; flex-wrap:wrap; gap: 12px; }
 
 /* ── Reveal ── */
-.reveal { opacity: 0; transform: translateY(16px); transition: opacity .7s cubic-bezier(0.22,1,0.36,1), transform .7s cubic-bezier(0.22,1,0.36,1); }
+.js .reveal { opacity: 0; transform: translateY(16px); transition: opacity .7s cubic-bezier(0.22,1,0.36,1), transform .7s cubic-bezier(0.22,1,0.36,1); }
 .reveal.in { opacity: 1; transform: none; }
 
 /* ────────────────────────────────────────────────────────────────────
@@ -1678,11 +1678,7 @@ button { font-family: inherit; cursor: pointer; }
 
 /* ── Responsive ── */
 @media (max-width: 960px) {
-  .feature-row, .stats-grid, .steps, .foot-grid { grid-template-columns: 1fr !important; gap: 32px; }
-  .feature-row.flip .text-col { order: 0; }
-  .mockup-body { grid-template-columns: 1fr; }
-  .mockup-side { display: none; }
-  .mockup-floater, .mockup-floater-l { display: none; }
+  .foot-grid { grid-template-columns: 1fr; gap: 32px; }
 }
 
 /* ── Language toggle ── */
@@ -1724,7 +1720,7 @@ button { font-family: inherit; cursor: pointer; }
 [dir="rtl"] .serif {
   font-family: 'Frank Ruhl Libre', 'David Libre', Georgia, serif !important;
   font-style: normal !important;
-  font-weight: 500;
+  font-weight: 500 !important;
 }
 
 /* Hebrew typography tweaks: relax tight tracking, tune weights */
@@ -2304,3 +2300,10 @@ html { overflow-x: clip; }
   .cta-form input, .cta-form button { width: 100%; flex: 1 1 auto; }
   .cta-form button { justify-content: center; }
 }
+
+/* ── Arrows: one flip rule that hover composes with, instead of fighting ── */
+.arrow { display: inline-block; --dir: 1; transition: transform .18s; transform: scaleX(var(--dir)); }
+[dir="rtl"] .arrow { --dir: -1; }
+.btn:hover .arrow, a:hover > .arrow { transform: scaleX(var(--dir)) translateX(2px); }
+/* Keep signed numbers and arrows from detaching in RTL text */
+.ltr { direction: ltr; unicode-bidi: isolate; display: inline-block; }
