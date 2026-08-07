@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>About - Data Clinic</title>
 <meta name="description" content="A technology team in the world of data: BI systems, data warehouses (DWH), data apps, Excel systems and AI agents." />
-<link rel="stylesheet" href="site.css?v=15" />
+<link rel="stylesheet" href="site.css?v=16" />
 <noscript><style>.reveal{opacity:1!important;transform:none!important}</style></noscript>
 <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
 <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png" />
@@ -202,10 +202,10 @@
 
         <div class="contact-meta">
           <div class="row">
-            <div class="ic">@</div>
+            <div class="ic">☎</div>
             <div>
-              <div class="l">Email</div>
-              <div class="v">hello@dataclinic.ai</div>
+              <div class="l">Phone</div>
+              <div class="v"><a href="tel:+972528756806">052-875-6806</a></div>
             </div>
           </div>
           <div class="row">
@@ -218,23 +218,28 @@
         </div>
       </div>
 
-      <form class="contact-form" onsubmit="sendContact(event)">
+      <form class="contact-form" id="contact-form">
         <div class="form-grid">
+          <input type="text" name="_honey" class="hp-field" tabindex="-1" autocomplete="off" aria-hidden="true"/>
           <div class="form-field">
             <label for="cf-name">Full name</label>
-            <input id="cf-name" type="text" required placeholder="Jane Cohen"/>
+            <input id="cf-name" name="Name" type="text" required placeholder="Jane Cohen"/>
           </div>
           <div class="form-field">
             <label for="cf-company">Company</label>
-            <input id="cf-company" type="text" placeholder="Acme Inc."/>
+            <input id="cf-company" name="Company" type="text" placeholder="Acme Inc."/>
           </div>
           <div class="form-field">
-            <label for="cf-email">Work email</label>
-            <input id="cf-email" type="email" required placeholder="jane@acme.com"/>
+            <label for="cf-email">Email</label>
+            <input id="cf-email" name="email" type="email" required placeholder="jane@acme.com"/>
           </div>
           <div class="form-field">
+            <label for="cf-phone">Phone</label>
+            <input id="cf-phone" name="Phone" type="tel" inputmode="tel" placeholder="+972 50 000 0000"/>
+          </div>
+          <div class="form-field full">
             <label for="cf-role">Role</label>
-            <select id="cf-role">
+            <select id="cf-role" name="Role">
               <option>CEO / Founder</option>
               <option>Head of Data / Analytics</option>
               <option>VP Marketing / Sales / Finance</option>
@@ -244,7 +249,7 @@
           </div>
           <div class="form-field full">
             <label for="cf-need">What do you need?</label>
-            <select id="cf-need">
+            <select id="cf-need" name="Need">
               <option>A BI system and dashboards</option>
               <option>A data warehouse (DWH)</option>
               <option>A data app</option>
@@ -255,14 +260,17 @@
           </div>
           <div class="form-field full">
             <label for="cf-msg">A few sentences about your systems and needs</label>
-            <textarea id="cf-msg" placeholder="For example: we have an ERP and Excel files, and want one sales dashboard everyone trusts."></textarea>
+            <textarea id="cf-msg" name="Message" placeholder="For example: we have an ERP and Excel files, and want one sales dashboard everyone trusts."></textarea>
           </div>
           <div class="full" style="display:flex; gap:10px; align-items:center; flex-wrap:wrap; margin-top: 4px;">
-            <button type="submit" class="btn btn-blue btn-lg">Send message <span class="arrow">→</span></button>
-            <span style="font-family: var(--font-display); font-size: 13px; color:#5B6B82;">or email <b style="color:#0B72B5;">hello@dataclinic.ai</b></span>
+            <button type="submit" class="btn btn-blue btn-lg" id="cf-submit">Send message <span class="arrow">→</span></button>
+            <span style="font-family: var(--font-display); font-size: 13px; color:#5B6B82;">or call <a href="tel:+972528756806" style="color:#0B72B5; font-weight:700;">052-875-6806</a></span>
           </div>
-          <div id="cf-success" class="full" style="display:none; padding: 14px 16px; background:#D8F3E0; border:1px solid #117E3E; border-radius: 12px; color:#0E6B34; font-family: var(--font-display); font-weight: 600; font-size: 14px; margin-top: 8px;">
-            ✓ An email draft opened with your details. If it didn't, write directly to hello@dataclinic.ai
+          <div id="cf-success" class="cf-note cf-ok full" role="status" aria-live="polite">
+            ✓ Message sent. We will get back to you within one business day.
+          </div>
+          <div id="cf-error" class="cf-note cf-bad full" role="status" aria-live="polite">
+            Sending failed. You can call us at <a href="tel:+972528756806">052-875-6806</a>
           </div>
         </div>
       </form>
@@ -308,20 +316,42 @@
 </section>
 
 <script>
-  function sendContact(e) {
-    e.preventDefault();
-    const v = id => document.getElementById(id).value;
-    const body = encodeURIComponent(
-      'Name: ' + v('cf-name') + '\n' +
-      'Company: ' + v('cf-company') + '\n' +
-      'Email: ' + v('cf-email') + '\n' +
-      'Role: ' + v('cf-role') + '\n' +
-      'Need: ' + v('cf-need') + '\n\n' +
-      v('cf-msg')
-    );
-    window.location.href = 'mailto:hello@dataclinic.ai?subject=' + encodeURIComponent('Website inquiry: ' + v('cf-name')) + '&body=' + body;
-    document.getElementById('cf-success').style.display = 'block';
-  }
+  (function () {
+    var form = document.getElementById('contact-form');
+    if (!form) return;
+    var ok = document.getElementById('cf-success');
+    var bad = document.getElementById('cf-error');
+    var btn = document.getElementById('cf-submit');
+    // assembled at runtime so address scrapers do not pick it up from the page source
+    var inbox = ['ahmad.kefah11sar', 'gmail.com'].join('@');
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      ok.style.display = 'none';
+      bad.style.display = 'none';
+
+      var data = {};
+      new FormData(form).forEach(function (val, key) { data[key] = val; });
+      if (data._honey) return;               // bot filled the hidden trap
+      delete data._honey;
+      data._subject = 'New website enquiry: ' + (data.Name || '');
+      data._template = 'table';
+
+      var label = btn.innerHTML;
+      btn.disabled = true;
+      btn.textContent = 'Sending...';
+
+      fetch('https://formsubmit.co/ajax/' + inbox, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify(data)
+      })
+        .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
+        .then(function () { ok.style.display = 'block'; form.reset(); })
+        .catch(function () { bad.style.display = 'block'; })
+        .then(function () { btn.disabled = false; btn.innerHTML = label; });
+    });
+  })();
 </script>
 
 <!-- ──────── FOOTER ──────── -->

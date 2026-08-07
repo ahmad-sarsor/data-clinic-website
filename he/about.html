@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>אודות - Data Clinic</title>
 <meta name="description" content="צוות טכנולוגי שעוסק בעולם הדאטה: מערכות BI, מחסני נתונים (DWH), אפליקציות דאטה, מערכות אקסל וסוכני AI." />
-<link rel="stylesheet" href="../site.css?v=15" />
+<link rel="stylesheet" href="../site.css?v=16" />
 <noscript><style>.reveal{opacity:1!important;transform:none!important}</style></noscript>
 <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32.png" />
 <link rel="apple-touch-icon" sizes="180x180" href="../assets/apple-touch-icon.png" />
@@ -202,10 +202,10 @@
 
         <div class="contact-meta">
           <div class="row">
-            <div class="ic">@</div>
+            <div class="ic">☎</div>
             <div>
-              <div class="l">אימייל</div>
-              <div class="v">hello@dataclinic.ai</div>
+              <div class="l">טלפון</div>
+              <div class="v"><a href="tel:+972528756806" dir="ltr">052-875-6806</a></div>
             </div>
           </div>
           <div class="row">
@@ -218,23 +218,28 @@
         </div>
       </div>
 
-      <form class="contact-form" onsubmit="sendContact(event)">
+      <form class="contact-form" id="contact-form">
         <div class="form-grid">
+          <input type="text" name="_honey" class="hp-field" tabindex="-1" autocomplete="off" aria-hidden="true"/>
           <div class="form-field">
             <label for="cf-name">שם מלא</label>
-            <input id="cf-name" type="text" required placeholder="ישראל כהן"/>
+            <input id="cf-name" name="שם" type="text" required placeholder="ישראל כהן"/>
           </div>
           <div class="form-field">
             <label for="cf-company">חברה</label>
-            <input id="cf-company" type="text" placeholder="Acme Inc."/>
+            <input id="cf-company" name="חברה" type="text" placeholder="Acme Inc."/>
           </div>
           <div class="form-field">
-            <label for="cf-email">אימייל עסקי</label>
-            <input id="cf-email" type="email" required placeholder="israel@acme.com"/>
+            <label for="cf-email">אימייל</label>
+            <input id="cf-email" name="email" type="email" required placeholder="israel@acme.com"/>
           </div>
           <div class="form-field">
+            <label for="cf-phone">טלפון</label>
+            <input id="cf-phone" name="טלפון" type="tel" inputmode="tel" placeholder="050-0000000"/>
+          </div>
+          <div class="form-field full">
             <label for="cf-role">תפקיד</label>
-            <select id="cf-role">
+            <select id="cf-role" name="תפקיד">
               <option>מנכ"ל / מייסד</option>
               <option>ראש Data / Analytics</option>
               <option>VP שיווק / מכירות / פיננסים</option>
@@ -244,7 +249,7 @@
           </div>
           <div class="form-field full">
             <label for="cf-need">מה אתם צריכים?</label>
-            <select id="cf-need">
+            <select id="cf-need" name="צורך">
               <option>מערכת BI ודשבורדים</option>
               <option>הקמת מחסן נתונים (DWH)</option>
               <option>אפליקציית דאטה</option>
@@ -255,14 +260,17 @@
           </div>
           <div class="form-field full">
             <label for="cf-msg">כמה משפטים על המערכות והצורך שלכם</label>
-            <textarea id="cf-msg" placeholder="למשל: יש לנו ERP וקבצי אקסל, רוצים דשבורד מכירות אחד שכולם סומכים עליו."></textarea>
+            <textarea id="cf-msg" name="הודעה" placeholder="למשל: יש לנו ERP וקבצי אקסל, רוצים דשבורד מכירות אחד שכולם סומכים עליו."></textarea>
           </div>
           <div class="full" style="display:flex; gap:10px; align-items:center; flex-wrap:wrap; margin-top: 4px;">
-            <button type="submit" class="btn btn-blue btn-lg">שלח הודעה <span class="arrow">→</span></button>
-            <span style="font-family: var(--font-display); font-size: 13px; color:#5B6B82;">או שלחו אימייל ל <b style="color:#0B72B5;">hello@dataclinic.ai</b></span>
+            <button type="submit" class="btn btn-blue btn-lg" id="cf-submit">שלח הודעה <span class="arrow">→</span></button>
+            <span style="font-family: var(--font-display); font-size: 13px; color:#5B6B82;">או התקשרו: <a href="tel:+972528756806" dir="ltr" style="color:#0B72B5; font-weight:700;">052-875-6806</a></span>
           </div>
-          <div id="cf-success" class="full" style="display:none; padding: 14px 16px; background:#D8F3E0; border:1px solid #117E3E; border-radius: 12px; color:#0E6B34; font-family: var(--font-display); font-weight: 600; font-size: 14px; margin-top: 8px;">
-            ✓ נפתחה טיוטת אימייל עם הפרטים. אם לא נפתחה, שלחו ישירות ל-hello@dataclinic.ai
+          <div id="cf-success" class="cf-note cf-ok full" role="status" aria-live="polite">
+            ✓ ההודעה נשלחה. נחזור אליכם תוך יום עסקים אחד.
+          </div>
+          <div id="cf-error" class="cf-note cf-bad full" role="status" aria-live="polite">
+            השליחה נכשלה. אפשר להתקשר אלינו ל־<a href="tel:+972528756806" dir="ltr">052-875-6806</a>
           </div>
         </div>
       </form>
@@ -308,20 +316,42 @@
 </section>
 
 <script>
-  function sendContact(e) {
-    e.preventDefault();
-    const v = id => document.getElementById(id).value;
-    const body = encodeURIComponent(
-      'שם: ' + v('cf-name') + '\n' +
-      'חברה: ' + v('cf-company') + '\n' +
-      'אימייל: ' + v('cf-email') + '\n' +
-      'תפקיד: ' + v('cf-role') + '\n' +
-      'צורך: ' + v('cf-need') + '\n\n' +
-      v('cf-msg')
-    );
-    window.location.href = 'mailto:hello@dataclinic.ai?subject=' + encodeURIComponent('פנייה מהאתר: ' + v('cf-name')) + '&body=' + body;
-    document.getElementById('cf-success').style.display = 'block';
-  }
+  (function () {
+    var form = document.getElementById('contact-form');
+    if (!form) return;
+    var ok = document.getElementById('cf-success');
+    var bad = document.getElementById('cf-error');
+    var btn = document.getElementById('cf-submit');
+    // assembled at runtime so address scrapers do not pick it up from the page source
+    var inbox = ['ahmad.kefah11sar', 'gmail.com'].join('@');
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      ok.style.display = 'none';
+      bad.style.display = 'none';
+
+      var data = {};
+      new FormData(form).forEach(function (val, key) { data[key] = val; });
+      if (data._honey) return;               // bot filled the hidden trap
+      delete data._honey;
+      data._subject = 'פנייה חדשה מהאתר: ' + (data['שם'] || '');
+      data._template = 'table';
+
+      var label = btn.innerHTML;
+      btn.disabled = true;
+      btn.textContent = 'שולח...';
+
+      fetch('https://formsubmit.co/ajax/' + inbox, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify(data)
+      })
+        .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
+        .then(function () { ok.style.display = 'block'; form.reset(); })
+        .catch(function () { bad.style.display = 'block'; })
+        .then(function () { btn.disabled = false; btn.innerHTML = label; });
+    });
+  })();
 </script>
 
 <!-- ──────── FOOTER ──────── -->

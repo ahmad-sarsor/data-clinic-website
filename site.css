@@ -1,5 +1,5 @@
 /* ui_kits/website/site.css — Data Clinic, Hex.tech-inspired layout */
-@import url('colors_and_type.css?v=15');
+@import url('colors_and_type.css?v=16');
 @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700;800&family=Frank+Ruhl+Libre:wght@400;500;700&display=swap');
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -2260,3 +2260,16 @@ html { overflow-x: clip; }
   .spotlight-kpis { grid-template-columns: 1fr 1fr; }
   .spotlight-text, .spotlight-canvas { padding: 24px 20px; }
 }
+
+/* ── Contact form: honeypot + status banners ── */
+.hp-field { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; pointer-events: none; }
+.cf-note {
+  display: none;
+  padding: 14px 16px; border-radius: 12px; margin-top: 8px;
+  font-family: var(--font-display); font-weight: 600; font-size: 14px;
+}
+.cf-ok  { background:#D8F3E0; border:1px solid #117E3E; color:#0E6B34; }
+.cf-bad { background:#FFF1E2; border:1px solid #C75A0F; color:#9A4409; }
+.cf-note a { color: inherit; text-decoration: underline; }
+.contact-meta .v a { color: inherit; }
+.contact-meta .v a:hover { color: #0B72B5; }
