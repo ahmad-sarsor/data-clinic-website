@@ -52,8 +52,7 @@ button { font-family: inherit; cursor: pointer; }
 .btn-on-dark { background: rgba(255,255,255,0.10); color:#fff; border:1px solid rgba(255,255,255,0.16); }
 .btn-on-dark:hover { background: rgba(255,255,255,0.18); }
 .btn-lg { padding: 12px 22px; font-size: 15px; border-radius: 10px; }
-.arrow { transition: transform .18s; }
-.btn:hover .arrow { transform: translateX(2px); }
+/* .arrow base + hover defined once at the end of this file */
 
 /* ── Hero ── */
 .hero {
@@ -1733,7 +1732,7 @@ button { font-family: inherit; cursor: pointer; }
 [dir="rtl"] .lead, [dir="rtl"] p.lead { font-weight: 400; }
 
 /* Flip directional arrows */
-[dir="rtl"] .arrow { display:inline-block; transform: scaleX(-1); }
+/* arrow direction handled by the --dir pattern at the end of this file */
 [dir="rtl"] .cube-item .ar { display:inline-block; transform: scaleX(-1); }
 [dir="rtl"] .open-btn span { display:inline-block; transform: scaleX(-1); }
 [dir="rtl"] .arch-arrow { transform: scaleX(-1); }
@@ -1838,9 +1837,7 @@ button { font-family: inherit; cursor: pointer; }
   transition: background .15s, transform .15s;
 }
 .hb-cta:hover { background: var(--brand-blue-deep); color: #fff; transform: translateY(-2px); }
-.hb-cta .arrow { transition: transform .18s; }
-.hb-cta:hover .arrow { transform: translateX(2px); }
-html[dir="rtl"] .hb-cta:hover .arrow { transform: translateX(-2px); }
+/* .hb-cta arrows use the shared --dir pattern too */
 .hero-band-visual { position: relative; display: flex; flex-direction: column; align-items: center; }
 .hb-orb {
   width: 200px; height: 200px; border-radius: 50%;
