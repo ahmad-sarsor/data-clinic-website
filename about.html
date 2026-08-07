@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>About - Data Clinic</title>
 <meta name="description" content="A technology team in the world of data: BI systems, data warehouses (DWH), data apps, Excel systems and AI agents." />
-<link rel="stylesheet" href="site.css?v=16" />
+<link rel="stylesheet" href="site.css?v=17" />
 <noscript><style>.reveal{opacity:1!important;transform:none!important}</style></noscript>
 <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
 <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png" />
@@ -346,8 +346,14 @@
         headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
         body: JSON.stringify(data)
       })
-        .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
-        .then(function () { ok.style.display = 'block'; form.reset(); })
+        .then(function (r) { return r.json(); })
+        .then(function (res) {
+          // the service answers HTTP 200 even when it refuses the message,
+          // so the body is what decides whether the lead actually went out
+          if (!res || String(res.success) !== 'true') throw new Error(res && res.message);
+          ok.style.display = 'block';
+          form.reset();
+        })
         .catch(function () { bad.style.display = 'block'; })
         .then(function () { btn.disabled = false; btn.innerHTML = label; });
     });
