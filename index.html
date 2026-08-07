@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Data Clinic - BI systems, data warehouses and data apps</title>
 <meta name="description" content="A technology team in the world of data: BI systems, data warehouses (DWH), data apps, Excel systems and AI agents." />
-<link rel="stylesheet" href="site.css?v=17" />
+<link rel="stylesheet" href="site.css?v=18" />
 <noscript><style>.reveal{opacity:1!important;transform:none!important}</style></noscript>
 <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
 <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png" />
@@ -388,11 +388,24 @@
   <img class="cta-mascot-r" src="assets/mascot-480.png" alt=""/>
   <div class="container-narrow" style="position:relative; z-index:2;">
     <h2>Ready to see your business <br/><span class="serif">through clearer data?</span></h2>
-    <p>Free intro call. No deck, no sales pitch, just a look at your stack and a plan.</p>
-    <div class="cta-btns">
-      <a href="about.html#contact" class="btn btn-blue btn-lg">Book a free intro call <span class="arrow">→</span></a>
-      <a href="agents.html" class="btn btn-on-dark btn-lg">Meet the AI agents</a>
-    </div>
+    <p>Leave your details and we will get back to you within one business day. An intro call, no deck and no sales pitch.</p>
+
+    <form class="cta-form" data-contact data-subject="Homepage lead" data-sending="Sending...">
+      <input type="text" name="_honey" class="hp-field" tabindex="-1" autocomplete="off" aria-hidden="true"/>
+      <div class="cta-form-row">
+        <label class="sr-only" for="hc-name">Full name</label>
+        <input id="hc-name" name="Name" type="text" required placeholder="Full name"/>
+        <label class="sr-only" for="hc-phone">Phone</label>
+        <input id="hc-phone" name="Phone" type="tel" inputmode="tel" required placeholder="Phone"/>
+        <label class="sr-only" for="hc-email">Email</label>
+        <input id="hc-email" name="email" type="email" placeholder="Email (optional)"/>
+        <button type="submit" class="btn btn-blue btn-lg">Send and we'll call you <span class="arrow">→</span></button>
+      </div>
+      <div class="cf-note cf-ok" role="status" aria-live="polite">✓ Message sent. We will get back to you within one business day.</div>
+      <div class="cf-note cf-bad" role="status" aria-live="polite">Sending failed. You can call us at <a href="tel:+972528756806">052-875-6806</a></div>
+    </form>
+
+    <p class="cta-phone">Or call now: <a href="tel:+972528756806">052-875-6806</a></p>
   </div>
 </section>
 
@@ -441,5 +454,6 @@
   }
 </script>
 
+<script src="contact.js" defer></script>
 </body>
 </html>

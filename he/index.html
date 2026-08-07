@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Data Clinic - מערכות BI, מחסני נתונים ואפליקציות דאטה</title>
 <meta name="description" content="צוות טכנולוגי שעוסק בעולם הדאטה: מערכות BI, מחסני נתונים (DWH), אפליקציות דאטה, מערכות אקסל וסוכני AI." />
-<link rel="stylesheet" href="../site.css?v=17" />
+<link rel="stylesheet" href="../site.css?v=18" />
 <noscript><style>.reveal{opacity:1!important;transform:none!important}</style></noscript>
 <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32.png" />
 <link rel="apple-touch-icon" sizes="180x180" href="../assets/apple-touch-icon.png" />
@@ -387,12 +387,25 @@
   <img class="cta-mascot-l" src="../assets/mascot-480.png" alt=""/>
   <img class="cta-mascot-r" src="../assets/mascot-480.png" alt=""/>
   <div class="container-narrow" style="position:relative; z-index:2;">
-    <h2>מוכן לראות את העסק שלך <br/><span class="serif">דרך נתונים ברורים יותר?</span></h2>
-    <p>שיחת היכרות חינמית. ללא מצגות וללא מכירות, רק מבט על הסטאק שלכם ותכנית פעולה.</p>
-    <div class="cta-btns">
-      <a href="about.html#contact" class="btn btn-blue btn-lg">הזמן אבחון חינמי <span class="arrow">→</span></a>
-      <a href="agents.html" class="btn btn-on-dark btn-lg">הכר את סוכני ה-AI</a>
-    </div>
+    <h2>מוכנים לראות את העסק שלכם <br/><span class="serif">דרך נתונים ברורים יותר?</span></h2>
+    <p>השאירו פרטים ונחזור אליכם תוך יום עסקים אחד. שיחת היכרות, בלי מצגות ובלי מכירות.</p>
+
+    <form class="cta-form" data-contact data-subject="ליד מדף הבית" data-sending="שולח...">
+      <input type="text" name="_honey" class="hp-field" tabindex="-1" autocomplete="off" aria-hidden="true"/>
+      <div class="cta-form-row">
+        <label class="sr-only" for="hc-name">שם מלא</label>
+        <input id="hc-name" name="שם" type="text" required placeholder="שם מלא"/>
+        <label class="sr-only" for="hc-phone">טלפון</label>
+        <input id="hc-phone" name="טלפון" type="tel" inputmode="tel" required placeholder="טלפון"/>
+        <label class="sr-only" for="hc-email">אימייל</label>
+        <input id="hc-email" name="email" type="email" placeholder="אימייל (לא חובה)"/>
+        <button type="submit" class="btn btn-blue btn-lg">שלחו ונחזור אליכם <span class="arrow">→</span></button>
+      </div>
+      <div class="cf-note cf-ok" role="status" aria-live="polite">✓ ההודעה נשלחה. נחזור אליכם תוך יום עסקים אחד.</div>
+      <div class="cf-note cf-bad" role="status" aria-live="polite">השליחה נכשלה. אפשר להתקשר אלינו ל־<a href="tel:+972528756806" dir="ltr">052-875-6806</a></div>
+    </form>
+
+    <p class="cta-phone">או התקשרו עכשיו: <a href="tel:+972528756806" dir="ltr">052-875-6806</a></p>
   </div>
 </section>
 
@@ -441,5 +454,6 @@
   }
 </script>
 
+<script src="../contact.js" defer></script>
 </body>
 </html>
