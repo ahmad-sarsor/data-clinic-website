@@ -9,8 +9,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700;800&family=Frank+Ruhl+Libre:wght@400;500;700&display=swap" />
-<link rel="stylesheet" href="../colors_and_type.css?v=22" />
-<link rel="stylesheet" href="../site.css?v=22" />
+<link rel="stylesheet" href="../colors_and_type.css?v=23" />
+<link rel="stylesheet" href="../site.css?v=23" />
 <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32.png" />
 <link rel="apple-touch-icon" sizes="180x180" href="../assets/apple-touch-icon.png" />
 <meta name="theme-color" content="#16A8EA" />
@@ -179,13 +179,16 @@
 
 <script>
   var els = document.querySelectorAll(".reveal");
+  function showAll() { for (var i = 0; i < els.length; i++) els[i].classList.add("in"); }
   if (!("IntersectionObserver" in window)) {
-    els.forEach(function (el) { el.classList.add("in"); });
+    showAll();
   } else {
     var io = new IntersectionObserver(function (entries) {
       entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } });
-    }, { threshold: 0.12 });
-    els.forEach(function (el) { io.observe(el); });
+    }, { threshold: 0, rootMargin: "0px 0px -10% 0px" });
+    for (var i = 0; i < els.length; i++) io.observe(els[i]);
+    // last resort: never let the animation be the reason content stays invisible
+    setTimeout(showAll, 3000);
   }
 </script>
 
