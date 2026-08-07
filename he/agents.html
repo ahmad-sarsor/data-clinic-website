@@ -9,8 +9,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700;800&family=Frank+Ruhl+Libre:wght@400;500;700&display=swap" />
-<link rel="stylesheet" href="../colors_and_type.css?v=23" />
-<link rel="stylesheet" href="../site.css?v=23" />
+<link rel="stylesheet" href="../colors_and_type.css?v=24" />
+<link rel="stylesheet" href="../site.css?v=24" />
 <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32.png" />
 <link rel="apple-touch-icon" sizes="180x180" href="../assets/apple-touch-icon.png" />
 <meta name="theme-color" content="#16A8EA" />
@@ -39,7 +39,6 @@
     <nav class="nav-links">
       <a href="index.html">בית</a>
       <a href="index.html#services">שירותים</a>
-      <span class="nav-lock" title="בקרוב">דשבורדים</span>
       <a href="agents.html" class="active">סוכני AI</a>
       <a href="learn.html">מדריכים</a>
       <a href="about.html">אודות</a>
@@ -49,7 +48,7 @@
         <a href="../agents.html" class="lang-btn">EN</a>
         <a href="agents.html" class="lang-btn active">HE</a>
       </div>
-      <a href="about.html#contact" class="btn btn-primary">שכרו מומחה <span class="arrow">→</span></a>
+      <a href="about.html#contact" class="btn btn-primary">דברו איתנו <span class="arrow">→</span></a>
     </div>
   </div>
 </header>
@@ -77,9 +76,28 @@
   </div>
 </section>
 
+<!-- ──────── THE REFUSAL ──────── -->
+<section class="section tight" style="padding: 8px 0 56px;">
+  <div class="container">
+    <div class="agent-refusal reveal">
+      <h2>מתי <span class="serif">לא</span> נבנה לכם סוכן AI</h2>
+      <p>
+        אם הנתונים שלכם לא ממודלים, סוכן ייתן תשובות שנשמעות בטוחות והן שגויות. הוא לא יגיד "אני לא יודע",
+        הוא ינחש חיבור בין טבלאות ויציג את התוצאה במשפט משכנע. מי שמוכר לכם סוכן על נתונים לא מסודרים,
+        מוכר לכם בעיה חדשה שקשה יותר לזהות מהבעיה הקיימת.
+      </p>
+      <p>
+        לכן במקרים רבים התשובה שלנו היא לבנות קודם את הבסיס, ורק אחר כך לדבר על סוכן. זה פחות מרשים,
+        וזה מה שעובד.
+      </p>
+    </div>
+  </div>
+</section>
+
 <!-- ──────── AGENT APP MOCK ──────── -->
 <section class="section tight" style="padding: 8px 0 110px;">
   <div class="container">
+    <p class="demo-label reveal">כך ייראה הממשק. נתוני דוגמה בלבד, לא נתונים של לקוח.</p>
     <div class="app-mock reveal" role="img" aria-label="הדגמת ממשק הסוכן">
       <div class="app-bar">
         <span class="app-dots"><i></i><i></i><i></i></span>
@@ -101,8 +119,8 @@
           <div class="side-item">תחזית הכנסות · Q3</div>
           <div class="side-item">עומס שירות לפי ערוץ</div>
           <div class="side-foot">
-            <span class="side-user">ד</span>
-            <span>דנה · מנהלת כספים</span>
+            <span class="side-user">·</span>
+            <span>משתמש לדוגמה · כספים</span>
           </div>
         </aside>
         <div class="app-chat">
@@ -144,6 +162,69 @@
   </div>
 </section>
 
+
+<!-- ──────── HOW IT ACTUALLY WORKS ──────── -->
+<section class="section" style="padding: 8px 0 88px;">
+  <div class="container">
+
+    <div class="agent-prose reveal">
+      <h2>מה סוכן על נתוני החברה באמת עושה</h2>
+      <p>
+        המשתמש שואל שאלה בעברית. הסוכן מתרגם אותה לשאילתה על מחסן הנתונים, מריץ אותה, ומחזיר את התשובה
+        יחד עם המקור: איזו טבלה, איזה חלון זמן, ואיזו הגדרת מדד שימשה. זה ההבדל בין כלי שאפשר לסמוך עליו
+        לבין צ'אט שנשמע חכם. תשובה בלי מקור היא דעה.
+      </p>
+
+      <h2>מה חייב להתקיים לפני שמתחילים</h2>
+      <ul class="agent-list">
+        <li><b>מחסן נתונים.</b> מקום אחד שבו הנתונים יושבים בצורה יציבה, לא שליפה ישירה מהמערכות התפעוליות.</li>
+        <li><b>הגדרות מדדים מוסכמות.</b> אם "הכנסה" מחושבת אחרת בשיווק ובכספים, הסוכן יבחר אחת מהן ולא יגיד לכם.</li>
+        <li><b>שכבה סמנטית.</b> תיאור מפורש של הטבלאות, הקשרים והמדדים, כדי שהסוכן לא ינחש.</li>
+        <li><b>הרשאות.</b> מי רשאי לראות מה. סוכן שמדלג על זה הופך כל שאלה לדליפת מידע פוטנציאלית.</li>
+      </ul>
+
+      <h2>איפה זה נשבר</h2>
+      <p>
+        שלוש נקודות כשל חוזרות. <b>הגדרות עמומות</b>: שאלה כמו "כמה לקוחות פעילים יש לנו" חסרת משמעות
+        עד שמישהו קובע מה זה פעיל. <b>חיבורים שגויים</b>: כשהמודל מנחש איך שתי טבלאות מתחברות, התוצאה
+        נראית סבירה ואי אפשר לזהות את הטעות מהמספר עצמו. <b>הרשאות</b>: משתמש ששואל שאלה תמימה ומקבל
+        נתון שלא היה אמור לראות.
+      </p>
+      <p>
+        כל השלוש נפתרות באותו מקום, ולא בבחירת המודל: בשכבת הנתונים שמתחת לסוכן.
+      </p>
+
+      <h2>איך שומרים שהתשובות יישארו נכונות</h2>
+      <ul class="agent-list">
+        <li><b>עיגון בהגדרות.</b> הסוכן משתמש במדדים המוגדרים במודל, לא ממציא חישוב משלו.</li>
+        <li><b>ציטוט מקורות.</b> כל תשובה מציינת מאיפה הגיעה, כך שאפשר לבדוק אותה.</li>
+        <li><b>סט בדיקות.</b> אוסף שאלות עם תשובות ידועות שרצות אחרי כל שינוי, כדי לתפוס נסיגה.</li>
+        <li><b>גבולות ברורים.</b> שאלות שהסוכן לא אמור לענות עליהן מוחזרות כ"אין לי את זה", לא כניחוש.</li>
+      </ul>
+
+      <h2>אבטחה וגישה</h2>
+      <p>
+        העבודה מתבצעת בתוך הענן שלכם, עם הרשאות קריאה מוגבלות לסכמות מוגדרות. הנתונים הגולמיים נשארים
+        בסביבה שלכם, וההרשאות של המשתמש נאכפות ברמת השאילתה, לא ברמת הניסוח של השאלה.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ──────── CTA ──────── -->
+<section class="cta" id="cta">
+  <img class="cta-mascot-l" src="../assets/mascot-480.png" alt=""/>
+  <img class="cta-mascot-r" src="../assets/mascot-480.png" alt=""/>
+  <div class="container-narrow" style="position:relative; z-index:2;">
+    <h2>רוצים לדעת אם אתם <br/><span class="serif">מוכנים לסוכן?</span></h2>
+    <p>נסתכל על המערכות והמדדים שלכם ונגיד לכם בכנות אם זה הצעד הנכון עכשיו, או מה צריך לקרות קודם.</p>
+    <div class="cta-btns">
+      <a href="about.html#contact" class="btn btn-blue btn-lg">לשיחת אבחון <span class="arrow">→</span></a>
+    </div>
+    <p class="cta-phone">או התקשרו: <a href="tel:+972528756806" dir="ltr">052-875-6806</a></p>
+  </div>
+</section>
 <!-- ──────── FOOTER ──────── -->
 <footer class="footer">
   <div class="container">
@@ -153,8 +234,7 @@
         <p>צוות טכנולוגי שעוסק בעולם הדאטה. מערכות BI, מחסני נתונים, אפליקציות דאטה, מערכות אקסל וסוכני AI.</p>
       </div>
       <div class="foot-col">
-        <h5>מוצר</h5>
-        <span class="nav-lock" title="בקרוב">דשבורדים</span>
+        <h5>שירותים</h5>
         <a href="agents.html">סוכני AI</a>
         <a href="index.html#services">שירותים</a>
       </div>
@@ -192,5 +272,9 @@
   }
 </script>
 
+<div class="mobile-bar">
+  <a class="mb-call" href="tel:+972528756806"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg> התקשרו</a>
+  <a class="mb-wa" href="https://wa.me/972528756806?text=%D7%94%D7%99%2C%20%D7%94%D7%92%D7%A2%D7%AA%D7%99%20%D7%9E%D7%94%D7%90%D7%AA%D7%A8%20%D7%A9%D7%9C%D7%9B%D7%9D" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.47 14.38c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.64.08-.3-.15-1.25-.46-2.38-1.47-.88-.78-1.48-1.75-1.65-2.05-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.01-1.04 2.47s1.06 2.87 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.69.63.71.22 1.36.19 1.87.12.57-.09 1.75-.72 2-1.41.25-.69.25-1.28.17-1.41-.07-.13-.27-.2-.57-.35z"/><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.9-4.45 9.9-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm0 18.02h-.01a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.24 8.24 0 0 1-1.26-4.39c0-4.54 3.7-8.23 8.25-8.23a8.2 8.2 0 0 1 5.82 2.42 8.18 8.18 0 0 1 2.41 5.82c0 4.54-3.7 8.24-8.23 8.24z"/></svg> וואטסאפ</a>
+</div>
 </body>
 </html>

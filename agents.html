@@ -9,8 +9,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" />
-<link rel="stylesheet" href="colors_and_type.css?v=23" />
-<link rel="stylesheet" href="site.css?v=23" />
+<link rel="stylesheet" href="colors_and_type.css?v=24" />
+<link rel="stylesheet" href="site.css?v=24" />
 <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
 <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png" />
 <meta name="theme-color" content="#16A8EA" />
@@ -39,7 +39,6 @@
     <nav class="nav-links">
       <a href="index.html">Home</a>
       <a href="index.html#services">Services</a>
-      <span class="nav-lock" title="Coming soon">Dashboards</span>
       <a href="agents.html" class="active">AI Agents</a>
       <a href="learn.html">Learn</a>
       <a href="about.html">About</a>
@@ -49,7 +48,7 @@
         <a href="agents.html" class="lang-btn active">EN</a>
         <a href="he/agents.html" class="lang-btn">HE</a>
       </div>
-      <a href="about.html#contact" class="btn btn-primary">Hire a specialist <span class="arrow">→</span></a>
+      <a href="about.html#contact" class="btn btn-primary">Talk to us <span class="arrow">→</span></a>
     </div>
   </div>
 </header>
@@ -77,9 +76,29 @@
   </div>
 </section>
 
+<!-- ──────── THE REFUSAL ──────── -->
+<section class="section tight" style="padding: 8px 0 56px;">
+  <div class="container">
+    <div class="agent-refusal reveal">
+      <h2>When we will <span class="serif">not</span> build you an AI agent</h2>
+      <p>
+        If your data is not modeled, an agent will give answers that sound confident and are wrong. It will not say
+        "I don't know", it will guess how two tables join and present the result in a convincing sentence.
+        Anyone selling you an agent on unorganized data is selling you a new problem, one that is harder to spot
+        than the one you already have.
+      </p>
+      <p>
+        So in many cases our answer is to build the foundation first and talk about an agent later. It is less
+        impressive, and it is what works.
+      </p>
+    </div>
+  </div>
+</section>
+
 <!-- ──────── AGENT APP MOCK ──────── -->
 <section class="section tight" style="padding: 8px 0 110px;">
   <div class="container">
+    <p class="demo-label reveal">This is what the interface will look like. Sample data only, not a client's data.</p>
     <div class="app-mock reveal" role="img" aria-label="Agent interface demo">
       <div class="app-bar">
         <span class="app-dots"><i></i><i></i><i></i></span>
@@ -101,8 +120,8 @@
           <div class="side-item">Revenue forecast · Q3</div>
           <div class="side-item">Support load by channel</div>
           <div class="side-foot">
-            <span class="side-user">D</span>
-            <span>Dana · Finance lead</span>
+            <span class="side-user">·</span>
+            <span>Example user · Finance</span>
           </div>
         </aside>
         <div class="app-chat">
@@ -144,6 +163,70 @@
   </div>
 </section>
 
+
+<!-- ──────── HOW IT ACTUALLY WORKS ──────── -->
+<section class="section" style="padding: 8px 0 88px;">
+  <div class="container">
+
+    <div class="agent-prose reveal">
+      <h2>What an agent on company data actually does</h2>
+      <p>
+        A user asks a question in plain language. The agent translates it into a query against the data warehouse,
+        runs it, and returns the answer together with its source: which table, which time window, and which metric
+        definition was used. That is the difference between a tool you can rely on and a chat that sounds clever.
+        An answer without a source is an opinion.
+      </p>
+
+      <h2>What has to exist before you start</h2>
+      <ul class="agent-list">
+        <li><b>A data warehouse.</b> One place where the data sits stably, not a live query against your operational systems.</li>
+        <li><b>Agreed metric definitions.</b> If "revenue" is calculated differently in marketing and finance, the agent will pick one and not tell you.</li>
+        <li><b>A semantic layer.</b> An explicit description of tables, relationships and metrics, so the agent does not have to guess.</li>
+        <li><b>Permissions.</b> Who is allowed to see what. An agent that skips this turns every question into a potential data leak.</li>
+      </ul>
+
+      <h2>Where it breaks</h2>
+      <p>
+        Three failure points recur. <b>Ambiguous definitions</b>: a question like "how many active customers do we have"
+        is meaningless until someone decides what active means. <b>Wrong joins</b>: when the model guesses how two tables
+        connect, the result looks plausible and the error is invisible in the number itself. <b>Permissions</b>: a user
+        asks an innocent question and receives a figure they were never meant to see.
+      </p>
+      <p>
+        All three are solved in the same place, and it is not the choice of model: it is the data layer underneath the agent.
+      </p>
+
+      <h2>How answers are kept correct</h2>
+      <ul class="agent-list">
+        <li><b>Grounded in definitions.</b> The agent uses the metrics defined in the model rather than inventing its own calculation.</li>
+        <li><b>Cited sources.</b> Every answer states where it came from, so it can be checked.</li>
+        <li><b>An evaluation set.</b> A collection of questions with known answers that runs after every change, to catch regressions.</li>
+        <li><b>Clear boundaries.</b> Questions the agent should not answer come back as "I don't have that", not as a guess.</li>
+      </ul>
+
+      <h2>Security and access</h2>
+      <p>
+        The work happens inside your own cloud, with read-only access limited to defined schemas. Raw data stays in your
+        environment, and user permissions are enforced at the query level, not at the level of how the question was phrased.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ──────── CTA ──────── -->
+<section class="cta" id="cta">
+  <img class="cta-mascot-l" src="assets/mascot-480.png" alt=""/>
+  <img class="cta-mascot-r" src="assets/mascot-480.png" alt=""/>
+  <div class="container-narrow" style="position:relative; z-index:2;">
+    <h2>Want to know whether <br/><span class="serif">you are ready for an agent?</span></h2>
+    <p>We will look at your systems and metrics and tell you honestly whether this is the right step now, or what needs to happen first.</p>
+    <div class="cta-btns">
+      <a href="about.html#contact" class="btn btn-blue btn-lg">Book a diagnosis call <span class="arrow">→</span></a>
+    </div>
+    <p class="cta-phone">Or call: <a href="tel:+972528756806">052-875-6806</a></p>
+  </div>
+</section>
 <!-- ──────── FOOTER ──────── -->
 <footer class="footer">
   <div class="container">
@@ -153,8 +236,7 @@
         <p>A technology team in the world of data. BI systems, data warehouses, data apps, Excel systems and AI agents.</p>
       </div>
       <div class="foot-col">
-        <h5>Product</h5>
-        <span class="nav-lock" title="Coming soon">Dashboards</span>
+        <h5>Services</h5>
         <a href="agents.html">AI Agents</a>
         <a href="index.html#services">Services</a>
       </div>
@@ -192,5 +274,9 @@
   }
 </script>
 
+<div class="mobile-bar">
+  <a class="mb-call" href="tel:+972528756806"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg> Call us</a>
+  <a class="mb-wa" href="https://wa.me/972528756806?text=Hi%2C%20I%20came%20from%20your%20website" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.47 14.38c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.64.08-.3-.15-1.25-.46-2.38-1.47-.88-.78-1.48-1.75-1.65-2.05-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.01-1.04 2.47s1.06 2.87 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.69.63.71.22 1.36.19 1.87.12.57-.09 1.75-.72 2-1.41.25-.69.25-1.28.17-1.41-.07-.13-.27-.2-.57-.35z"/><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.9-4.45 9.9-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm0 18.02h-.01a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.24 8.24 0 0 1-1.26-4.39c0-4.54 3.7-8.23 8.25-8.23a8.2 8.2 0 0 1 5.82 2.42 8.18 8.18 0 0 1 2.41 5.82c0 4.54-3.7 8.24-8.23 8.24z"/></svg> WhatsApp</a>
+</div>
 </body>
 </html>

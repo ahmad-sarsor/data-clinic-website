@@ -2304,3 +2304,74 @@ html { overflow-x: clip; }
 .btn:hover .arrow, a:hover > .arrow { transform: scaleX(var(--dir)) translateX(2px); }
 /* Keep signed numbers and arrows from detaching in RTL text */
 .ltr { direction: ltr; unicode-bidi: isolate; display: inline-block; }
+
+/* ══════════ Mobile contact bar: the phone is the product, keep it one tap away ══════════ */
+.mobile-bar { display: none; }
+@media (max-width: 860px) {
+  .mobile-bar {
+    display: grid; grid-template-columns: 1fr 1fr;
+    position: fixed; inset-inline: 0; bottom: 0; z-index: 60;
+    background: #fff; border-top: 1px solid rgba(17,24,42,0.12);
+    box-shadow: 0 -6px 24px -12px rgba(17,24,42,0.28);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  .mobile-bar a {
+    display: flex; align-items: center; justify-content: center; gap: 8px;
+    min-height: 52px; padding: 8px 10px;
+    font-family: var(--font-display); font-weight: 700; font-size: 15px;
+  }
+  .mobile-bar a svg { width: 19px; height: 19px; flex-shrink: 0; }
+  .mb-call { color: #0B72B5; }
+  .mb-call:active { background: var(--brand-blue-50); }
+  .mb-wa { color: #fff; background: #25D366; }
+  .mb-wa:active { background: #1EB456; }
+  .mobile-bar a:focus-visible { outline: 2px solid #0B72B5; outline-offset: -3px; }
+  body { padding-bottom: 60px; }
+  .cta { padding-bottom: 120px; }
+}
+
+/* ══════════ Agents page: the refusal, the demo label, and the prose ══════════ */
+.agent-refusal {
+  max-width: 780px; margin: 0 auto;
+  background: var(--brand-orange-50);
+  border: 1px solid var(--brand-orange-100);
+  border-inline-start: 4px solid var(--brand-orange);
+  border-radius: 20px;
+  padding: 30px 34px;
+}
+.agent-refusal h2 {
+  font-family: var(--font-display); font-weight: 700;
+  font-size: clamp(23px, 3vw, 32px); letter-spacing: -.02em;
+  color: #11182A; margin-bottom: 14px;
+}
+.agent-refusal p { color: #3D4B63; font-size: 16.5px; line-height: 1.75; margin-bottom: 12px; }
+.agent-refusal p:last-child { margin-bottom: 0; }
+
+.demo-label {
+  max-width: 1080px; margin: 0 auto 14px;
+  font-family: var(--font-display); font-size: 13.5px; font-weight: 600;
+  color: #5B6572; text-align: center;
+}
+
+.agent-prose { max-width: 780px; margin: 0 auto; }
+.agent-prose h2 {
+  font-family: var(--font-display); font-weight: 700;
+  font-size: clamp(21px, 2.7vw, 28px); letter-spacing: -.02em;
+  color: #11182A; margin: 38px 0 12px;
+}
+.agent-prose h2:first-child { margin-top: 0; }
+.agent-prose p { color: #3D4B63; font-size: 16.5px; line-height: 1.78; margin-bottom: 14px; }
+.agent-list { list-style: none; margin: 6px 0 14px; padding: 0; }
+.agent-list li {
+  position: relative; color: #3D4B63; font-size: 16px; line-height: 1.72;
+  padding-inline-start: 24px; margin-bottom: 10px;
+}
+.agent-list li::before {
+  content: ""; position: absolute; inset-inline-start: 4px; top: 11px;
+  width: 7px; height: 7px; border-radius: 50%; background: var(--brand-blue);
+}
+.agent-list b { color: #11182A; }
+@media (max-width: 640px) {
+  .agent-refusal { padding: 22px 20px; border-radius: 16px; }
+  .agent-prose h2 { margin-top: 30px; }
+}
